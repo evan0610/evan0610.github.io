@@ -3,43 +3,61 @@
 <html lang="en">
 
 <head>
+  <!-- =========================================================
+       基础页面配置
+       ========================================================= -->
+
+  <!-- 设置网页字符编码，避免中文或特殊字符乱码 -->
   <meta charset="UTF-8">
 
+  <!-- 提高网页在旧版 Microsoft Edge 浏览器中的兼容性 -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+  <!-- 让网页在手机、平板和电脑上自动适配屏幕宽度 -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- 浏览器标签页标题 -->
   <title>Evan Wu | Medical Robotics & Vision-Language-Action</title>
 
+  <!-- 搜索引擎页面简介 -->
   <meta
     name="description"
     content="Evan Wu is an Electronic Engineering undergraduate in the ELITE Stream at The Chinese University of Hong Kong. His research focuses on medical robotics, robotic endoscopy, vision-language-action models, computer vision, and embodied intelligence."
   >
 
+  <!-- 搜索引擎关键词 -->
   <meta
     name="keywords"
     content="Evan Wu, Tianchun Wu, 武天淳, CUHK, Electronic Engineering, ELITE Stream, Medical Robotics, Vision-Language-Action, VLA, ColonVLA, Robotic Endoscopy, Computer Vision, Embodied Intelligence"
   >
 
+  <!-- 网页作者 -->
   <meta name="author" content="Evan Wu">
 
-  <!-- Browser favicon -->
+  <!-- 浏览器标签页小图标 -->
+  <!-- 文件位置：assets/img/favicon.jpg -->
   <link
     rel="icon"
     href="assets/img/favicon.jpg"
     type="image/jpeg"
   >
 
-  <!-- Google Fonts -->
+
+  <!-- =========================================================
+       外部字体与图标库
+       ========================================================= -->
+
+  <!-- 提前连接 Google Fonts，提高字体加载速度 -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+  <!-- 使用 Inter 字体 -->
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
     rel="stylesheet"
   >
 
-  <!-- Academicons -->
+  <!-- Academicons：用于 Google Scholar 等学术平台图标 -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css"
@@ -47,36 +65,61 @@
     crossorigin="anonymous"
   >
 
-  <!-- Font Awesome -->
+  <!-- Font Awesome：用于邮箱、GitHub、LinkedIn、深色模式等图标 -->
   <script
     src="https://kit.fontawesome.com/a860a211d3.js"
     crossorigin="anonymous"
   ></script>
 
-  <!-- Existing local styles -->
+
+  <!-- =========================================================
+       本地 CSS 文件
+       ========================================================= -->
+
+  <!-- 本地字体样式 -->
   <link
     rel="stylesheet"
     href="assets/css/font_sans_serif.css"
   >
 
+  <!-- Luka 模板主样式 -->
   <link
     rel="stylesheet"
     href="assets/css/theme-luka.css"
   >
 
+
+  <!-- =========================================================
+       当前页面附加样式
+       ========================================================= -->
+
   <style>
+    /*
+      全局启用平滑滚动。
+
+      点击顶部导航栏时，页面会平滑移动到对应栏目。
+    */
     html {
       scroll-behavior: smooth;
     }
 
+    /*
+      全站使用 Inter 字体。
+    */
     body {
       font-family: "Inter", sans-serif;
     }
 
+    /*
+      防止通过导航栏跳转后，栏目标题被顶部导航栏遮挡。
+    */
     .section {
       scroll-margin-top: 90px;
     }
 
+    /*
+      顶部导航栏左侧链接布局。
+    */
     .nav-left {
       display: flex;
       flex-wrap: wrap;
@@ -84,6 +127,16 @@
       gap: 18px;
     }
 
+
+    /* =========================================================
+       左侧个人资料区域
+       ========================================================= */
+
+    /*
+      头像外层容器。
+
+      固定宽高并设置圆角，使头像显示为圆形。
+    */
     .profile-card .avatar {
       display: block;
       width: 180px;
@@ -94,6 +147,15 @@
       text-decoration: none;
     }
 
+    /*
+      头像图片样式。
+
+      object-fit: cover：
+      在不拉伸图片的情况下填满圆形区域。
+
+      object-position: center：
+      默认显示图片中央区域。
+    */
     .profile-card .avatar img {
       display: block;
       width: 100%;
@@ -103,6 +165,9 @@
       border-radius: 50%;
     }
 
+    /*
+      姓名下方的身份信息。
+    */
     .site-role {
       margin: 6px 0 4px;
       font-size: 0.95rem;
@@ -111,6 +176,9 @@
       text-align: center;
     }
 
+    /*
+      学校和 ELITE Stream 信息。
+    */
     .site-affiliation {
       margin: 0 0 4px;
       font-size: 0.9rem;
@@ -119,6 +187,9 @@
       opacity: 0.82;
     }
 
+    /*
+      地点信息。
+    */
     .site-location {
       margin: 0 0 10px;
       font-size: 0.85rem;
@@ -127,6 +198,14 @@
       opacity: 0.65;
     }
 
+
+    /* =========================================================
+       教育和经历卡片
+       ========================================================= */
+
+    /*
+      教育经历和工作经历中的机构图片。
+    */
     .institution-logo {
       width: 64px;
       height: 64px;
@@ -136,20 +215,32 @@
       border-radius: 10px;
     }
 
+    /*
+      让经历内容自动占据剩余宽度。
+    */
     .experience-content {
       width: 100%;
     }
 
+    /*
+      经历标题。
+    */
     .exp-title {
       margin-bottom: 4px;
     }
 
+    /*
+      经历详情。
+    */
     .exp-detail {
       margin-top: 4px;
       margin-bottom: 4px;
       line-height: 1.65;
     }
 
+    /*
+      经历日期。
+    */
     .exp-period {
       margin-top: 4px;
       margin-bottom: 8px;
@@ -157,6 +248,9 @@
       opacity: 0.72;
     }
 
+    /*
+      经历地点。
+    */
     .exp-location {
       margin-top: 2px;
       margin-bottom: 6px;
@@ -164,6 +258,9 @@
       opacity: 0.68;
     }
 
+    /*
+      项目或经历下方的成果列表。
+    */
     .achievement-list {
       margin: 12px 0 0;
       padding-left: 20px;
@@ -174,6 +271,14 @@
       line-height: 1.7;
     }
 
+
+    /* =========================================================
+       项目区域
+       ========================================================= */
+
+    /*
+      项目名称。
+    */
     .project-title {
       display: inline-block;
       margin-bottom: 8px;
@@ -181,6 +286,9 @@
       font-weight: 700;
     }
 
+    /*
+      项目副标题。
+    */
     .project-subtitle {
       margin: 2px 0 10px;
       font-size: 0.92rem;
@@ -188,6 +296,14 @@
       opacity: 0.78;
     }
 
+
+    /* =========================================================
+       研究方向标签
+       ========================================================= */
+
+    /*
+      研究方向标签容器。
+    */
     .research-tag-list {
       display: flex;
       flex-wrap: wrap;
@@ -195,6 +311,9 @@
       margin-top: 14px;
     }
 
+    /*
+      单个研究方向标签。
+    */
     .research-tag {
       display: inline-block;
       padding: 6px 11px;
@@ -204,6 +323,14 @@
       line-height: 1.2;
     }
 
+
+    /* =========================================================
+       技术技能区域
+       ========================================================= */
+
+    /*
+      每一组技能之间的间距。
+    */
     .skill-group {
       margin-bottom: 16px;
     }
@@ -212,11 +339,22 @@
       margin-bottom: 0;
     }
 
+    /*
+      技能分类标题单独占一行。
+    */
     .skill-group strong {
       display: block;
       margin-bottom: 5px;
     }
 
+
+    /* =========================================================
+       数据成果卡片
+       ========================================================= */
+
+    /*
+      三列统计数据布局。
+    */
     .metric-row {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -224,6 +362,9 @@
       margin-top: 16px;
     }
 
+    /*
+      单个统计数据卡片。
+    */
     .metric-card {
       padding: 14px;
       border: 1px solid rgba(127, 127, 127, 0.22);
@@ -231,6 +372,9 @@
       text-align: center;
     }
 
+    /*
+      统计数字。
+    */
     .metric-number {
       display: block;
       margin-bottom: 4px;
@@ -238,12 +382,26 @@
       font-weight: 700;
     }
 
+    /*
+      统计数字下方说明。
+    */
     .metric-label {
       font-size: 0.82rem;
       line-height: 1.4;
       opacity: 0.72;
     }
 
+
+    /* =========================================================
+       空白信息占位
+       ========================================================= */
+
+    /*
+      暂时没有的信息使用该样式。
+
+      例如：
+      尚未公开的论文或尚未建立的 Google Scholar。
+    */
     .empty-placeholder {
       margin: 0;
       font-size: 0.95rem;
@@ -252,30 +410,55 @@
       opacity: 0.62;
     }
 
+    /*
+      尚未启用的社交链接显示为半透明。
+    */
     .social-icons a[data-empty-link="true"] {
       opacity: 0.38;
       cursor: default;
     }
 
+
+    /* =========================================================
+       页脚
+       ========================================================= */
+
     .site-footer {
       text-align: center;
     }
 
+
+    /* =========================================================
+       手机和平板适配
+       ========================================================= */
+
     @media screen and (max-width: 768px) {
+      /*
+        减少手机端导航栏链接间距。
+      */
       .nav-left {
         gap: 10px;
       }
 
+      /*
+        手机端缩小头像。
+      */
       .profile-card .avatar {
         width: 150px;
         height: 150px;
       }
 
+      /*
+        手机端缩小机构 Logo。
+      */
       .institution-logo {
         width: 54px;
         height: 54px;
       }
 
+      /*
+        手机端统计卡片改为单列。
+      */
       .metric-row {
         grid-template-columns: 1fr;
       }
@@ -287,12 +470,13 @@
 <body class="theme-luka">
 
   <!-- =========================================================
-       TOP NAVIGATION
+       顶部导航栏
        ========================================================= -->
 
   <nav class="top-nav">
     <div class="nav-container">
 
+      <!-- 左侧栏目导航 -->
       <div class="nav-left">
         <a href="#about">About</a>
         <a href="#education">Education</a>
@@ -304,6 +488,7 @@
         <a href="#publications">Publications</a>
       </div>
 
+      <!-- 右侧深色模式切换按钮 -->
       <div class="nav-right">
         <button
           id="themeToggle"
@@ -321,18 +506,24 @@
 
 
   <!-- =========================================================
-       MAIN WRAPPER
+       页面主体
        ========================================================= -->
 
   <div class="wrapper">
 
     <!-- =======================================================
-         PROFILE SIDEBAR
+         左侧个人信息栏
          ======================================================= -->
 
     <header class="sidebar">
       <div class="profile-card">
 
+        <!--
+          个人头像。
+
+          文件位置：
+          assets/img/avatar.jpg
+        -->
         <a
           class="image avatar"
           href="#about"
@@ -346,33 +537,39 @@
           >
         </a>
 
+        <!-- 姓名 -->
         <h1 class="site-name">
           Evan Wu
         </h1>
 
+        <!-- 当前身份 -->
         <p class="site-role">
           Electronic Engineering Undergraduate
         </p>
 
+        <!-- 学校及项目 -->
         <p class="site-affiliation">
           ELITE Stream · The Chinese University of Hong Kong
         </p>
 
+        <!-- 所在地区 -->
         <p class="site-location">
           Hong Kong SAR
         </p>
 
+        <!-- 邮箱 -->
         <p class="site-email">
           tianchunwu10@gmail.com
         </p>
 
 
         <!-- ===================================================
-             SOCIAL LINKS
+             社交平台链接
              =================================================== -->
 
         <div class="social-icons">
 
+          <!-- 邮箱 -->
           <a
             href="mailto:tianchunwu10@gmail.com"
             title="Email"
@@ -381,8 +578,9 @@
             <i class="fa-solid fa-envelope"></i>
           </a>
 
+          <!-- GitHub -->
           <a
-            href="https://github.com/tianchunwu10"
+            href="https://github.com/evan0610"
             title="GitHub"
             aria-label="Visit Evan Wu's GitHub profile"
             target="_blank"
@@ -391,6 +589,7 @@
             <i class="fa-brands fa-github"></i>
           </a>
 
+          <!-- LinkedIn -->
           <a
             href="https://www.linkedin.com/in/tcwu/"
             title="LinkedIn"
@@ -401,7 +600,12 @@
             <i class="fa-brands fa-linkedin"></i>
           </a>
 
-          <!-- Leave empty until a Google Scholar profile is available -->
+          <!--
+            Google Scholar。
+
+            目前没有主页，因此链接暂时为空。
+            以后创建 Google Scholar 后，只需要修改 href。
+          -->
           <a
             href=""
             title="Google Scholar"
@@ -411,11 +615,20 @@
             <i class="ai ai-google-scholar"></i>
           </a>
 
+          <!-- 个人主页 -->
+          <a
+            href="https://evan0610.github.io/"
+            title="Homepage"
+            aria-label="Visit Evan Wu's homepage"
+          >
+            <i class="fa-solid fa-globe"></i>
+          </a>
+
         </div>
 
 
         <!-- ===================================================
-             CURRENT FOCUS
+             当前研究方向卡片
              =================================================== -->
 
         <div class="visitor-card">
@@ -437,13 +650,13 @@
 
 
     <!-- =======================================================
-         MAIN CONTENT
+         右侧主要内容
          ======================================================= -->
 
     <main class="content">
 
       <!-- =====================================================
-           ABOUT
+           个人简介
            ===================================================== -->
 
       <section class="section" id="about">
@@ -474,12 +687,16 @@
           <p>
             My current projects investigate autonomous colonoscopy withdrawal,
             supervised endoscopic navigation, multimodal action learning,
-            and clinician-in-the-loop safety mechanisms. I am particularly
-            interested in how embodied foundation models can improve the
-            reliability, interpretability, and clinical usability of
-            intelligent medical robots.
+            and clinician-in-the-loop safety mechanisms.
           </p>
 
+          <p>
+            I am particularly interested in how embodied foundation models
+            can improve the reliability, interpretability, and clinical
+            usability of intelligent medical robots.
+          </p>
+
+          <!-- 研究方向标签 -->
           <div class="research-tag-list">
             <span class="research-tag">Medical Robotics</span>
             <span class="research-tag">Robotic Endoscopy</span>
@@ -489,6 +706,12 @@
             <span class="research-tag">Multimodal Learning</span>
           </div>
 
+          <!--
+            简历下载链接。
+
+            将简历 PDF 放到：
+            assets/files/Evan_Wu_CV.pdf
+          -->
           <p>
             <strong>
               <a
@@ -507,7 +730,7 @@
 
 
       <!-- =====================================================
-           EDUCATION
+           教育经历
            ===================================================== -->
 
       <section class="section" id="education">
@@ -518,11 +741,17 @@
 
         <div class="section-body">
 
-          <!-- CUHK -->
+          <!-- 香港中文大学 -->
           <div class="card timeline-item">
 
             <div class="experience-item">
 
+              <!--
+                机构图片。
+
+                文件位置：
+                assets/img/institution.jpg
+              -->
               <img
                 src="assets/img/institution.jpg"
                 alt="The Chinese University of Hong Kong"
@@ -567,13 +796,13 @@
           </div>
 
 
-          <!-- HIT Winter School -->
+          <!-- 哈尔滨工业大学国际冬校 -->
           <div class="card timeline-item">
 
             <div class="experience-item">
 
               <img
-                src="assets/img/institution.jpg"
+                src="assets/img/HIT.jpg"
                 alt="Harbin Institute of Technology"
                 class="institution-logo"
                 loading="lazy"
@@ -615,7 +844,7 @@
 
 
       <!-- =====================================================
-           RESEARCH EXPERIENCE
+           科研经历
            ===================================================== -->
 
       <section class="section" id="research">
@@ -632,7 +861,7 @@
 
               <img
                 src="assets/img/institution.jpg"
-                alt="RPAI Lab at The Chinese University of Hong Kong"
+                alt="RPAI Laboratory"
                 class="institution-logo"
                 loading="lazy"
                 decoding="async"
@@ -703,7 +932,7 @@
 
 
       <!-- =====================================================
-           SELECTED PROJECTS
+           重点科研项目
            ===================================================== -->
 
       <section class="section" id="projects">
@@ -780,8 +1009,8 @@
               </li>
 
               <li>
-                Use a binary verifier to determine whether autonomous execution
-                should safely continue or terminate.
+                Use a binary verifier to determine whether autonomous
+                execution should safely continue or terminate.
               </li>
 
               <li>
@@ -818,9 +1047,8 @@
               </li>
 
               <li>
-                Contributed to the EndoVLA-OOV work submitted to
-                <em>IEEE Transactions on Robotics and Learning</em>
-                in collaboration with NVIDIA.
+                Contributed to the EndoVLA-OOV research work in collaboration
+                with NVIDIA.
               </li>
 
             </ul>
@@ -828,7 +1056,7 @@
           </div>
 
 
-          <!-- Fire Rescue Continuum Robot -->
+          <!-- 连续体机器人消防救援项目 -->
           <div class="card project-card">
 
             <div class="project-title">
@@ -865,7 +1093,7 @@
 
 
       <!-- =====================================================
-           PROFESSIONAL EXPERIENCE
+           企业经历
            ===================================================== -->
 
       <section class="section" id="professional">
@@ -881,7 +1109,7 @@
             <div class="experience-item">
 
               <img
-                src="assets/img/institution.jpg"
+                src="assets/img/TCL.jpg"
                 alt="TCL Technology Corporation"
                 class="institution-logo"
                 loading="lazy"
@@ -944,7 +1172,7 @@
 
 
       <!-- =====================================================
-           LEADERSHIP AND ACTIVITIES
+           学生领导力与技术活动
            ===================================================== -->
 
       <section class="section" id="leadership">
@@ -961,7 +1189,7 @@
             <div class="experience-item">
 
               <img
-                src="assets/img/institution.jpg"
+                src="assets/img/CCIA.jpg"
                 alt="Chung Chi International Association"
                 class="institution-logo"
                 loading="lazy"
@@ -1068,7 +1296,7 @@
 
 
       <!-- =====================================================
-           SELECTED IMPACT
+           量化成果
            ===================================================== -->
 
       <section class="section" id="impact">
@@ -1083,6 +1311,7 @@
 
             <div class="metric-card">
               <span class="metric-number">3,000+</span>
+
               <span class="metric-label">
                 Endoscopic samples collected and structured
               </span>
@@ -1090,6 +1319,7 @@
 
             <div class="metric-card">
               <span class="metric-number">20+</span>
+
               <span class="metric-label">
                 Smartphone functional tests completed
               </span>
@@ -1097,6 +1327,7 @@
 
             <div class="metric-card">
               <span class="metric-number">1,000+</span>
+
               <span class="metric-label">
                 Participants reached through student events
               </span>
@@ -1109,7 +1340,7 @@
 
 
       <!-- =====================================================
-           AWARD
+           获奖经历
            ===================================================== -->
 
       <section class="section" id="awards">
@@ -1151,7 +1382,7 @@
 
 
       <!-- =====================================================
-           TECHNICAL SKILLS
+           技术技能
            ===================================================== -->
 
       <section class="section" id="skills">
@@ -1203,7 +1434,7 @@
 
 
       <!-- =====================================================
-           PUBLICATIONS
+           论文栏目
            ===================================================== -->
 
       <section class="section" id="publications">
@@ -1216,6 +1447,12 @@
 
           <div class="card">
 
+            <!--
+              目前没有正式公开的论文信息，因此暂时留空。
+
+              等论文公开后，可以在这里加入：
+              论文标题、作者、期刊、论文链接、代码链接。
+            -->
             <p class="empty-placeholder">
               Publications and manuscripts will be added after they are
               publicly available.
@@ -1230,9 +1467,13 @@
 
 
     <!-- =======================================================
-         FOOTER
+         页脚
          ======================================================= -->
 
+    <!--
+      已删除原模板作者信息。
+      这里只保留你的个人版权信息。
+    -->
     <footer class="site-footer">
       <p>
         &copy; 2026 Evan Wu. All rights reserved.
@@ -1242,46 +1483,73 @@
   </div>
 
 
-  <!-- Existing responsive scale script -->
+  <!-- =========================================================
+       本地 JavaScript 文件
+       ========================================================= -->
+
+  <!-- Luka 模板原有的缩放兼容脚本 -->
   <script src="assets/js/scale.fix.js"></script>
 
 
   <!-- =========================================================
-       PAGE INTERACTION
+       页面交互逻辑
        ========================================================= -->
 
   <script>
     (function () {
 
+      /*
+        获取深色模式切换按钮。
+      */
       const themeToggle =
         document.getElementById('themeToggle');
 
+      /*
+        获取按钮内部的图标。
+      */
       const icon =
         themeToggle.querySelector('i');
 
 
       /**
-       * Apply the selected visual theme.
+       * 设置页面主题。
        *
        * @param {boolean} isDark
+       * true：深色模式
+       * false：浅色模式
        */
       function setTheme(isDark) {
 
+        /*
+          在 html 根节点上保存当前主题状态。
+        */
         document.documentElement.setAttribute(
           'data-theme',
           isDark ? 'dark' : 'light'
         );
 
+        /*
+          深色模式下显示太阳图标。
+        */
         icon.classList.toggle(
           'fa-sun',
           isDark
         );
 
+        /*
+          浅色模式下显示月亮图标。
+        */
         icon.classList.toggle(
           'fa-moon',
           !isDark
         );
 
+        /*
+          将用户选择保存到浏览器本地存储。
+
+          这样用户下次打开网页时，
+          页面会继续使用上次选择的主题。
+        */
         localStorage.setItem(
           'theme',
           isDark ? 'dark' : 'light'
@@ -1289,14 +1557,28 @@
       }
 
 
+      /*
+        读取用户上一次保存的主题。
+      */
       const savedTheme =
         localStorage.getItem('theme');
 
+
+      /*
+        检测用户操作系统是否偏好深色模式。
+      */
       const prefersDark =
         window.matchMedia(
           '(prefers-color-scheme: dark)'
         ).matches;
 
+
+      /*
+        如果用户以前手动选择过主题，
+        优先使用保存的主题。
+
+        否则跟随操作系统主题。
+      */
       setTheme(
         savedTheme
           ? savedTheme === 'dark'
@@ -1304,6 +1586,9 @@
       );
 
 
+      /*
+        用户点击按钮时切换主题。
+      */
       themeToggle.addEventListener(
         'click',
         function () {
@@ -1318,9 +1603,11 @@
       );
 
 
-      /**
-       * Prevent unfinished links from navigating.
-       */
+      /*
+        阻止尚未设置完成的空白链接跳转。
+
+        目前主要用于 Google Scholar。
+      */
       document
         .querySelectorAll('a[data-empty-link="true"]')
         .forEach(function (link) {
@@ -1335,9 +1622,9 @@
         });
 
 
-      /**
-       * Smooth-scroll internal links.
-       */
+      /*
+        为所有页面内部导航链接加入平滑滚动效果。
+      */
       document
         .querySelectorAll('a[href^="#"]')
         .forEach(function (link) {
@@ -1346,9 +1633,15 @@
             'click',
             function (event) {
 
+              /*
+                获取目标栏目 ID。
+              */
               const targetId =
                 link.getAttribute('href');
 
+              /*
+                空链接不处理。
+              */
               if (
                 !targetId ||
                 targetId === '#'
@@ -1356,15 +1649,27 @@
                 return;
               }
 
+              /*
+                查找目标栏目。
+              */
               const targetElement =
                 document.querySelector(targetId);
 
+              /*
+                如果目标栏目不存在，则停止执行。
+              */
               if (!targetElement) {
                 return;
               }
 
+              /*
+                阻止浏览器默认的瞬间跳转。
+              */
               event.preventDefault();
 
+              /*
+                平滑滚动到目标栏目。
+              */
               targetElement.scrollIntoView({
                 behavior: 'smooth',
                 block: 'start'
@@ -1375,9 +1680,12 @@
         });
 
 
-      /**
-       * Reveal sections as they enter the viewport.
-       */
+      /*
+        页面滚动动画。
+
+        当栏目进入浏览器可见区域时，
+        为该栏目加入 visible 类。
+      */
       if ('IntersectionObserver' in window) {
 
         const observer =
@@ -1390,10 +1698,16 @@
 
                   if (entry.isIntersecting) {
 
+                    /*
+                      触发 CSS 显示动画。
+                    */
                     entry.target.classList.add(
                       'visible'
                     );
 
+                    /*
+                      动画触发后停止监听该栏目。
+                    */
                     observer.unobserve(
                       entry.target
                     );
@@ -1405,12 +1719,18 @@
             },
 
             {
+              /*
+                当栏目至少有 10% 进入可见区域时触发。
+              */
               threshold: 0.1
             }
 
           );
 
 
+        /*
+          监听所有 section 栏目。
+        */
         document
           .querySelectorAll('.section')
           .forEach(function (element) {
@@ -1421,6 +1741,10 @@
 
       } else {
 
+        /*
+          如果浏览器不支持 IntersectionObserver，
+          直接显示所有栏目。
+        */
         document
           .querySelectorAll('.section')
           .forEach(function (element) {

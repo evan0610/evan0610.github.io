@@ -3,31 +3,31 @@
 
 <head>
   <!-- =========================================================
-       基础页面设置
+       基础页面配置
        ========================================================= -->
 
-  <!-- 设置字符编码，避免中英文字符乱码 -->
+  <!-- 设置网页字符编码，避免中英文字符乱码 -->
   <meta charset="UTF-8">
 
   <!-- 提高旧版 Microsoft Edge 的兼容性 -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <!-- 适配手机、平板和桌面设备 -->
+  <!-- 让页面自动适配手机、平板和桌面设备 -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- 浏览器标签页显示的标题 -->
+  <!-- 浏览器标签页标题 -->
   <title>Tianchun Wu - Homepage</title>
 
   <!-- 搜索引擎页面描述 -->
   <meta
     name="description"
-    content="Tianchun Wu is an Electronic Engineering undergraduate in the ELITE Stream at The Chinese University of Hong Kong. His research focuses on medical robotics, robotic endoscopy, vision-language-action models, computer vision, and embodied intelligence."
+    content="Tianchun Wu is an Electronic Engineering undergraduate at The Chinese University of Hong Kong. His research focuses on vision-language-action learning, medical robotics, robotic endoscopy, multimodal robot learning, and embodied intelligence."
   >
 
   <!-- 搜索引擎关键词 -->
   <meta
     name="keywords"
-    content="Tianchun Wu, 武天淳, CUHK, Electronic Engineering, ELITE Stream, Medical Robotics, Vision-Language-Action, VLA, ColonVLA, Robotic Endoscopy, Computer Vision, Embodied Intelligence"
+    content="Tianchun Wu, 武天淳, CUHK, Electronic Engineering, Medical Robotics, Vision-Language-Action, VLA, Vision-Language Model, VLM, ColonVLA, EndoNav, Robotic Endoscopy, Embodied Intelligence"
   >
 
   <!-- 网页作者 -->
@@ -42,7 +42,7 @@
 
 
   <!-- =========================================================
-       外部字体与图标库
+       外部字体和图标库
        ========================================================= -->
 
   <!-- 提前连接 Google Fonts，提高字体加载速度 -->
@@ -55,7 +55,7 @@
     rel="stylesheet"
   >
 
-  <!-- Academicons：用于 Google Scholar 等学术平台图标 -->
+  <!-- 学术平台图标库，例如 Google Scholar -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css"
@@ -63,7 +63,7 @@
     crossorigin="anonymous"
   >
 
-  <!-- Font Awesome：用于 GitHub、LinkedIn、邮箱和主题按钮图标 -->
+  <!-- Font Awesome 通用图标库 -->
   <script
     src="https://kit.fontawesome.com/a860a211d3.js"
     crossorigin="anonymous"
@@ -74,7 +74,7 @@
        本地 CSS 文件
        ========================================================= -->
 
-  <!-- 本地字体样式 -->
+  <!-- 本地字体配置 -->
   <link
     rel="stylesheet"
     href="assets/css/font_sans_serif.css"
@@ -88,9 +88,8 @@
 
 
   <!-- =========================================================
-       少量页面专用样式
-       仅处理中文姓名和 Research Focus 列表
-       不修改原模板整体布局
+       页面专用附加样式
+       只补充原 CSS 中没有的元素，不改变整体模板结构
        ========================================================= -->
 
   <style>
@@ -107,7 +106,7 @@
     }
 
     /*
-      当前身份样式。
+      身份信息样式。
     */
     body.theme-evan .site-role {
       margin: 0 0 4px;
@@ -130,7 +129,7 @@
     }
 
     /*
-      地点信息样式。
+      地区信息样式。
     */
     body.theme-evan .site-location {
       margin: 0 0 14px;
@@ -141,7 +140,7 @@
     }
 
     /*
-      Research Focus 使用纵向排列。
+      Research Focus 采用纵向排列。
     */
     body.theme-evan .research-focus-list {
       display: flex;
@@ -158,20 +157,51 @@
     }
 
     /*
-      暂时未启用的链接显示为半透明。
+      暂时没有有效地址的链接显示为半透明。
     */
     body.theme-evan .social-icons a[data-empty-link="true"] {
       opacity: 0.4;
       cursor: default;
+    }
+
+    /*
+      项目副标题。
+    */
+    body.theme-evan .project-subtitle {
+      margin: 2px 0 10px;
+      color: var(--evan-secondary);
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+
+    /*
+      项目和科研经历中的技术要点列表。
+    */
+    body.theme-evan .achievement-list {
+      margin: 10px 0 18px;
+      padding-left: 21px;
+    }
+
+    body.theme-evan .achievement-list li {
+      margin-bottom: 7px;
+      line-height: 1.65;
+    }
+
+    /*
+      页面内跳转时，防止标题被顶部导航栏遮挡。
+    */
+    body.theme-evan .section {
+      scroll-margin-top: 86px;
     }
   </style>
 </head>
 
 
 <!--
-  必须使用 theme-evan。
+  必须保留 theme-evan。
 
-  theme-evan.css 中的样式选择器均以 body.theme-evan 开头。
+  theme-evan.css 中的大部分选择器都以 body.theme-evan 开头。
 -->
 <body class="theme-evan">
 
@@ -194,7 +224,7 @@
         <a href="#publications">Publications</a>
       </div>
 
-      <!-- 右侧深浅色切换按钮 -->
+      <!-- 右侧深浅色主题切换按钮 -->
       <div class="nav-right">
         <button
           id="themeToggle"
@@ -227,7 +257,7 @@
         <!--
           个人头像。
 
-          文件路径：
+          文件位置：
           assets/img/avatar.jpg
         -->
         <a
@@ -256,7 +286,7 @@
           Electronic Engineering Undergraduate
         </p>
 
-        <!-- 学校及课程项目 -->
+        <!-- 学校信息 -->
         <p class="site-affiliation">
           ELITE Stream · The Chinese University of Hong Kong
         </p>
@@ -310,9 +340,8 @@
           </a>
 
           <!--
-            Google Scholar 暂时没有链接。
-
-            创建 Scholar 主页后，把 href="" 改为实际网址。
+            Google Scholar 暂时没有公开主页。
+            创建后将 href 替换为真实链接。
           -->
           <a
             href=""
@@ -323,7 +352,7 @@
             <i class="ai ai-google-scholar"></i>
           </a>
 
-          <!-- 当前个人主页 -->
+          <!-- 个人主页 -->
           <a
             href="https://evan0610.github.io/"
             title="Homepage"
@@ -336,7 +365,7 @@
 
 
         <!-- ===================================================
-             研究方向卡片
+             Research Focus
              =================================================== -->
 
         <div class="visitor-card">
@@ -347,10 +376,10 @@
 
           <!-- 每个研究方向单独一行 -->
           <div class="visitor-card-body research-focus-list">
-            <span>Medical Robotics</span>
+            <span>Vision-Language-Action Models</span>
             <span>Robotic Endoscopy</span>
-            <span>Vision-Language-Action</span>
-            <span>Embodied Intelligence</span>
+            <span>Multimodal Robot Learning</span>
+            <span>Embodied AI Systems</span>
           </div>
 
         </div>
@@ -381,36 +410,41 @@
             I am <strong>Tianchun Wu</strong>, an Electronic Engineering
             undergraduate in the <strong>ELITE Stream</strong> at
             <strong>The Chinese University of Hong Kong</strong>.
+            My research focuses on vision-language-action learning,
+            medical robotics, robotic endoscopy, multimodal perception,
+            and embodied intelligence.
           </p>
 
           <p>
-            My research interests lie at the intersection of
-            <strong>medical robotics</strong>,
-            <strong>robotic endoscopy</strong>,
-            <strong>vision-language-action learning</strong>,
-            <strong>computer vision</strong>, and
-            <strong>embodied intelligence</strong>.
+            I develop and evaluate learning-based control systems for
+            robotic endoscopy. My work includes reproducing and evaluating
+            vision-language and vision-language-action baselines,
+            fine-tuning multimodal foundation models on domain-specific
+            endoscopic data, designing actuator-space action representations,
+            and integrating trained models with physical robotic platforms.
           </p>
 
           <p>
-            I am currently a Research Student Helper at the
-            Robotics, Perception and Artificial Intelligence Laboratory
-            at CUHK. My work involves multimodal robotic data collection,
-            robotic endoscope control, embedded motor systems,
-            electromagnetic tracking, visual perception,
-            and vision-language-action model development.
+            I build end-to-end research pipelines covering synchronized
+            video and robot-state acquisition, clinical phase and anatomy
+            annotation, YOLO-assisted data labeling, vision-language model
+            supervised fine-tuning, VLA policy training, offline evaluation,
+            and anatomical phantom experiments.
           </p>
 
           <p>
-            My current projects focus on autonomous colonoscopy withdrawal,
-            clinician-supervised endoscopic navigation,
-            multimodal action learning, and safety-aware robotic autonomy.
+            On the robotics side, I work with STM32, CAN communication,
+            ROS and ROS 2, six-motor endoscope control, electromagnetic
+            tracking, real-time Python interfaces, and multimodal robot-state
+            logging. My current work studies autonomous colonoscopy withdrawal,
+            clinician-supervised navigation, and robust action generation
+            under multimodal motor-space distributions.
           </p>
 
           <!--
             简历下载链接。
 
-            PDF 文件路径：
+            PDF 文件位置：
             assets/files/Evan_Wu_CV.pdf
           -->
           <p>
@@ -447,12 +481,6 @@
 
             <div class="experience-item">
 
-              <!--
-                香港中文大学 Logo。
-
-                文件路径：
-                assets/img/institution.jpg
-              -->
               <img
                 src="assets/img/institution.jpg"
                 alt="The Chinese University of Hong Kong"
@@ -492,12 +520,6 @@
 
             <div class="experience-item">
 
-              <!--
-                哈尔滨工业大学 Logo。
-
-                文件路径：
-                assets/img/HIT.jpg
-              -->
               <img
                 src="assets/img/HIT.jpg"
                 alt="Harbin Institute of Technology"
@@ -577,24 +599,47 @@
                 </p>
 
                 <p class="exp-detail">
-                  Developing vision-language-action systems for robotic
-                  endoscopy, with emphasis on autonomous colonoscopy
-                  withdrawal, supervised navigation, and multimodal
-                  action learning.
+                  Develop vision-language-action systems for robotic endoscopy,
+                  covering baseline reproduction, multimodal model fine-tuning,
+                  actuator-space action learning, offline evaluation,
+                  and deployment-oriented integration with a six-motor
+                  robotic endoscope.
                 </p>
 
                 <p class="exp-detail">
-                  Integrating endoscopic video, six-actuator motor states,
-                  clinical phase and anatomy annotations, and electromagnetic
-                  tracking into synchronized multimodal datasets.
+                  Develop pipelines to reproduce, train, and evaluate
+                  vision-language and vision-language-action baselines using
+                  endoscopic image sequences, language instructions,
+                  clinical phase labels, anatomy labels, motor commands,
+                  and robot-state histories.
                 </p>
 
                 <p class="exp-detail">
-                  Building research infrastructure using STM32,
-                  CAN communication, ROS and ROS 2,
-                  Python control interfaces, YOLO-assisted labeling,
-                  synchronized CSV and video acquisition,
-                  and robot-state logging.
+                  Compare direct action regression, single-expert policies,
+                  latent action-mode decomposition, and mixture-of-experts
+                  control for multimodal motor-space prediction.
+                </p>
+
+                <p class="exp-detail">
+                  Construct supervised fine-tuning and reinforcement
+                  fine-tuning pipelines for Qwen-based vision-language models,
+                  and adapt Qwen–GR00T-style architectures for continuous
+                  robotic action generation.
+                </p>
+
+                <p class="exp-detail">
+                  Build synchronized multimodal datasets containing endoscopic
+                  video, frame timestamps, six-actuator positions and currents,
+                  control commands, clinical phases, anatomical locations,
+                  task instructions, and electromagnetic tracker measurements.
+                </p>
+
+                <p class="exp-detail">
+                  Implement the physical system stack using STM32,
+                  CAN communication, ROS and ROS 2, Python control interfaces,
+                  YOLO-assisted annotation, real-time video acquisition,
+                  CSV logging, electromagnetic tracking, and anatomical
+                  phantom validation.
                 </p>
 
               </div>
@@ -618,83 +663,228 @@
 
         <div class="section-body">
 
-          <!-- ColonVLA 项目 -->
+          <!-- =================================================
+               ColonVLA
+               ================================================= -->
+
           <div class="card project-card">
 
             <p>
-              <strong>ColonVLA</strong>:
+              <strong>ColonVLA</strong>
+            </p>
+
+            <p class="project-subtitle">
+              Motor-Based Mixture-of-Experts VLA for Autonomous
+              Colonoscopy Withdrawal
+            </p>
+
+            <p>
               Developing a motor-based mixture-of-experts
               vision-language-action framework for autonomous colonoscopy
               withdrawal on a six-actuator robotic endoscope platform.
             </p>
 
-            <p>
-              The framework uses latent action-mode decomposition to model
-              inspection, tracking, sampling, recovery,
-              and anatomy-dependent withdrawal control.
-            </p>
+            <ul class="achievement-list">
 
-            <p>
-              Endoscopic video, motor states, clinical phase and anatomy
-              labels, and electromagnetic tracker measurements are integrated
-              into a synchronized multimodal learning pipeline.
-            </p>
+              <li>
+                Formulate colonoscopy withdrawal as an actuator-space
+                distribution decomposition problem rather than a generic
+                direct action-regression task.
+              </li>
+
+              <li>
+                Use latent action-mode decomposition to model inspection,
+                tracking, sampling, recovery, and anatomy-dependent
+                withdrawal control.
+              </li>
+
+              <li>
+                Compare latent-gated experts, single-action experts,
+                and GR00T-style continuous action baselines.
+              </li>
+
+              <li>
+                Integrate endoscopic video, motor states, clinical phase
+                and anatomy labels, and electromagnetic tracker measurements
+                into a synchronized multimodal training pipeline.
+              </li>
+
+              <li>
+                Use three-dimensional tracker coordinates to estimate
+                withdrawal velocity and support phantom-based validation.
+              </li>
+
+            </ul>
 
           </div>
 
 
-          <!-- EndoNav 项目 -->
+          <!-- =================================================
+               EndoNav
+               ================================================= -->
+
           <div class="card project-card">
 
             <p>
-              <strong>EndoNav</strong>:
-              Designed a clinician-supervised autonomous navigation workflow
-              for endoscopic intervention.
+              <strong>EndoNav</strong>
+            </p>
+
+            <p class="project-subtitle">
+              VLM-Guided Clinician-Supervised Autonomous Endoscopic Navigation
             </p>
 
             <p>
-              Human instructions interrupt autonomous control and assign
-              the operative instrument, while a binary verifier determines
-              whether autonomous execution should continue or terminate.
+              Engineering a clinician-supervised autonomous endoscopic
+              navigation system that integrates a vision-language model,
+              robot control policy, human-instruction interface,
+              binary safety verifier, and multi-instrument execution workflow.
             </p>
+
+            <ul class="achievement-list">
+
+              <li>
+                Process endoscopic observations, navigation history,
+                task instructions, and robot states to generate autonomous
+                control commands for forward navigation and target approach.
+              </li>
+
+              <li>
+                Reproduce and evaluate baseline vision-language models on
+                instruction understanding, endoscopic scene interpretation,
+                target recognition, and action-selection tasks.
+              </li>
+
+              <li>
+                Fine-tune domain-specific VLMs using anatomical phantom data,
+                language instructions, visual observations,
+                tool-selection labels, and control-state annotations.
+              </li>
+
+              <li>
+                Implement a control-state machine in which a human instruction
+                immediately interrupts autonomous navigation and simultaneously
+                specifies the instrument assigned to the operative channel.
+              </li>
+
+              <li>
+                Suspend navigation, update the active tool configuration,
+                and transfer execution to the intervention workflow after
+                receiving a clinician command.
+              </li>
+
+              <li>
+                Use a binary verifier that outputs
+                <strong>1</strong> for valid continuation and
+                <strong>0</strong> for termination.
+              </li>
+
+              <li>
+                Evaluate whether commanded motion produces sufficient
+                physical progress, whether the robot remains within the
+                permitted operating state, and whether autonomous control
+                should continue.
+              </li>
+
+              <li>
+                Log synchronized endoscopic video, motor commands,
+                actuator feedback, tool-selection signals,
+                human instructions, verifier outputs, and robot states
+                during anatomical phantom experiments.
+              </li>
+
+            </ul>
 
           </div>
 
 
-          <!-- EndoVLA-OOV / OpenHDS 项目 -->
+          <!-- =================================================
+               EndoVLA-OOV / OpenHDS
+               ================================================= -->
+
           <div class="card project-card">
 
             <p>
-              <strong>EndoVLA-OOV / OpenHDS</strong>:
+              <strong>EndoVLA-OOV / OpenHDS</strong>
+            </p>
+
+            <p class="project-subtitle">
+              Multimodal Data and Training Infrastructure for Robotic Endoscopy
+            </p>
+
+            <p>
               Collected and structured more than 3,000 endoscopic samples
               from anatomical phantoms for vision-language-action
-              model development.
+              model development and evaluation.
             </p>
 
-            <p>
-              Developed synchronized video, motor-state,
-              annotation, and robot-state acquisition workflows.
-            </p>
+            <ul class="achievement-list">
+
+              <li>
+                Developed synchronized acquisition pipelines for endoscopic
+                video, frame timestamps, motor commands, actuator feedback,
+                clinical labels, and robot-state histories.
+              </li>
+
+              <li>
+                Built YOLO-assisted annotation tools for visual targets,
+                anatomical locations, clinical phases, and task states.
+              </li>
+
+              <li>
+                Prepared domain-specific datasets for VLM supervised
+                fine-tuning and continuous-action VLA training.
+              </li>
+
+              <li>
+                Contributed to EndoVLA-OOV research conducted in
+                collaboration with NVIDIA.
+              </li>
+
+            </ul>
 
           </div>
 
 
-          <!-- 连续体机器人消防救援项目 -->
+          <!-- =================================================
+               连续体机器人消防救援
+               ================================================= -->
+
           <div class="card project-card">
 
             <p>
               <strong>
                 Exploring Continuum Robot Agents for Fire Rescuing in Buildings
-              </strong>:
-              Developed a continuum-robot agent concept for rescue assistance
-              in structurally constrained building-fire environments.
+              </strong>
+            </p>
+
+            <p class="project-subtitle">
+              Continuum Robotics and Agentic Autonomy
             </p>
 
             <p>
-              The project integrates robotic mobility,
-              environmental perception, and task-level autonomy
-              for navigation in constrained spaces.
+              Developed a continuum-robot agent concept for navigation
+              and rescue assistance in structurally constrained
+              building-fire environments.
             </p>
+
+            <ul class="achievement-list">
+
+              <li>
+                Combined continuum-robot mobility, environmental perception,
+                and task-level autonomy for operation in constrained spaces.
+              </li>
+
+              <li>
+                Designed an agent-oriented workflow for navigation,
+                scene interpretation, and rescue-task execution.
+              </li>
+
+              <li>
+                Received an award at the Hong Kong University Student
+                Innovation and Entrepreneurship Competition.
+              </li>
+
+            </ul>
 
           </div>
 
@@ -718,12 +908,6 @@
 
             <div class="experience-item">
 
-              <!--
-                TCL Logo。
-
-                文件路径：
-                assets/img/TCL.jpg
-              -->
               <img
                 src="assets/img/TCL.jpg"
                 alt="TCL Technology Corporation"
@@ -748,16 +932,25 @@
 
                 <p class="exp-detail">
                   Supported cross-functional smartphone development by
-                  preparing technical documentation,
-                  executing more than 20 functional tests across
-                  three prototypes, and reporting more than eight
+                  preparing technical documentation and coordinating
+                  prototype testing with engineering teams.
+                </p>
+
+                <p class="exp-detail">
+                  Executed more than 20 functional tests across three
+                  smartphone prototypes and reported more than eight
                   critical issues for engineering triage.
                 </p>
 
                 <p class="exp-detail">
-                  Improved defect traceability and review coordination,
-                  contributing to a 10-day acceleration of the
-                  flagship-model iteration cycle.
+                  Structured test results and defect records to improve
+                  traceability, review efficiency, and issue prioritization.
+                </p>
+
+                <p class="exp-detail">
+                  Contributed to a 10-day acceleration of the flagship-model
+                  iteration cycle through improved defect reporting
+                  and engineering coordination.
                 </p>
 
               </div>
@@ -781,17 +974,11 @@
 
         <div class="section-body">
 
-          <!-- Chung Chi International Association -->
+          <!-- CCIA -->
           <div class="card timeline-item">
 
             <div class="experience-item">
 
-              <!--
-                CCIA Logo。
-
-                文件路径：
-                assets/img/CCIA.jpg
-              -->
               <img
                 src="assets/img/CCIA.jpg"
                 alt="Chung Chi International Association"
@@ -815,10 +1002,18 @@
                 </p>
 
                 <p class="exp-detail">
-                  Lead a 15-member executive team,
-                  delivered more than 10 events for over 1,000 participants,
-                  secured two funding partners,
-                  and launched a mentorship programme for more than
+                  Lead a 15-member executive team and coordinate programme
+                  planning, budgeting, external communication,
+                  event operations, and internal task allocation.
+                </p>
+
+                <p class="exp-detail">
+                  Delivered more than 10 events serving over 1,000
+                  participants and secured two funding partners.
+                </p>
+
+                <p class="exp-detail">
+                  Launched a mentorship programme for more than
                   50 incoming international students.
                 </p>
 
@@ -828,7 +1023,7 @@
           </div>
 
 
-          <!-- RoboMaster 团队 -->
+          <!-- RoboMaster -->
           <div class="card timeline-item">
 
             <div class="experience-item">
@@ -856,9 +1051,16 @@
                 </p>
 
                 <p class="exp-detail">
-                  Develop computer-vision capabilities for robotic platforms,
-                  focusing on real-time object detection,
-                  target tracking, and deployment-oriented model optimization.
+                  Develop computer-vision modules for robotic platforms,
+                  including real-time object detection, target tracking,
+                  inference testing, and deployment-oriented
+                  model optimization.
+                </p>
+
+                <p class="exp-detail">
+                  Evaluate detection and tracking pipelines under
+                  real-time robotic constraints, including latency,
+                  frame consistency, occlusion, and target motion.
                 </p>
 
               </div>
@@ -899,7 +1101,7 @@
 
                 <p>
                   Award recipient for the continuum robot agent project
-                  for navigation and rescue assistance
+                  focused on autonomous navigation and rescue assistance
                   in constrained building-fire environments.
                 </p>
 
@@ -931,18 +1133,33 @@
             </p>
 
             <p>
-              <strong>Robotics & Embedded Systems:</strong>
-              STM32, CAN communication, ROS, ROS 2, Linux,
-              electromagnetic tracking, embedded-system design,
-              six-motor control, and robot-state acquisition
+              <strong>AI Model Training:</strong>
+              VLM supervised fine-tuning, VLA policy training,
+              baseline reproduction, offline evaluation,
+              multimodal dataset construction, Qwen-based models,
+              and GR00T-style action architectures
             </p>
 
             <p>
-              <strong>Computer Vision & Artificial Intelligence:</strong>
+              <strong>Computer Vision:</strong>
               YOLO, object detection, visual tracking,
-              vision-language-action models,
-              multimodal data pipelines,
-              and robotic perception
+              frame-consistent perception, model-assisted annotation,
+              and endoscopic image processing
+            </p>
+
+            <p>
+              <strong>Robotics & Embedded Systems:</strong>
+              STM32, CAN communication, ROS, ROS 2, Linux,
+              six-motor control, electromagnetic tracking,
+              embedded-system integration, and robot-state acquisition
+            </p>
+
+            <p>
+              <strong>Research Infrastructure:</strong>
+              Python control interfaces, synchronized CSV and video
+              acquisition, clinical phase and anatomy labeling,
+              endoscopic datasets, anatomical phantom experiments,
+              and multimodal robot logging
             </p>
 
             <p>
@@ -978,7 +1195,12 @@
 
                   <div class="pub-content">
 
-                    <!-- 暂时没有公开论文 -->
+                    <!--
+                      暂时没有公开论文。
+
+                      后续可以在此加入：
+                      标题、作者、期刊、论文链接、代码链接。
+                    -->
                     <div class="title">
                       Publications and manuscripts will be added
                       after they are publicly available.
@@ -1032,17 +1254,20 @@
     (function () {
 
       /*
-        获取主题切换按钮和按钮图标。
+        获取深浅色模式切换按钮。
       */
       const themeToggle =
         document.getElementById('themeToggle');
 
+      /*
+        获取按钮内部图标。
+      */
       const icon =
         themeToggle.querySelector('i');
 
 
       /**
-       * 设置深色或浅色主题。
+       * 设置页面主题。
        *
        * @param {boolean} isDark
        * true：深色模式
@@ -1051,7 +1276,7 @@
       function setTheme(isDark) {
 
         /*
-          在 html 根节点记录当前主题。
+          在 HTML 根节点保存主题状态。
         */
         document.documentElement.setAttribute(
           'data-theme',
@@ -1075,7 +1300,7 @@
         );
 
         /*
-          保存用户的主题选择。
+          将用户选择保存到浏览器。
         */
         localStorage.setItem(
           'theme',
@@ -1085,14 +1310,14 @@
 
 
       /*
-        读取浏览器中保存的主题。
+        读取用户之前保存的主题。
       */
       const savedTheme =
         localStorage.getItem('theme');
 
 
       /*
-        检测操作系统是否偏好深色模式。
+        检测操作系统主题偏好。
       */
       const prefersDark =
         window.matchMedia(
@@ -1129,7 +1354,7 @@
 
 
       /*
-        阻止暂时为空的链接跳转。
+        阻止暂时为空的社交链接跳转。
       */
       document
         .querySelectorAll('a[data-empty-link="true"]')
@@ -1146,7 +1371,7 @@
 
 
       /*
-        为所有页面内部导航链接启用平滑滚动。
+        为页面内部导航添加平滑滚动。
       */
       document
         .querySelectorAll('a[href^="#"]')
@@ -1187,8 +1412,8 @@
 
 
       /*
-        当栏目进入可见区域时添加 visible 类，
-        触发 theme-evan.css 中的进入动画。
+        页面栏目进入可见区域时，
+        添加 visible 类并触发 CSS 动画。
       */
       if ('IntersectionObserver' in window) {
 
@@ -1224,7 +1449,7 @@
 
 
         /*
-          监听所有 section 栏目。
+          监听所有 section。
         */
         document
           .querySelectorAll('.section')

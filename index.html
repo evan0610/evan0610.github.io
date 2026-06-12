@@ -1,18 +1,17 @@
 ```html
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
 
-  <!-- Improve compatibility with older Microsoft browsers -->
+  <!-- Improve compatibility with older versions of Microsoft Edge -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <!-- Responsive layout for phones, tablets, and desktops -->
+  <!-- Make the page responsive on mobile devices -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Browser tab title -->
-  <title>Evan Wu - Homepage</title>
+  <title>Evan Wu | Electronic Engineering & Medical Robotics</title>
 
   <!-- Search engine description -->
   <meta
@@ -29,19 +28,10 @@
   <!-- Website author -->
   <meta name="author" content="Evan Wu">
 
-  <!--
-    Browser tab icon.
+  <!-- Website icon -->
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 
-    Put the file at:
-    assets/img/favicon.jpg
-  -->
-  <link
-    rel="icon"
-    href="assets/img/favicon.jpg"
-    type="image/jpeg"
-  >
-
-  <!-- Improve Google Fonts loading performance -->
+  <!-- Google Fonts connection optimization -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -51,7 +41,7 @@
     rel="stylesheet"
   >
 
-  <!-- Academic icons, such as Google Scholar -->
+  <!-- Academic icons -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css"
@@ -65,188 +55,37 @@
     crossorigin="anonymous"
   ></script>
 
-  <!-- Local font stylesheet -->
-  <link
-    rel="stylesheet"
-    href="assets/css/font_sans_serif.css"
-  >
+  <!-- Local font configuration -->
+  <link rel="stylesheet" href="assets/css/font_sans_serif.css">
 
-  <!-- Main Luka theme stylesheet -->
-  <link
-    rel="stylesheet"
-    href="assets/css/theme-luka.css"
-  >
-
-  <!-- Additional local page styles -->
-  <style>
-    /*
-      Enable smooth scrolling when navigation links are clicked.
-    */
-    html {
-      scroll-behavior: smooth;
-    }
-
-    /*
-      Prevent anchored sections from being hidden under the fixed navigation bar.
-    */
-    .section {
-      scroll-margin-top: 90px;
-    }
-
-    /*
-      Profile avatar container.
-    */
-    .profile-card .avatar {
-      display: block;
-      width: 180px;
-      height: 180px;
-      margin: 0 auto 20px;
-      overflow: hidden;
-      border-radius: 50%;
-      text-decoration: none;
-    }
-
-    /*
-      Profile avatar JPG image.
-
-      object-fit: cover keeps the photo proportional.
-      object-position: center keeps the central area visible.
-    */
-    .profile-card .avatar img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-      border-radius: 50%;
-    }
-
-    /*
-      Academic role under the user name.
-    */
-    .site-role {
-      margin: 6px 0 4px;
-      font-size: 0.95rem;
-      font-weight: 500;
-      line-height: 1.5;
-      text-align: center;
-    }
-
-    /*
-      University affiliation under the academic role.
-    */
-    .site-affiliation {
-      margin: 0 0 8px;
-      font-size: 0.9rem;
-      line-height: 1.5;
-      text-align: center;
-      opacity: 0.8;
-    }
-
-    /*
-      Empty section placeholder.
-
-      This makes unfinished content visible without inserting false information.
-    */
-    .empty-placeholder {
-      margin: 0;
-      font-size: 0.95rem;
-      font-style: italic;
-      line-height: 1.6;
-      opacity: 0.65;
-    }
-
-    /*
-      Add spacing between top navigation links.
-    */
-    .nav-left {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 18px;
-    }
-
-    /*
-      Shared institution logo display.
-
-      All education and experience logos use:
-      assets/img/institution.jpg
-    */
-    .institution-logo {
-      width: 64px;
-      height: 64px;
-      flex-shrink: 0;
-      object-fit: cover;
-      object-position: center;
-      border-radius: 10px;
-    }
-
-    /*
-      Prevent empty social links from navigating away from the page.
-    */
-    .social-icons a[data-empty-link="true"] {
-      opacity: 0.45;
-      cursor: default;
-    }
-
-    /*
-      Improve empty project, publication, and award placeholders.
-    */
-    .placeholder-card {
-      min-height: 72px;
-      display: flex;
-      align-items: center;
-    }
-
-    /*
-      Responsive adjustments for smaller devices.
-    */
-    @media screen and (max-width: 768px) {
-      .nav-left {
-        gap: 10px;
-      }
-
-      .profile-card .avatar {
-        width: 150px;
-        height: 150px;
-      }
-
-      .institution-logo {
-        width: 54px;
-        height: 54px;
-      }
-    }
-  </style>
+  <!-- Main theme stylesheet -->
+  <link rel="stylesheet" href="assets/css/theme-luka.css">
 </head>
-
 
 <body class="theme-luka">
 
   <!-- =========================================================
        TOP NAVIGATION BAR
        ========================================================= -->
-
   <nav class="top-nav">
     <div class="nav-container">
 
-      <!-- Navigation links to page sections -->
+      <!-- Left-side navigation links -->
       <div class="nav-left">
         <a href="#about">About</a>
         <a href="#education">Education</a>
         <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#publications">Publications</a>
-        <a href="#awards">Awards</a>
+        <a href="#research">Research</a>
+        <a href="#leadership">Leadership</a>
       </div>
 
-      <!-- Dark/light theme toggle button -->
+      <!-- Right-side theme button -->
       <div class="nav-right">
         <button
           id="themeToggle"
           class="theme-toggle"
           title="Toggle theme"
           aria-label="Toggle between light and dark themes"
-          type="button"
         >
           <i class="fa-solid fa-moon"></i>
         </button>
@@ -259,44 +98,38 @@
   <!-- =========================================================
        MAIN PAGE WRAPPER
        ========================================================= -->
-
   <div class="wrapper">
 
     <!-- =======================================================
          LEFT PROFILE SIDEBAR
          ======================================================= -->
-
     <header class="sidebar">
       <div class="profile-card">
 
         <!--
-          Profile photo.
+          Replace assets/img/avatar.svg with your own photograph.
 
-          Put your JPG image at:
-          assets/img/avatar.jpg
+          Recommended image:
+          - Square image
+          - At least 600 × 600 pixels
+          - JPG, PNG, WebP, or SVG
         -->
-        <a
-          class="image avatar"
-          href="#about"
-          aria-label="Go to the About section"
-        >
+        <a class="image avatar" href="#about" aria-label="Go to About section">
           <img
-            src="assets/img/avatar.jpg"
+            src="assets/img/avatar.svg"
             alt="Portrait of Evan Wu"
-            loading="eager"
-            decoding="async"
           >
         </a>
 
         <!-- Personal name -->
         <h1 class="site-name">Evan Wu</h1>
 
-        <!-- Current academic role -->
+        <!-- Current academic identity -->
         <p class="site-role">
           Electronic Engineering Student
         </p>
 
-        <!-- Current university affiliation -->
+        <!-- University -->
         <p class="site-affiliation">
           The Chinese University of Hong Kong
         </p>
@@ -306,34 +139,16 @@
           tianchunwu10@gmail.com
         </p>
 
-
-        <!-- ===================================================
-             SOCIAL LINKS
-             =================================================== -->
-
+        <!-- Social and contact links -->
         <div class="social-icons">
 
           <!-- Email -->
           <a
             href="mailto:tianchunwu10@gmail.com"
-            title="Email"
-            aria-label="Send an email to Evan Wu"
+            title="Email Evan Wu"
+            aria-label="Email Evan Wu"
           >
             <i class="fa-solid fa-envelope"></i>
-          </a>
-
-          <!--
-            Google Scholar.
-
-            Leave empty until your profile is available.
-          -->
-          <a
-            href=""
-            title="Google Scholar"
-            aria-label="Google Scholar profile"
-            data-empty-link="true"
-          >
-            <i class="ai ai-google-scholar"></i>
           </a>
 
           <!-- GitHub -->
@@ -347,20 +162,6 @@
             <i class="fa-brands fa-github"></i>
           </a>
 
-          <!--
-            LinkedIn.
-
-            Leave empty until your profile is available.
-          -->
-          <a
-            href=""
-            title="LinkedIn"
-            aria-label="LinkedIn profile"
-            data-empty-link="true"
-          >
-            <i class="fa-brands fa-linkedin"></i>
-          </a>
-
           <!-- Personal homepage -->
           <a
             href="https://evan0610.github.io/"
@@ -372,42 +173,18 @@
             <i class="fa-solid fa-globe"></i>
           </a>
 
-          <!--
-            Blog.
-
-            Leave empty until your blog is available.
-          -->
-          <a
-            href=""
-            title="Blog"
-            aria-label="Personal blog"
-            data-empty-link="true"
-          >
-            <i class="fa-solid fa-rss"></i>
-          </a>
-
         </div>
 
 
-        <!-- ===================================================
-             VISITOR MAP
-             =================================================== -->
-
+        <!-- Research status card -->
         <div class="visitor-card">
-
           <div class="visitor-card-title">
-            Visitor Map
+            Current Focus
           </div>
 
           <div class="visitor-card-body">
-
-            <!--
-              Paste your ClustrMaps or analytics widget here later.
-            -->
-            <p class="empty-placeholder">
-              Visitor map will be added later.
-            </p>
-
+            Medical robotics, vision-language-action models,
+            robotic endoscopy, and embodied intelligence.
           </div>
         </div>
 
@@ -418,56 +195,50 @@
     <!-- =======================================================
          MAIN CONTENT
          ======================================================= -->
-
     <main class="content">
 
       <!-- =====================================================
-           ABOUT ME
+           ABOUT
            ===================================================== -->
-
       <section class="section" id="about">
-
-        <h2 class="section-title">
-          About Me
-        </h2>
+        <h2 class="section-title">About Me</h2>
 
         <div class="section-body">
-
           <p>
-            Hello! I am <strong>Evan Wu</strong>, an undergraduate student
+            Hello, I am <strong>Evan Wu</strong>, an undergraduate student
             studying Electronic Engineering at
             <strong>The Chinese University of Hong Kong</strong>.
           </p>
 
           <p>
-            My research interests include
+            My research interests lie at the intersection of
             <strong>medical robotics</strong>,
             <strong>vision-language-action models</strong>,
-            <strong>robot perception</strong>,
-            <strong>robotic endoscopy</strong>, and
+            <strong>robot perception</strong>, and
             <strong>embodied intelligence</strong>.
+            I am particularly interested in developing intelligent robotic
+            systems for endoscopic navigation, autonomous withdrawal,
+            target tracking, and clinician-supervised intervention.
           </p>
 
           <p>
-            I am currently involved in medical robotics research at CUHK.
-            My work covers multimodal robotic data collection,
-            embedded motor control, endoscopic robot integration,
-            visual tracking, electromagnetic tracking,
-            and vision-language-action model development.
+            I am currently involved in medical robotics research at CUHK,
+            where I work on multimodal data collection, robotic endoscope
+            control, visual perception, embedded motor systems, and the
+            training of vision-language-action models for clinical workflows.
           </p>
 
           <p>
-            I am particularly interested in intelligent robotic systems for
-            endoscopic navigation, autonomous colonoscopy withdrawal,
-            target tracking, multimodal perception,
-            and clinician-supervised medical intervention.
+            My long-term research goal is to study how multimodal foundation
+            models and embodied intelligence can improve the autonomy,
+            reliability, and clinical usability of medical robots.
           </p>
 
           <!--
-            CV download.
-
-            Put the PDF file at:
+            Place your CV file at:
             assets/files/Evan_Wu_CV.pdf
+
+            Then this link will work automatically.
           -->
           <p>
             <strong>
@@ -476,11 +247,11 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
+                <i class="fa-solid fa-file-pdf"></i>
                 Download My CV
               </a>
             </strong>
           </p>
-
         </div>
       </section>
 
@@ -488,39 +259,30 @@
       <!-- =====================================================
            EDUCATION
            ===================================================== -->
-
       <section class="section" id="education">
-
-        <h2 class="section-title">
-          Education
-        </h2>
+        <h2 class="section-title">Education</h2>
 
         <div class="section-body">
-
           <div class="card">
 
             <div class="experience-item">
 
               <!--
-                Institution logo.
+                You can later replace institution.svg with a CUHK logo.
 
-                Put the JPG file at:
-                assets/img/institution.jpg
+                Example:
+                assets/img/cuhk-logo.svg
               -->
               <img
-                src="assets/img/institution.jpg"
-                alt="The Chinese University of Hong Kong"
+                src="assets/img/institution.svg"
+                alt="The Chinese University of Hong Kong logo"
                 class="institution-logo"
-                loading="lazy"
-                decoding="async"
               >
 
               <div class="experience-content">
 
                 <p class="exp-title">
-                  <strong>
-                    The Chinese University of Hong Kong
-                  </strong>
+                  <strong>The Chinese University of Hong Kong</strong>
                 </p>
 
                 <p class="exp-detail">
@@ -532,41 +294,32 @@
                 </p>
 
                 <p class="exp-period">
-                  2024 - Present
+                  2024 – Present
                 </p>
 
               </div>
             </div>
 
           </div>
-
         </div>
       </section>
 
 
       <!-- =====================================================
-           EXPERIENCE
+           RESEARCH EXPERIENCE
            ===================================================== -->
-
       <section class="section" id="experience">
-
-        <h2 class="section-title">
-          Experience
-        </h2>
+        <h2 class="section-title">Research Experience</h2>
 
         <div class="section-body">
 
-          <!-- Current research experience -->
           <div class="card timeline-item">
-
             <div class="experience-item">
 
               <img
-                src="assets/img/institution.jpg"
-                alt="The Chinese University of Hong Kong"
+                src="assets/img/institution.svg"
+                alt="CUHK research laboratory logo"
                 class="institution-logo"
-                loading="lazy"
-                decoding="async"
               >
 
               <div class="experience-content">
@@ -593,53 +346,18 @@
                 </p>
 
                 <p class="exp-period">
-                  December 2025 - Present
+                  December 2025 – Present
                 </p>
 
-                <p class="exp-detail">
-                  Working on robotic endoscopy, vision-language-action
-                  learning, multimodal data collection, motor control,
-                  visual tracking, and medical robot system integration.
-                </p>
-
-              </div>
-            </div>
-
-          </div>
-
-
-          <!-- Empty future experience -->
-          <div class="card timeline-item placeholder-card">
-
-            <div class="experience-item">
-
-              <img
-                src="assets/img/institution.jpg"
-                alt="Institution placeholder"
-                class="institution-logo"
-                loading="lazy"
-                decoding="async"
-              >
-
-              <div class="experience-content">
-
-                <p class="exp-title">
-                  <strong></strong>
-                </p>
-
-                <p class="exp-detail"></p>
-
-                <p class="exp-detail"></p>
-
-                <p class="exp-period"></p>
-
-                <p class="empty-placeholder">
-                  Additional experience will be added later.
+                <p class="exp-description">
+                  Conducting research on robotic endoscopy,
+                  vision-language-action learning, multimodal data collection,
+                  embedded motor control, visual tracking, and
+                  clinician-supervised autonomous robotic workflows.
                 </p>
 
               </div>
             </div>
-
           </div>
 
         </div>
@@ -647,134 +365,218 @@
 
 
       <!-- =====================================================
-           PROJECTS
+           RESEARCH INTERESTS
            ===================================================== -->
-
-      <section class="section" id="projects">
-
-        <h2 class="section-title">
-          Projects
-        </h2>
+      <section class="section" id="research">
+        <h2 class="section-title">Research Interests</h2>
 
         <div class="section-body">
-
-          <!--
-            Empty project placeholder.
-
-            Replace this block later with:
-            project title, GitHub link, description, image, and status.
-          -->
-          <div class="card project-card placeholder-card">
-
-            <div>
-              <a href=""></a>
-
-              <p class="empty-placeholder">
-                Projects will be added later.
-              </p>
-            </div>
-
-          </div>
-
-        </div>
-      </section>
-
-
-      <!-- =====================================================
-           PUBLICATIONS
-           ===================================================== -->
-
-      <section class="section" id="publications">
-
-        <h2 class="section-title">
-          Publications
-        </h2>
-
-        <div class="section-body">
-
-          <div class="publications">
-
-            <ol class="bibliography">
-
-              <!-- Empty future publication -->
-              <li>
-
-                <div class="pub-row">
-
-                  <div class="pub-content">
-
-                    <div class="title"></div>
-
-                    <div class="author"></div>
-
-                    <div class="periodical"></div>
-
-                    <div class="links"></div>
-
-                    <p class="empty-placeholder">
-                      Publications will be added later.
-                    </p>
-
-                  </div>
-                </div>
-
-              </li>
-
-            </ol>
-
-          </div>
-        </div>
-      </section>
-
-
-      <!-- =====================================================
-           AWARDS
-           ===================================================== -->
-
-      <section class="section" id="awards">
-
-        <h2 class="section-title">
-          Awards
-        </h2>
-
-        <div class="section-body">
-
           <div class="awards-grid">
 
-            <!-- Empty award placeholder -->
             <div class="award-item">
-
               <span class="award-icon">
-                🏅
+                <i class="fa-solid fa-robot"></i>
               </span>
 
               <div class="award-text">
-
-                <strong></strong>
-
-                <p class="empty-placeholder">
-                  Award information will be added later.
+                <strong>Medical Robotics</strong>
+                <p>
+                  Intelligent robotic systems for endoscopy,
+                  diagnosis, intervention, and clinical assistance.
                 </p>
-
               </div>
             </div>
 
 
-            <!-- Empty competition or scholarship placeholder -->
             <div class="award-item">
-
               <span class="award-icon">
-                🥇
+                <i class="fa-solid fa-brain"></i>
               </span>
 
               <div class="award-text">
+                <strong>Vision-Language-Action Models</strong>
+                <p>
+                  Multimodal foundation models for perception,
+                  reasoning, and robotic action generation.
+                </p>
+              </div>
+            </div>
 
-                <strong></strong>
 
-                <p class="empty-placeholder">
-                  Competition, scholarship, or honor will be added later.
+            <div class="award-item">
+              <span class="award-icon">
+                <i class="fa-solid fa-eye"></i>
+              </span>
+
+              <div class="award-text">
+                <strong>Robot Perception</strong>
+                <p>
+                  Frame-consistent tracking, target recognition,
+                  occlusion handling, and multimodal sensor fusion.
+                </p>
+              </div>
+            </div>
+
+
+            <div class="award-item">
+              <span class="award-icon">
+                <i class="fa-solid fa-microchip"></i>
+              </span>
+
+              <div class="award-text">
+                <strong>Embedded Robotic Systems</strong>
+                <p>
+                  STM32-based motor control, CAN communication,
+                  sensor acquisition, and real-time system integration.
+                </p>
+              </div>
+            </div>
+
+
+            <div class="award-item">
+              <span class="award-icon">
+                <i class="fa-solid fa-stethoscope"></i>
+              </span>
+
+              <div class="award-text">
+                <strong>Robotic Endoscopy</strong>
+                <p>
+                  Autonomous navigation, colonoscopy withdrawal,
+                  visual inspection, and clinician supervision.
+                </p>
+              </div>
+            </div>
+
+
+            <div class="award-item">
+              <span class="award-icon">
+                <i class="fa-solid fa-cubes"></i>
+              </span>
+
+              <div class="award-text">
+                <strong>Embodied Intelligence</strong>
+                <p>
+                  Learning-based control and multimodal reasoning
+                  for robots operating in complex environments.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+
+      <!-- =====================================================
+           TECHNICAL SKILLS
+           ===================================================== -->
+      <section class="section" id="skills">
+        <h2 class="section-title">Technical Skills</h2>
+
+        <div class="section-body">
+
+          <div class="card">
+            <p>
+              <strong>Programming:</strong>
+              Python, C, C++, MATLAB
+            </p>
+
+            <p>
+              <strong>Machine Learning:</strong>
+              PyTorch, YOLO, DINOv2, GRU, LSTM,
+              vision-language models, vision-language-action models
+            </p>
+
+            <p>
+              <strong>Robotics:</strong>
+              ROS, robotic perception, motor control,
+              endoscope robot integration, electromagnetic tracking
+            </p>
+
+            <p>
+              <strong>Embedded Systems:</strong>
+              STM32, Keil MDK, HAL drivers, CAN, UART, SPI, timers
+            </p>
+
+            <p>
+              <strong>Development Tools:</strong>
+              Git, GitHub, Linux, Windows, Flask, OpenCV
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- =====================================================
+           LEADERSHIP
+           ===================================================== -->
+      <section class="section" id="leadership">
+        <h2 class="section-title">Leadership & Activities</h2>
+
+        <div class="section-body">
+          <div class="awards-grid">
+
+            <div class="award-item">
+              <span class="award-icon">
+                <i class="fa-solid fa-users"></i>
+              </span>
+
+              <div class="award-text">
+                <strong>
+                  President, Chung Chi International Association
+                </strong>
+
+                <p>
+                  The Chinese University of Hong Kong
                 </p>
 
+                <p class="exp-period">
+                  2025 – 2026
+                </p>
+              </div>
+            </div>
+
+
+            <div class="award-item">
+              <span class="award-icon">
+                <i class="fa-solid fa-scale-balanced"></i>
+              </span>
+
+              <div class="award-text">
+                <strong>
+                  Member, 15th Supervisory Committee
+                </strong>
+
+                <p>
+                  Mainland Undergraduate Association,
+                  The Chinese University of Hong Kong
+                </p>
+
+                <p class="exp-period">
+                  2025 – 2026
+                </p>
+              </div>
+            </div>
+
+
+            <div class="award-item">
+              <span class="award-icon">
+                <i class="fa-solid fa-user-group"></i>
+              </span>
+
+              <div class="award-text">
+                <strong>
+                  Chung Chi College Mentor Programme
+                </strong>
+
+                <p>
+                  Non-local Student Mentee
+                </p>
+
+                <p class="exp-period">
+                  2024 – 2026
+                </p>
               </div>
             </div>
 
@@ -788,16 +590,12 @@
     <!-- =======================================================
          FOOTER
          ======================================================= -->
-
     <footer class="site-footer">
-
       <p>
         &copy; 2026 Evan Wu. All rights reserved.
-
         <br>
 
         <span class="template-credit">
-
           <a
             href="https://github.com/wzsyyh/luka-homepage-template"
             target="_blank"
@@ -815,10 +613,8 @@
           >
             Yuheng Yang
           </a>
-
         </span>
       </p>
-
     </footer>
 
   </div>
@@ -829,58 +625,40 @@
 
 
   <!-- =========================================================
-       WEBSITE INTERACTION SCRIPT
+       PAGE INTERACTION SCRIPT
        ========================================================= -->
-
   <script>
     (function () {
 
-      /*
-        Get the theme toggle button and its icon.
-      */
-      const themeToggle =
-        document.getElementById('themeToggle');
+      // Obtain the theme toggle button.
+      const themeToggle = document.getElementById('themeToggle');
 
-      const icon =
-        themeToggle.querySelector('i');
+      // Obtain the icon inside the theme toggle button.
+      const icon = themeToggle.querySelector('i');
 
 
       /**
-       * Apply the selected page theme.
+       * Apply the requested page theme.
        *
        * @param {boolean} isDark
-       * true  = dark mode
-       * false = light mode
+       * True enables dark mode.
+       * False enables light mode.
        */
       function setTheme(isDark) {
 
-        /*
-          Store the current theme on the root HTML element.
-        */
+        // Store the current theme on the root HTML element.
         document.documentElement.setAttribute(
           'data-theme',
           isDark ? 'dark' : 'light'
         );
 
-        /*
-          Display a sun icon in dark mode.
-        */
-        icon.classList.toggle(
-          'fa-sun',
-          isDark
-        );
+        // Show the sun icon while dark mode is active.
+        icon.classList.toggle('fa-sun', isDark);
 
-        /*
-          Display a moon icon in light mode.
-        */
-        icon.classList.toggle(
-          'fa-moon',
-          !isDark
-        );
+        // Show the moon icon while light mode is active.
+        icon.classList.toggle('fa-moon', !isDark);
 
-        /*
-          Save the theme selection in the browser.
-        */
+        // Save the selected theme in the browser.
         localStorage.setItem(
           'theme',
           isDark ? 'dark' : 'light'
@@ -888,27 +666,16 @@
       }
 
 
-      /*
-        Read the previously selected theme.
-      */
-      const savedTheme =
-        localStorage.getItem('theme');
+      // Read the visitor's previously selected theme.
+      const savedTheme = localStorage.getItem('theme');
 
+      // Detect whether the visitor's operating system uses dark mode.
+      const prefersDark = window.matchMedia(
+        '(prefers-color-scheme: dark)'
+      ).matches;
 
-      /*
-        Detect the operating system theme preference.
-      */
-      const prefersDark =
-        window.matchMedia(
-          '(prefers-color-scheme: dark)'
-        ).matches;
-
-
-      /*
-        Use the saved theme when available.
-
-        Otherwise, follow the operating system preference.
-      */
+      // Use the saved preference when available.
+      // Otherwise, follow the operating system preference.
       setTheme(
         savedTheme
           ? savedTheme === 'dark'
@@ -916,137 +683,91 @@
       );
 
 
-      /*
-        Change theme when the toggle button is clicked.
-      */
-      themeToggle.addEventListener(
-        'click',
-        function () {
+      // Switch between light and dark mode when the button is clicked.
+      themeToggle.addEventListener('click', function () {
 
-          const isDark =
-            document.documentElement.getAttribute(
-              'data-theme'
-            ) === 'dark';
+        // Check whether dark mode is currently active.
+        const isDark =
+          document.documentElement.getAttribute('data-theme') === 'dark';
 
-          setTheme(!isDark);
-        }
-      );
+        // Apply the opposite theme.
+        setTheme(!isDark);
+      });
 
 
-      /*
-        Prevent unfinished social links from refreshing the page.
-      */
-      document
-        .querySelectorAll('a[data-empty-link="true"]')
-        .forEach(function (link) {
+      /**
+       * Add smooth scrolling for internal navigation links.
+       */
+      document.querySelectorAll('a[href^="#"]').forEach(function (link) {
 
-          link.addEventListener(
-            'click',
-            function (event) {
-              event.preventDefault();
-            }
-          );
+        link.addEventListener('click', function (event) {
 
+          // Read the target section ID.
+          const targetId = link.getAttribute('href');
+
+          // Ignore empty fragment links.
+          if (!targetId || targetId === '#') {
+            return;
+          }
+
+          // Find the corresponding section.
+          const targetElement = document.querySelector(targetId);
+
+          // Stop if the target does not exist.
+          if (!targetElement) {
+            return;
+          }
+
+          // Prevent the browser's default immediate jump.
+          event.preventDefault();
+
+          // Smoothly scroll to the target section.
+          targetElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
         });
+      });
 
 
-      /*
-        Add smooth scrolling for internal page links.
-      */
-      document
-        .querySelectorAll('a[href^="#"]')
-        .forEach(function (link) {
-
-          link.addEventListener(
-            'click',
-            function (event) {
-
-              const targetId =
-                link.getAttribute('href');
-
-              if (
-                !targetId ||
-                targetId === '#'
-              ) {
-                return;
-              }
-
-              const targetElement =
-                document.querySelector(targetId);
-
-              if (!targetElement) {
-                return;
-              }
-
-              event.preventDefault();
-
-              targetElement.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-              });
-            }
-          );
-
-        });
-
-
-      /*
-        Reveal sections when they enter the viewport.
-      */
+      /**
+       * Reveal sections when they enter the viewport.
+       */
       if ('IntersectionObserver' in window) {
 
-        const observer =
-          new IntersectionObserver(
+        // Create an observer for page sections.
+        const observer = new IntersectionObserver(
+          function (entries) {
 
-            function (entries) {
+            entries.forEach(function (entry) {
 
-              entries.forEach(
-                function (entry) {
+              // Reveal a section once it becomes visible.
+              if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
 
-                  if (entry.isIntersecting) {
+                // Stop observing after the animation has occurred.
+                observer.unobserve(entry.target);
+              }
+            });
 
-                    entry.target.classList.add(
-                      'visible'
-                    );
+          },
+          {
+            // Trigger when at least 10% of the section is visible.
+            threshold: 0.1
+          }
+        );
 
-                    observer.unobserve(
-                      entry.target
-                    );
-                  }
-
-                }
-              );
-
-            },
-
-            {
-              threshold: 0.1
-            }
-
-          );
-
-
-        document
-          .querySelectorAll('.section')
-          .forEach(function (element) {
-
-            observer.observe(element);
-
-          });
+        // Observe every main content section.
+        document.querySelectorAll('.section').forEach(function (element) {
+          observer.observe(element);
+        });
 
       } else {
 
-        /*
-          Fallback for older browsers.
-        */
-        document
-          .querySelectorAll('.section')
-          .forEach(function (element) {
-
-            element.classList.add('visible');
-
-          });
-
+        // Fallback for browsers without IntersectionObserver support.
+        document.querySelectorAll('.section').forEach(function (element) {
+          element.classList.add('visible');
+        });
       }
 
     })();

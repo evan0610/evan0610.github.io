@@ -3,35 +3,35 @@
 
 <head>
   <!-- =========================================================
-       基础页面配置
+       基础页面设置
        ========================================================= -->
 
-  <!-- 设置网页字符编码，避免中文和特殊字符乱码 -->
+  <!-- 设置字符编码，避免中英文字符乱码 -->
   <meta charset="UTF-8">
 
   <!-- 提高旧版 Microsoft Edge 的兼容性 -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <!-- 让网页适配手机、平板和桌面设备 -->
+  <!-- 适配手机、平板和桌面设备 -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- 浏览器标签页标题 -->
-  <title>Evan Wu | Medical Robotics & Vision-Language-Action</title>
+  <!-- 浏览器标签页显示的标题 -->
+  <title>Tianchun Wu - Homepage</title>
 
-  <!-- 搜索引擎页面简介 -->
+  <!-- 搜索引擎页面描述 -->
   <meta
     name="description"
-    content="Evan Wu is an Electronic Engineering undergraduate in the ELITE Stream at The Chinese University of Hong Kong. His research focuses on medical robotics, robotic endoscopy, vision-language-action models, computer vision, and embodied intelligence."
+    content="Tianchun Wu is an Electronic Engineering undergraduate in the ELITE Stream at The Chinese University of Hong Kong. His research focuses on medical robotics, robotic endoscopy, vision-language-action models, computer vision, and embodied intelligence."
   >
 
   <!-- 搜索引擎关键词 -->
   <meta
     name="keywords"
-    content="Evan Wu, Tianchun Wu, 武天淳, CUHK, Electronic Engineering, ELITE Stream, Medical Robotics, Vision-Language-Action, VLA, ColonVLA, Robotic Endoscopy, Computer Vision, Embodied Intelligence"
+    content="Tianchun Wu, 武天淳, CUHK, Electronic Engineering, ELITE Stream, Medical Robotics, Vision-Language-Action, VLA, ColonVLA, Robotic Endoscopy, Computer Vision, Embodied Intelligence"
   >
 
   <!-- 网页作者 -->
-  <meta name="author" content="Evan Wu">
+  <meta name="author" content="Tianchun Wu">
 
   <!-- 浏览器标签页图标 -->
   <link
@@ -42,7 +42,7 @@
 
 
   <!-- =========================================================
-       外部字体和图标
+       外部字体与图标库
        ========================================================= -->
 
   <!-- 提前连接 Google Fonts，提高字体加载速度 -->
@@ -55,7 +55,7 @@
     rel="stylesheet"
   >
 
-  <!-- 学术平台图标库，例如 Google Scholar -->
+  <!-- Academicons：用于 Google Scholar 等学术平台图标 -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css"
@@ -63,7 +63,7 @@
     crossorigin="anonymous"
   >
 
-  <!-- 通用图标库，例如 GitHub、LinkedIn、邮箱和深色模式图标 -->
+  <!-- Font Awesome：用于 GitHub、LinkedIn、邮箱和主题按钮图标 -->
   <script
     src="https://kit.fontawesome.com/a860a211d3.js"
     crossorigin="anonymous"
@@ -71,10 +71,10 @@
 
 
   <!-- =========================================================
-       本地样式文件
+       本地 CSS 文件
        ========================================================= -->
 
-  <!-- 本地字体配置 -->
+  <!-- 本地字体样式 -->
   <link
     rel="stylesheet"
     href="assets/css/font_sans_serif.css"
@@ -85,14 +85,93 @@
     rel="stylesheet"
     href="assets/css/theme-evan.css"
   >
+
+
+  <!-- =========================================================
+       少量页面专用样式
+       仅处理中文姓名和 Research Focus 列表
+       不修改原模板整体布局
+       ========================================================= -->
+
+  <style>
+    /*
+      中文姓名样式。
+    */
+    body.theme-evan .site-chinese-name {
+      margin: 0 0 12px;
+      color: var(--evan-secondary);
+      font-size: 17px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-align: center;
+    }
+
+    /*
+      当前身份样式。
+    */
+    body.theme-evan .site-role {
+      margin: 0 0 4px;
+      color: var(--evan-text);
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    /*
+      学校信息样式。
+    */
+    body.theme-evan .site-affiliation {
+      margin: 0 0 4px;
+      color: var(--evan-secondary);
+      font-size: 13px;
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    /*
+      地点信息样式。
+    */
+    body.theme-evan .site-location {
+      margin: 0 0 14px;
+      color: var(--evan-secondary);
+      font-size: 13px;
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    /*
+      Research Focus 使用纵向排列。
+    */
+    body.theme-evan .research-focus-list {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    /*
+      每个研究方向单独占一行。
+    */
+    body.theme-evan .research-focus-list span {
+      display: block;
+      line-height: 1.4;
+    }
+
+    /*
+      暂时未启用的链接显示为半透明。
+    */
+    body.theme-evan .social-icons a[data-empty-link="true"] {
+      opacity: 0.4;
+      cursor: default;
+    }
+  </style>
 </head>
 
 
 <!--
   必须使用 theme-evan。
 
-  theme-evan.css 中的所有样式都以 body.theme-evan 开头。
-  如果这里写成 theme-luka，主样式将无法正常生效。
+  theme-evan.css 中的样式选择器均以 body.theme-evan 开头。
 -->
 <body class="theme-evan">
 
@@ -103,7 +182,7 @@
   <nav class="top-nav">
     <div class="nav-container">
 
-      <!-- 左侧导航 -->
+      <!-- 左侧栏目导航 -->
       <div class="nav-left">
         <a href="#about">About</a>
         <a href="#education">Education</a>
@@ -115,7 +194,7 @@
         <a href="#publications">Publications</a>
       </div>
 
-      <!-- 右侧深色与浅色模式切换按钮 -->
+      <!-- 右侧深浅色切换按钮 -->
       <div class="nav-right">
         <button
           id="themeToggle"
@@ -148,7 +227,7 @@
         <!--
           个人头像。
 
-          文件位置：
+          文件路径：
           assets/img/avatar.jpg
         -->
         <a
@@ -158,14 +237,34 @@
         >
           <img
             src="assets/img/avatar.jpg"
-            alt="Portrait of Evan Wu"
+            alt="Portrait of Tianchun Wu"
           >
         </a>
 
-        <!-- 姓名 -->
+        <!-- 英文姓名 -->
         <h1 class="site-name">
-          Evan Wu
+          Tianchun Wu
         </h1>
+
+        <!-- 中文姓名 -->
+        <p class="site-chinese-name">
+          武天淳
+        </p>
+
+        <!-- 当前身份 -->
+        <p class="site-role">
+          Electronic Engineering Undergraduate
+        </p>
+
+        <!-- 学校及课程项目 -->
+        <p class="site-affiliation">
+          ELITE Stream · The Chinese University of Hong Kong
+        </p>
+
+        <!-- 所在地区 -->
+        <p class="site-location">
+          Hong Kong SAR
+        </p>
 
         <!-- 联系邮箱 -->
         <p class="site-email">
@@ -183,7 +282,7 @@
           <a
             href="mailto:tianchunwu10@gmail.com"
             title="Email"
-            aria-label="Send an email to Evan Wu"
+            aria-label="Send an email to Tianchun Wu"
           >
             <i class="fa-solid fa-envelope"></i>
           </a>
@@ -192,7 +291,7 @@
           <a
             href="https://github.com/evan0610"
             title="GitHub"
-            aria-label="Visit Evan Wu's GitHub profile"
+            aria-label="Visit Tianchun Wu's GitHub profile"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -203,7 +302,7 @@
           <a
             href="https://www.linkedin.com/in/tcwu/"
             title="LinkedIn"
-            aria-label="Visit Evan Wu's LinkedIn profile"
+            aria-label="Visit Tianchun Wu's LinkedIn profile"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -213,7 +312,7 @@
           <!--
             Google Scholar 暂时没有链接。
 
-            创建 Scholar 主页后，将 href="" 替换为真实网址。
+            创建 Scholar 主页后，把 href="" 改为实际网址。
           -->
           <a
             href=""
@@ -224,11 +323,11 @@
             <i class="ai ai-google-scholar"></i>
           </a>
 
-          <!-- 个人主页 -->
+          <!-- 当前个人主页 -->
           <a
             href="https://evan0610.github.io/"
             title="Homepage"
-            aria-label="Visit Evan Wu's homepage"
+            aria-label="Visit Tianchun Wu's homepage"
           >
             <i class="fa-solid fa-globe"></i>
           </a>
@@ -237,7 +336,7 @@
 
 
         <!-- ===================================================
-             左侧研究方向卡片
+             研究方向卡片
              =================================================== -->
 
         <div class="visitor-card">
@@ -246,10 +345,12 @@
             Research Focus
           </div>
 
-          <div class="visitor-card-body">
-            Medical robotics, robotic endoscopy,
-            vision-language-action learning,
-            multimodal perception, and embodied intelligence.
+          <!-- 每个研究方向单独一行 -->
+          <div class="visitor-card-body research-focus-list">
+            <span>Medical Robotics</span>
+            <span>Robotic Endoscopy</span>
+            <span>Vision-Language-Action</span>
+            <span>Embodied Intelligence</span>
           </div>
 
         </div>
@@ -265,7 +366,7 @@
     <main class="content">
 
       <!-- =====================================================
-           About Me
+           个人简介
            ===================================================== -->
 
       <section class="section" id="about">
@@ -277,7 +378,7 @@
         <div class="section-body">
 
           <p>
-            I am <strong>Evan Wu</strong>, an Electronic Engineering
+            I am <strong>Tianchun Wu</strong>, an Electronic Engineering
             undergraduate in the <strong>ELITE Stream</strong> at
             <strong>The Chinese University of Hong Kong</strong>.
           </p>
@@ -309,7 +410,7 @@
           <!--
             简历下载链接。
 
-            PDF 文件需要放在：
+            PDF 文件路径：
             assets/files/Evan_Wu_CV.pdf
           -->
           <p>
@@ -330,7 +431,7 @@
 
 
       <!-- =====================================================
-           Education
+           教育经历
            ===================================================== -->
 
       <section class="section" id="education">
@@ -346,6 +447,12 @@
 
             <div class="experience-item">
 
+              <!--
+                香港中文大学 Logo。
+
+                文件路径：
+                assets/img/institution.jpg
+              -->
               <img
                 src="assets/img/institution.jpg"
                 alt="The Chinese University of Hong Kong"
@@ -363,10 +470,6 @@
                 <p class="exp-detail">
                   Bachelor of Engineering in Electronic Engineering,
                   ELITE Stream
-                </p>
-
-                <p class="exp-detail">
-                  CGPA: 3.37 / 4.00 · Advanced Standing
                 </p>
 
                 <p class="exp-detail">
@@ -389,6 +492,12 @@
 
             <div class="experience-item">
 
+              <!--
+                哈尔滨工业大学 Logo。
+
+                文件路径：
+                assets/img/HIT.jpg
+              -->
               <img
                 src="assets/img/HIT.jpg"
                 alt="Harbin Institute of Technology"
@@ -426,7 +535,7 @@
 
 
       <!-- =====================================================
-           Research Experience
+           科研经历
            ===================================================== -->
 
       <section class="section" id="research">
@@ -498,7 +607,7 @@
 
 
       <!-- =====================================================
-           Selected Research Projects
+           重点研究项目
            ===================================================== -->
 
       <section class="section" id="projects">
@@ -509,7 +618,7 @@
 
         <div class="section-body">
 
-          <!-- ColonVLA -->
+          <!-- ColonVLA 项目 -->
           <div class="card project-card">
 
             <p>
@@ -534,7 +643,7 @@
           </div>
 
 
-          <!-- EndoNav -->
+          <!-- EndoNav 项目 -->
           <div class="card project-card">
 
             <p>
@@ -552,7 +661,7 @@
           </div>
 
 
-          <!-- EndoVLA-OOV / OpenHDS -->
+          <!-- EndoVLA-OOV / OpenHDS 项目 -->
           <div class="card project-card">
 
             <p>
@@ -570,7 +679,7 @@
           </div>
 
 
-          <!-- 连续体机器人消防救援 -->
+          <!-- 连续体机器人消防救援项目 -->
           <div class="card project-card">
 
             <p>
@@ -594,7 +703,7 @@
 
 
       <!-- =====================================================
-           Professional Experience
+           企业经历
            ===================================================== -->
 
       <section class="section" id="professional">
@@ -609,6 +718,12 @@
 
             <div class="experience-item">
 
+              <!--
+                TCL Logo。
+
+                文件路径：
+                assets/img/TCL.jpg
+              -->
               <img
                 src="assets/img/TCL.jpg"
                 alt="TCL Technology Corporation"
@@ -655,7 +770,7 @@
 
 
       <!-- =====================================================
-           Leadership & Technical Activities
+           领导力与技术活动
            ===================================================== -->
 
       <section class="section" id="leadership">
@@ -666,11 +781,17 @@
 
         <div class="section-body">
 
-          <!-- CCIA -->
+          <!-- Chung Chi International Association -->
           <div class="card timeline-item">
 
             <div class="experience-item">
 
+              <!--
+                CCIA Logo。
+
+                文件路径：
+                assets/img/CCIA.jpg
+              -->
               <img
                 src="assets/img/CCIA.jpg"
                 alt="Chung Chi International Association"
@@ -707,7 +828,7 @@
           </div>
 
 
-          <!-- RoboMaster -->
+          <!-- RoboMaster 团队 -->
           <div class="card timeline-item">
 
             <div class="experience-item">
@@ -750,7 +871,7 @@
 
 
       <!-- =====================================================
-           Awards
+           获奖经历
            ===================================================== -->
 
       <section class="section" id="awards">
@@ -770,6 +891,7 @@
               </span>
 
               <div class="award-text">
+
                 <strong>
                   Hong Kong University Student Innovation and
                   Entrepreneurship Competition
@@ -780,8 +902,8 @@
                   for navigation and rescue assistance
                   in constrained building-fire environments.
                 </p>
-              </div>
 
+              </div>
             </div>
 
           </div>
@@ -790,7 +912,7 @@
 
 
       <!-- =====================================================
-           Technical Skills
+           技术技能
            ===================================================== -->
 
       <section class="section" id="skills">
@@ -836,7 +958,7 @@
 
 
       <!-- =====================================================
-           Publications
+           论文栏目
            ===================================================== -->
 
       <section class="section" id="publications">
@@ -856,7 +978,7 @@
 
                   <div class="pub-content">
 
-                    <!-- 暂时没有公开论文，后续可在这里加入 -->
+                    <!-- 暂时没有公开论文 -->
                     <div class="title">
                       Publications and manuscripts will be added
                       after they are publicly available.
@@ -885,10 +1007,9 @@
          页脚
          ======================================================= -->
 
-    <!-- 只保留个人版权信息 -->
     <footer class="site-footer">
       <p>
-        &copy; 2026 Evan Wu. All rights reserved.
+        &copy; 2026 Tianchun Wu. All rights reserved.
       </p>
     </footer>
 
@@ -899,7 +1020,7 @@
        本地 JavaScript 文件
        ========================================================= -->
 
-  <!-- Evan 主页缩放兼容脚本 -->
+  <!-- 页面缩放兼容脚本 -->
   <script src="assets/js/scale.fix.js"></script>
 
 
@@ -924,13 +1045,13 @@
        * 设置深色或浅色主题。
        *
        * @param {boolean} isDark
-       * true 表示深色模式。
-       * false 表示浅色模式。
+       * true：深色模式
+       * false：浅色模式
        */
       function setTheme(isDark) {
 
         /*
-          在 html 根节点上保存主题状态。
+          在 html 根节点记录当前主题。
         */
         document.documentElement.setAttribute(
           'data-theme',
@@ -938,7 +1059,7 @@
         );
 
         /*
-          深色模式显示太阳图标。
+          深色模式下显示太阳图标。
         */
         icon.classList.toggle(
           'fa-sun',
@@ -946,7 +1067,7 @@
         );
 
         /*
-          浅色模式显示月亮图标。
+          浅色模式下显示月亮图标。
         */
         icon.classList.toggle(
           'fa-moon',
@@ -954,7 +1075,7 @@
         );
 
         /*
-          保存用户选择。
+          保存用户的主题选择。
         */
         localStorage.setItem(
           'theme',
@@ -964,14 +1085,14 @@
 
 
       /*
-        读取用户之前保存的主题。
+        读取浏览器中保存的主题。
       */
       const savedTheme =
         localStorage.getItem('theme');
 
 
       /*
-        获取操作系统的主题偏好。
+        检测操作系统是否偏好深色模式。
       */
       const prefersDark =
         window.matchMedia(
@@ -981,7 +1102,7 @@
 
       /*
         优先使用用户保存的主题。
-        如果没有保存记录，则跟随系统主题。
+        如果没有保存，则跟随系统设置。
       */
       setTheme(
         savedTheme
@@ -1025,8 +1146,49 @@
 
 
       /*
-        页面栏目进入可见区域时，
-        添加 visible 类并触发原模板动画。
+        为所有页面内部导航链接启用平滑滚动。
+      */
+      document
+        .querySelectorAll('a[href^="#"]')
+        .forEach(function (link) {
+
+          link.addEventListener(
+            'click',
+            function (event) {
+
+              const targetId =
+                link.getAttribute('href');
+
+              if (
+                !targetId ||
+                targetId === '#'
+              ) {
+                return;
+              }
+
+              const targetElement =
+                document.querySelector(targetId);
+
+              if (!targetElement) {
+                return;
+              }
+
+              event.preventDefault();
+
+              targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+              });
+
+            }
+          );
+
+        });
+
+
+      /*
+        当栏目进入可见区域时添加 visible 类，
+        触发 theme-evan.css 中的进入动画。
       */
       if ('IntersectionObserver' in window) {
 

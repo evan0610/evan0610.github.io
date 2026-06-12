@@ -1,46 +1,45 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
 
-  <!-- Improve compatibility with older versions of Microsoft Edge -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <!-- Make the page responsive on mobile devices -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Browser tab title -->
-  <title>Evan Wu | Electronic Engineering & Medical Robotics</title>
+  <title>Evan Wu | Medical Robotics & Vision-Language-Action</title>
 
-  <!-- Search engine description -->
   <meta
     name="description"
-    content="Evan Wu is an Electronic Engineering student at The Chinese University of Hong Kong, working on medical robotics, vision-language-action models, robotic endoscopy, and embodied intelligence."
+    content="Evan Wu is an Electronic Engineering undergraduate in the ELITE Stream at The Chinese University of Hong Kong. His research focuses on medical robotics, robotic endoscopy, vision-language-action models, computer vision, and embodied intelligence."
   >
 
-  <!-- Search engine keywords -->
   <meta
     name="keywords"
-    content="Evan Wu, CUHK, Electronic Engineering, Medical Robotics, Vision Language Action, VLA, Robotic Endoscopy, Embodied Intelligence"
+    content="Evan Wu, Tianchun Wu, 武天淳, CUHK, Electronic Engineering, ELITE Stream, Medical Robotics, Vision-Language-Action, VLA, ColonVLA, Robotic Endoscopy, Computer Vision, Embodied Intelligence"
   >
 
-  <!-- Website author -->
   <meta name="author" content="Evan Wu">
 
-  <!-- Website icon -->
-  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <!-- Browser favicon -->
+  <link
+    rel="icon"
+    href="assets/img/favicon.jpg"
+    type="image/jpeg"
+  >
 
-  <!-- Google Fonts connection optimization -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <!-- Main website font -->
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
     rel="stylesheet"
   >
 
-  <!-- Academic icons -->
+  <!-- Academicons -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css"
@@ -48,43 +47,270 @@
     crossorigin="anonymous"
   >
 
-  <!-- Font Awesome icons -->
+  <!-- Font Awesome -->
   <script
     src="https://kit.fontawesome.com/a860a211d3.js"
     crossorigin="anonymous"
   ></script>
 
-  <!-- Local font configuration -->
-  <link rel="stylesheet" href="assets/css/font_sans_serif.css">
+  <!-- Existing local styles -->
+  <link
+    rel="stylesheet"
+    href="assets/css/font_sans_serif.css"
+  >
 
-  <!-- Main theme stylesheet -->
-  <link rel="stylesheet" href="assets/css/theme-luka.css">
+  <link
+    rel="stylesheet"
+    href="assets/css/theme-luka.css"
+  >
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+    }
+
+    .section {
+      scroll-margin-top: 90px;
+    }
+
+    .nav-left {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .profile-card .avatar {
+      display: block;
+      width: 180px;
+      height: 180px;
+      margin: 0 auto 20px;
+      overflow: hidden;
+      border-radius: 50%;
+      text-decoration: none;
+    }
+
+    .profile-card .avatar img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 50%;
+    }
+
+    .site-role {
+      margin: 6px 0 4px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    .site-affiliation {
+      margin: 0 0 4px;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      text-align: center;
+      opacity: 0.82;
+    }
+
+    .site-location {
+      margin: 0 0 10px;
+      font-size: 0.85rem;
+      line-height: 1.5;
+      text-align: center;
+      opacity: 0.65;
+    }
+
+    .institution-logo {
+      width: 64px;
+      height: 64px;
+      flex-shrink: 0;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 10px;
+    }
+
+    .experience-content {
+      width: 100%;
+    }
+
+    .exp-title {
+      margin-bottom: 4px;
+    }
+
+    .exp-detail {
+      margin-top: 4px;
+      margin-bottom: 4px;
+      line-height: 1.65;
+    }
+
+    .exp-period {
+      margin-top: 4px;
+      margin-bottom: 8px;
+      font-size: 0.9rem;
+      opacity: 0.72;
+    }
+
+    .exp-location {
+      margin-top: 2px;
+      margin-bottom: 6px;
+      font-size: 0.88rem;
+      opacity: 0.68;
+    }
+
+    .achievement-list {
+      margin: 12px 0 0;
+      padding-left: 20px;
+    }
+
+    .achievement-list li {
+      margin-bottom: 8px;
+      line-height: 1.7;
+    }
+
+    .project-title {
+      display: inline-block;
+      margin-bottom: 8px;
+      font-size: 1.02rem;
+      font-weight: 700;
+    }
+
+    .project-subtitle {
+      margin: 2px 0 10px;
+      font-size: 0.92rem;
+      font-weight: 500;
+      opacity: 0.78;
+    }
+
+    .research-tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .research-tag {
+      display: inline-block;
+      padding: 6px 11px;
+      border: 1px solid rgba(127, 127, 127, 0.28);
+      border-radius: 999px;
+      font-size: 0.84rem;
+      line-height: 1.2;
+    }
+
+    .skill-group {
+      margin-bottom: 16px;
+    }
+
+    .skill-group:last-child {
+      margin-bottom: 0;
+    }
+
+    .skill-group strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .metric-row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .metric-card {
+      padding: 14px;
+      border: 1px solid rgba(127, 127, 127, 0.22);
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .metric-number {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 1.35rem;
+      font-weight: 700;
+    }
+
+    .metric-label {
+      font-size: 0.82rem;
+      line-height: 1.4;
+      opacity: 0.72;
+    }
+
+    .empty-placeholder {
+      margin: 0;
+      font-size: 0.95rem;
+      font-style: italic;
+      line-height: 1.6;
+      opacity: 0.62;
+    }
+
+    .social-icons a[data-empty-link="true"] {
+      opacity: 0.38;
+      cursor: default;
+    }
+
+    .site-footer {
+      text-align: center;
+    }
+
+    @media screen and (max-width: 768px) {
+      .nav-left {
+        gap: 10px;
+      }
+
+      .profile-card .avatar {
+        width: 150px;
+        height: 150px;
+      }
+
+      .institution-logo {
+        width: 54px;
+        height: 54px;
+      }
+
+      .metric-row {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
+
 
 <body class="theme-luka">
 
   <!-- =========================================================
-       TOP NAVIGATION BAR
+       TOP NAVIGATION
        ========================================================= -->
+
   <nav class="top-nav">
     <div class="nav-container">
 
-      <!-- Left-side navigation links -->
       <div class="nav-left">
         <a href="#about">About</a>
         <a href="#education">Education</a>
-        <a href="#experience">Experience</a>
         <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
+        <a href="#professional">Experience</a>
         <a href="#leadership">Leadership</a>
+        <a href="#skills">Skills</a>
+        <a href="#publications">Publications</a>
       </div>
 
-      <!-- Right-side theme button -->
       <div class="nav-right">
         <button
           id="themeToggle"
           class="theme-toggle"
           title="Toggle theme"
           aria-label="Toggle between light and dark themes"
+          type="button"
         >
           <i class="fa-solid fa-moon"></i>
         </button>
@@ -95,62 +321,66 @@
 
 
   <!-- =========================================================
-       MAIN PAGE WRAPPER
+       MAIN WRAPPER
        ========================================================= -->
+
   <div class="wrapper">
 
     <!-- =======================================================
-         LEFT PROFILE SIDEBAR
+         PROFILE SIDEBAR
          ======================================================= -->
+
     <header class="sidebar">
       <div class="profile-card">
 
-        <!--
-          Replace assets/img/avatar.svg with your own photograph.
-
-          Recommended image:
-          - Square image
-          - At least 600 × 600 pixels
-          - JPG, PNG, WebP, or SVG
-        -->
-        <a class="image avatar" href="#about" aria-label="Go to About section">
+        <a
+          class="image avatar"
+          href="#about"
+          aria-label="Go to the About section"
+        >
           <img
-            src="assets/img/avatar.svg"
+            src="assets/img/avatar.jpg"
             alt="Portrait of Evan Wu"
+            loading="eager"
+            decoding="async"
           >
         </a>
 
-        <!-- Personal name -->
-        <h1 class="site-name">Evan Wu</h1>
+        <h1 class="site-name">
+          Evan Wu
+        </h1>
 
-        <!-- Current academic identity -->
         <p class="site-role">
-          Electronic Engineering Student
+          Electronic Engineering Undergraduate
         </p>
 
-        <!-- University -->
         <p class="site-affiliation">
-          The Chinese University of Hong Kong
+          ELITE Stream · The Chinese University of Hong Kong
         </p>
 
-        <!-- Contact email -->
+        <p class="site-location">
+          Hong Kong SAR
+        </p>
+
         <p class="site-email">
           tianchunwu10@gmail.com
         </p>
 
-        <!-- Social and contact links -->
+
+        <!-- ===================================================
+             SOCIAL LINKS
+             =================================================== -->
+
         <div class="social-icons">
 
-          <!-- Email -->
           <a
             href="mailto:tianchunwu10@gmail.com"
-            title="Email Evan Wu"
-            aria-label="Email Evan Wu"
+            title="Email"
+            aria-label="Send an email to Evan Wu"
           >
             <i class="fa-solid fa-envelope"></i>
           </a>
 
-          <!-- GitHub -->
           <a
             href="https://github.com/tianchunwu10"
             title="GitHub"
@@ -161,30 +391,45 @@
             <i class="fa-brands fa-github"></i>
           </a>
 
-          <!-- Personal homepage -->
           <a
-            href="https://evan0610.github.io/"
-            title="Personal Homepage"
-            aria-label="Visit Evan Wu's personal homepage"
+            href="https://www.linkedin.com/in/tcwu/"
+            title="LinkedIn"
+            aria-label="Visit Evan Wu's LinkedIn profile"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i class="fa-solid fa-globe"></i>
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+
+          <!-- Leave empty until a Google Scholar profile is available -->
+          <a
+            href=""
+            title="Google Scholar"
+            aria-label="Google Scholar profile"
+            data-empty-link="true"
+          >
+            <i class="ai ai-google-scholar"></i>
           </a>
 
         </div>
 
 
-        <!-- Research status card -->
+        <!-- ===================================================
+             CURRENT FOCUS
+             =================================================== -->
+
         <div class="visitor-card">
+
           <div class="visitor-card-title">
-            Current Focus
+            Research Focus
           </div>
 
           <div class="visitor-card-body">
-            Medical robotics, vision-language-action models,
-            robotic endoscopy, and embodied intelligence.
+            Medical robotics, robotic endoscopy,
+            vision-language-action learning,
+            multimodal perception, and embodied intelligence.
           </div>
+
         </div>
 
       </div>
@@ -194,51 +439,56 @@
     <!-- =======================================================
          MAIN CONTENT
          ======================================================= -->
+
     <main class="content">
 
       <!-- =====================================================
            ABOUT
            ===================================================== -->
+
       <section class="section" id="about">
-        <h2 class="section-title">About Me</h2>
+
+        <h2 class="section-title">
+          About Me
+        </h2>
 
         <div class="section-body">
+
           <p>
-            Hello, I am <strong>Evan Wu</strong>, an undergraduate student
-            studying Electronic Engineering at
+            I am <strong>Evan Wu</strong>, an Electronic Engineering
+            undergraduate in the <strong>ELITE Stream</strong> at
             <strong>The Chinese University of Hong Kong</strong>.
+            My work focuses on medical robotics, robotic endoscopy,
+            computer vision, and vision-language-action learning.
           </p>
 
           <p>
-            My research interests lie at the intersection of
-            <strong>medical robotics</strong>,
-            <strong>vision-language-action models</strong>,
-            <strong>robot perception</strong>, and
-            <strong>embodied intelligence</strong>.
-            I am particularly interested in developing intelligent robotic
-            systems for endoscopic navigation, autonomous withdrawal,
-            target tracking, and clinician-supervised intervention.
+            I am currently a Research Student Helper at the
+            Robotics, Perception and Artificial Intelligence Laboratory
+            at CUHK. My research involves developing multimodal robotic
+            systems that integrate endoscopic video, motor states,
+            anatomical and clinical labels, electromagnetic tracking,
+            and real-time embedded control.
           </p>
 
           <p>
-            I am currently involved in medical robotics research at CUHK,
-            where I work on multimodal data collection, robotic endoscope
-            control, visual perception, embedded motor systems, and the
-            training of vision-language-action models for clinical workflows.
+            My current projects investigate autonomous colonoscopy withdrawal,
+            supervised endoscopic navigation, multimodal action learning,
+            and clinician-in-the-loop safety mechanisms. I am particularly
+            interested in how embodied foundation models can improve the
+            reliability, interpretability, and clinical usability of
+            intelligent medical robots.
           </p>
 
-          <p>
-            My long-term research goal is to study how multimodal foundation
-            models and embodied intelligence can improve the autonomy,
-            reliability, and clinical usability of medical robots.
-          </p>
+          <div class="research-tag-list">
+            <span class="research-tag">Medical Robotics</span>
+            <span class="research-tag">Robotic Endoscopy</span>
+            <span class="research-tag">Vision-Language-Action</span>
+            <span class="research-tag">Computer Vision</span>
+            <span class="research-tag">Embodied Intelligence</span>
+            <span class="research-tag">Multimodal Learning</span>
+          </div>
 
-          <!--
-            Place your CV file at:
-            assets/files/Evan_Wu_CV.pdf
-
-            Then this link will work automatically.
-          -->
           <p>
             <strong>
               <a
@@ -251,6 +501,7 @@
               </a>
             </strong>
           </p>
+
         </div>
       </section>
 
@@ -258,48 +509,107 @@
       <!-- =====================================================
            EDUCATION
            ===================================================== -->
+
       <section class="section" id="education">
-        <h2 class="section-title">Education</h2>
+
+        <h2 class="section-title">
+          Education
+        </h2>
 
         <div class="section-body">
-          <div class="card">
+
+          <!-- CUHK -->
+          <div class="card timeline-item">
 
             <div class="experience-item">
 
-              <!--
-                You can later replace institution.svg with a CUHK logo.
-
-                Example:
-                assets/img/cuhk-logo.svg
-              -->
               <img
-                src="assets/img/institution.svg"
-                alt="The Chinese University of Hong Kong logo"
+                src="assets/img/institution.jpg"
+                alt="The Chinese University of Hong Kong"
                 class="institution-logo"
+                loading="lazy"
+                decoding="async"
               >
 
               <div class="experience-content">
 
                 <p class="exp-title">
-                  <strong>The Chinese University of Hong Kong</strong>
+                  <strong>
+                    The Chinese University of Hong Kong
+                  </strong>
                 </p>
 
                 <p class="exp-detail">
-                  Bachelor of Engineering in Electronic Engineering
+                  Bachelor of Engineering in Electronic Engineering,
+                  ELITE Stream
                 </p>
 
                 <p class="exp-detail">
-                  Chung Chi College
+                  CGPA: 3.37 / 4.00 · Advanced Standing
+                </p>
+
+                <p class="exp-detail">
+                  Selected coursework: Data Structures, C Programming,
+                  Digital Circuits, and Electronic System Design
                 </p>
 
                 <p class="exp-period">
-                  2024 – Present
+                  August 2024 – December 2027
+                </p>
+
+                <p class="exp-location">
+                  Hong Kong SAR
                 </p>
 
               </div>
             </div>
 
           </div>
+
+
+          <!-- HIT Winter School -->
+          <div class="card timeline-item">
+
+            <div class="experience-item">
+
+              <img
+                src="assets/img/institution.jpg"
+                alt="Harbin Institute of Technology"
+                class="institution-logo"
+                loading="lazy"
+                decoding="async"
+              >
+
+              <div class="experience-content">
+
+                <p class="exp-title">
+                  <strong>
+                    Harbin Institute of Technology
+                  </strong>
+                </p>
+
+                <p class="exp-detail">
+                  HIT–CUHK Joint International Winter School
+                </p>
+
+                <p class="exp-detail">
+                  Coursework: Introduction to Robotics and
+                  Introduction to Autonomous Unmanned Rotorcraft Systems
+                </p>
+
+                <p class="exp-period">
+                  December 2025
+                </p>
+
+                <p class="exp-location">
+                  Harbin, China
+                </p>
+
+              </div>
+            </div>
+
+          </div>
+
         </div>
       </section>
 
@@ -307,56 +617,85 @@
       <!-- =====================================================
            RESEARCH EXPERIENCE
            ===================================================== -->
-      <section class="section" id="experience">
-        <h2 class="section-title">Research Experience</h2>
+
+      <section class="section" id="research">
+
+        <h2 class="section-title">
+          Research Experience
+        </h2>
 
         <div class="section-body">
 
           <div class="card timeline-item">
+
             <div class="experience-item">
 
               <img
-                src="assets/img/institution.svg"
-                alt="CUHK research laboratory logo"
+                src="assets/img/institution.jpg"
+                alt="RPAI Lab at The Chinese University of Hong Kong"
                 class="institution-logo"
+                loading="lazy"
+                decoding="async"
               >
 
               <div class="experience-content">
 
                 <p class="exp-title">
                   <strong>
-                    Medical Robotics Research,
-                    The Chinese University of Hong Kong
+                    Robotics, Perception and Artificial Intelligence Laboratory
                   </strong>
                 </p>
 
                 <p class="exp-detail">
-                  Student Helper
+                  Research Student Helper
                 </p>
 
                 <p class="exp-detail">
-                  <em>Principal Investigator:</em>
-                  Prof. Hongliang Ren
-                </p>
-
-                <p class="exp-detail">
-                  <em>Research Mentor:</em>
-                  Mr. Chi Kit Ng
+                  <em>Supervisor:</em> Mr. Chi Kit Ng
                 </p>
 
                 <p class="exp-period">
                   December 2025 – Present
                 </p>
 
-                <p class="exp-description">
-                  Conducting research on robotic endoscopy,
-                  vision-language-action learning, multimodal data collection,
-                  embedded motor control, visual tracking, and
-                  clinician-supervised autonomous robotic workflows.
+                <p class="exp-location">
+                  The Chinese University of Hong Kong · Hong Kong SAR
                 </p>
+
+                <ul class="achievement-list">
+
+                  <li>
+                    Develop vision-language-action systems for robotic
+                    endoscopy, with emphasis on autonomous colonoscopy
+                    withdrawal, supervised navigation, and multimodal
+                    action learning.
+                  </li>
+
+                  <li>
+                    Integrate endoscopic video, six-actuator motor states,
+                    clinical phase and anatomy annotations, and electromagnetic
+                    tracking into synchronized multimodal datasets.
+                  </li>
+
+                  <li>
+                    Build embedded and software infrastructure using STM32,
+                    CAN communication, ROS and ROS 2, Python control interfaces,
+                    YOLO-assisted labeling, synchronized CSV and video
+                    acquisition, and robot-state logging.
+                  </li>
+
+                  <li>
+                    Conduct anatomical phantom experiments for system
+                    validation, including motor-control testing,
+                    withdrawal-velocity estimation, and clinician-supervised
+                    autonomy.
+                  </li>
+
+                </ul>
 
               </div>
             </div>
+
           </div>
 
         </div>
@@ -364,104 +703,449 @@
 
 
       <!-- =====================================================
-           RESEARCH INTERESTS
+           SELECTED PROJECTS
            ===================================================== -->
-      <section class="section" id="research">
-        <h2 class="section-title">Research Interests</h2>
+
+      <section class="section" id="projects">
+
+        <h2 class="section-title">
+          Selected Research Projects
+        </h2>
 
         <div class="section-body">
-          <div class="awards-grid">
 
-            <div class="award-item">
-              <span class="award-icon">
-                <i class="fa-solid fa-robot"></i>
-              </span>
+          <!-- ColonVLA -->
+          <div class="card project-card">
 
-              <div class="award-text">
-                <strong>Medical Robotics</strong>
-                <p>
-                  Intelligent robotic systems for endoscopy,
-                  diagnosis, intervention, and clinical assistance.
-                </p>
-              </div>
+            <div class="project-title">
+              ColonVLA
             </div>
 
-
-            <div class="award-item">
-              <span class="award-icon">
-                <i class="fa-solid fa-brain"></i>
-              </span>
-
-              <div class="award-text">
-                <strong>Vision-Language-Action Models</strong>
-                <p>
-                  Multimodal foundation models for perception,
-                  reasoning, and robotic action generation.
-                </p>
-              </div>
+            <div class="project-subtitle">
+              Motor-Based Mixture-of-Experts VLA for Autonomous Colonoscopy Withdrawal
             </div>
 
+            <p>
+              Developing a motor-based mixture-of-experts
+              vision-language-action framework for autonomous colonoscopy
+              withdrawal on a six-actuator robotic endoscope platform.
+            </p>
 
-            <div class="award-item">
-              <span class="award-icon">
-                <i class="fa-solid fa-eye"></i>
-              </span>
+            <ul class="achievement-list">
 
-              <div class="award-text">
-                <strong>Robot Perception</strong>
-                <p>
-                  Frame-consistent tracking, target recognition,
-                  occlusion handling, and multimodal sensor fusion.
-                </p>
-              </div>
+              <li>
+                Use latent action-mode decomposition to model inspection,
+                tracking, sampling, recovery, and anatomy-dependent
+                withdrawal control.
+              </li>
+
+              <li>
+                Integrate endoscopic video, robot motor states,
+                clinical phase and anatomy labels, and electromagnetic
+                tracker measurements into a synchronized learning pipeline.
+              </li>
+
+              <li>
+                Use three-dimensional tracker coordinates to estimate
+                withdrawal velocity and support phantom-based validation.
+              </li>
+
+            </ul>
+
+          </div>
+
+
+          <!-- EndoNav -->
+          <div class="card project-card">
+
+            <div class="project-title">
+              EndoNav
             </div>
 
-
-            <div class="award-item">
-              <span class="award-icon">
-                <i class="fa-solid fa-microchip"></i>
-              </span>
-
-              <div class="award-text">
-                <strong>Embedded Robotic Systems</strong>
-                <p>
-                  STM32-based motor control, CAN communication,
-                  sensor acquisition, and real-time system integration.
-                </p>
-              </div>
+            <div class="project-subtitle">
+              Clinician-Supervised Autonomous Endoscopic Navigation
             </div>
 
+            <p>
+              Designed a supervised autonomous navigation workflow for
+              endoscopic intervention in which human instructions interrupt
+              autonomous control and assign the operative instrument.
+            </p>
 
-            <div class="award-item">
-              <span class="award-icon">
-                <i class="fa-solid fa-stethoscope"></i>
-              </span>
+            <ul class="achievement-list">
 
-              <div class="award-text">
-                <strong>Robotic Endoscopy</strong>
-                <p>
-                  Autonomous navigation, colonoscopy withdrawal,
-                  visual inspection, and clinician supervision.
-                </p>
-              </div>
+              <li>
+                Separate clinician intervention from normal autonomous
+                navigation to preserve clear operational control.
+              </li>
+
+              <li>
+                Use a binary verifier to determine whether autonomous execution
+                should safely continue or terminate.
+              </li>
+
+              <li>
+                Evaluate the workflow through anatomical phantom experiments.
+              </li>
+
+            </ul>
+
+          </div>
+
+
+          <!-- EndoVLA-OOV / OpenHDS -->
+          <div class="card project-card">
+
+            <div class="project-title">
+              EndoVLA-OOV / OpenHDS
             </div>
 
+            <div class="project-subtitle">
+              Multimodal Data Collection for Robotic Endoscopy
+            </div>
 
-            <div class="award-item">
-              <span class="award-icon">
-                <i class="fa-solid fa-cubes"></i>
-              </span>
+            <p>
+              Collected and structured more than 3,000 endoscopic samples
+              from anatomical phantoms for vision-language-action model
+              development.
+            </p>
 
-              <div class="award-text">
-                <strong>Embodied Intelligence</strong>
-                <p>
-                  Learning-based control and multimodal reasoning
-                  for robots operating in complex environments.
+            <ul class="achievement-list">
+
+              <li>
+                Developed synchronized video, motor-state, annotation,
+                and robot-state acquisition workflows.
+              </li>
+
+              <li>
+                Contributed to the EndoVLA-OOV work submitted to
+                <em>IEEE Transactions on Robotics and Learning</em>
+                in collaboration with NVIDIA.
+              </li>
+
+            </ul>
+
+          </div>
+
+
+          <!-- Fire Rescue Continuum Robot -->
+          <div class="card project-card">
+
+            <div class="project-title">
+              Exploring Continuum Robot Agents for Fire Rescuing in Buildings
+            </div>
+
+            <div class="project-subtitle">
+              Continuum Robotics and Agentic Autonomy
+            </div>
+
+            <p>
+              Developed a continuum-robot agent concept for rescue assistance
+              in structurally constrained building-fire environments.
+            </p>
+
+            <ul class="achievement-list">
+
+              <li>
+                Combined robotic mobility, environmental perception,
+                and task-level autonomy for navigation in constrained spaces.
+              </li>
+
+              <li>
+                Received an award at the Hong Kong University Student
+                Innovation and Entrepreneurship Competition.
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- =====================================================
+           PROFESSIONAL EXPERIENCE
+           ===================================================== -->
+
+      <section class="section" id="professional">
+
+        <h2 class="section-title">
+          Professional Experience
+        </h2>
+
+        <div class="section-body">
+
+          <div class="card timeline-item">
+
+            <div class="experience-item">
+
+              <img
+                src="assets/img/institution.jpg"
+                alt="TCL Technology Corporation"
+                class="institution-logo"
+                loading="lazy"
+                decoding="async"
+              >
+
+              <div class="experience-content">
+
+                <p class="exp-title">
+                  <strong>
+                    TCL Technology Corporation
+                  </strong>
                 </p>
+
+                <p class="exp-detail">
+                  Project Assistant, Smartphone Research and Development
+                </p>
+
+                <p class="exp-period">
+                  June 2025 – July 2025
+                </p>
+
+                <p class="exp-location">
+                  Huizhou, China
+                </p>
+
+                <ul class="achievement-list">
+
+                  <li>
+                    Supported cross-functional smartphone development by
+                    preparing technical documentation and coordinating
+                    testing feedback.
+                  </li>
+
+                  <li>
+                    Executed more than 20 functional tests across three
+                    smartphone prototypes.
+                  </li>
+
+                  <li>
+                    Identified and reported more than eight critical issues
+                    for engineering triage.
+                  </li>
+
+                  <li>
+                    Improved defect traceability and review coordination,
+                    contributing to a 10-day acceleration of the
+                    flagship-model iteration cycle.
+                  </li>
+
+                </ul>
+
               </div>
             </div>
 
           </div>
+
+        </div>
+      </section>
+
+
+      <!-- =====================================================
+           LEADERSHIP AND ACTIVITIES
+           ===================================================== -->
+
+      <section class="section" id="leadership">
+
+        <h2 class="section-title">
+          Leadership & Technical Activities
+        </h2>
+
+        <div class="section-body">
+
+          <!-- CCIA -->
+          <div class="card timeline-item">
+
+            <div class="experience-item">
+
+              <img
+                src="assets/img/institution.jpg"
+                alt="Chung Chi International Association"
+                class="institution-logo"
+                loading="lazy"
+                decoding="async"
+              >
+
+              <div class="experience-content">
+
+                <p class="exp-title">
+                  <strong>
+                    Chung Chi International Association
+                  </strong>
+                </p>
+
+                <p class="exp-detail">
+                  President
+                </p>
+
+                <p class="exp-period">
+                  April 2025 – Present
+                </p>
+
+                <p class="exp-location">
+                  The Chinese University of Hong Kong
+                </p>
+
+                <ul class="achievement-list">
+
+                  <li>
+                    Lead a 15-member executive team.
+                  </li>
+
+                  <li>
+                    Delivered more than 10 events serving over
+                    1,000 participants.
+                  </li>
+
+                  <li>
+                    Secured two funding partners.
+                  </li>
+
+                  <li>
+                    Launched a mentorship programme for more than
+                    50 incoming international students.
+                  </li>
+
+                </ul>
+
+              </div>
+            </div>
+
+          </div>
+
+
+          <!-- RoboMaster -->
+          <div class="card timeline-item">
+
+            <div class="experience-item">
+
+              <img
+                src="assets/img/institution.jpg"
+                alt="CUHK RoboMaster Team"
+                class="institution-logo"
+                loading="lazy"
+                decoding="async"
+              >
+
+              <div class="experience-content">
+
+                <p class="exp-title">
+                  <strong>
+                    RoboMaster Team, The Chinese University of Hong Kong
+                  </strong>
+                </p>
+
+                <p class="exp-detail">
+                  Member, Vision & Algorithms Group
+                </p>
+
+                <p class="exp-period">
+                  December 2025 – Present
+                </p>
+
+                <ul class="achievement-list">
+
+                  <li>
+                    Develop computer-vision capabilities for robotic platforms.
+                  </li>
+
+                  <li>
+                    Work on real-time object detection, target tracking,
+                    and deployment-oriented model optimization.
+                  </li>
+
+                </ul>
+
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- =====================================================
+           SELECTED IMPACT
+           ===================================================== -->
+
+      <section class="section" id="impact">
+
+        <h2 class="section-title">
+          Selected Impact
+        </h2>
+
+        <div class="section-body">
+
+          <div class="metric-row">
+
+            <div class="metric-card">
+              <span class="metric-number">3,000+</span>
+              <span class="metric-label">
+                Endoscopic samples collected and structured
+              </span>
+            </div>
+
+            <div class="metric-card">
+              <span class="metric-number">20+</span>
+              <span class="metric-label">
+                Smartphone functional tests completed
+              </span>
+            </div>
+
+            <div class="metric-card">
+              <span class="metric-number">1,000+</span>
+              <span class="metric-label">
+                Participants reached through student events
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- =====================================================
+           AWARD
+           ===================================================== -->
+
+      <section class="section" id="awards">
+
+        <h2 class="section-title">
+          Award
+        </h2>
+
+        <div class="section-body">
+
+          <div class="awards-grid">
+
+            <div class="award-item">
+
+              <span class="award-icon">
+                <i class="fa-solid fa-trophy"></i>
+              </span>
+
+              <div class="award-text">
+
+                <strong>
+                  Hong Kong University Student Innovation and
+                  Entrepreneurship Competition
+                </strong>
+
+                <p>
+                  Award recipient for the continuum robot agent project
+                  focused on navigation and rescue assistance in
+                  constrained building-fire environments.
+                </p>
+
+              </div>
+            </div>
+
+          </div>
+
         </div>
       </section>
 
@@ -469,38 +1153,49 @@
       <!-- =====================================================
            TECHNICAL SKILLS
            ===================================================== -->
+
       <section class="section" id="skills">
-        <h2 class="section-title">Technical Skills</h2>
+
+        <h2 class="section-title">
+          Technical Skills
+        </h2>
 
         <div class="section-body">
 
           <div class="card">
-            <p>
-              <strong>Programming:</strong>
-              Python, C, C++, MATLAB
-            </p>
 
-            <p>
-              <strong>Machine Learning:</strong>
-              PyTorch, YOLO, DINOv2, GRU, LSTM,
-              vision-language models, vision-language-action models
-            </p>
+            <div class="skill-group">
+              <strong>Programming</strong>
+              Python, C, C++
+            </div>
 
-            <p>
-              <strong>Robotics:</strong>
-              ROS, robotic perception, motor control,
-              endoscope robot integration, electromagnetic tracking
-            </p>
+            <div class="skill-group">
+              <strong>Robotics & Embedded Systems</strong>
+              STM32, CAN communication, ROS, ROS 2, Linux,
+              electromagnetic tracking, embedded-system design,
+              six-motor control, and robot-state acquisition
+            </div>
 
-            <p>
-              <strong>Embedded Systems:</strong>
-              STM32, Keil MDK, HAL drivers, CAN, UART, SPI, timers
-            </p>
+            <div class="skill-group">
+              <strong>Computer Vision & Artificial Intelligence</strong>
+              YOLO, object detection, visual tracking,
+              vision-language-action models, multimodal data pipelines,
+              model-assisted annotation, and robotic perception
+            </div>
 
-            <p>
-              <strong>Development Tools:</strong>
-              Git, GitHub, Linux, Windows, Flask, OpenCV
-            </p>
+            <div class="skill-group">
+              <strong>Research Infrastructure</strong>
+              Python control interfaces, synchronized CSV and video
+              acquisition, endoscopic datasets, anatomical phantom
+              experiments, and multimodal robot logging
+            </div>
+
+            <div class="skill-group">
+              <strong>Languages</strong>
+              Mandarin: Native · Cantonese: Fluent ·
+              English: Fluent, IELTS 7.0
+            </div>
+
           </div>
 
         </div>
@@ -508,78 +1203,26 @@
 
 
       <!-- =====================================================
-           LEADERSHIP
+           PUBLICATIONS
            ===================================================== -->
-      <section class="section" id="leadership">
-        <h2 class="section-title">Leadership & Activities</h2>
+
+      <section class="section" id="publications">
+
+        <h2 class="section-title">
+          Publications
+        </h2>
 
         <div class="section-body">
-          <div class="awards-grid">
 
-            <div class="award-item">
-              <span class="award-icon">
-                <i class="fa-solid fa-users"></i>
-              </span>
+          <div class="card">
 
-              <div class="award-text">
-                <strong>
-                  President, Chung Chi International Association
-                </strong>
-
-                <p>
-                  The Chinese University of Hong Kong
-                </p>
-
-                <p class="exp-period">
-                  2025 – 2026
-                </p>
-              </div>
-            </div>
-
-
-            <div class="award-item">
-              <span class="award-icon">
-                <i class="fa-solid fa-scale-balanced"></i>
-              </span>
-
-              <div class="award-text">
-                <strong>
-                  Member, 15th Supervisory Committee
-                </strong>
-
-                <p>
-                  Mainland Undergraduate Association,
-                  The Chinese University of Hong Kong
-                </p>
-
-                <p class="exp-period">
-                  2025 – 2026
-                </p>
-              </div>
-            </div>
-
-
-            <div class="award-item">
-              <span class="award-icon">
-                <i class="fa-solid fa-user-group"></i>
-              </span>
-
-              <div class="award-text">
-                <strong>
-                  Chung Chi College Mentor Programme
-                </strong>
-
-                <p>
-                  Non-local Student Mentee
-                </p>
-
-                <p class="exp-period">
-                  2024 – 2026
-                </p>
-              </div>
-            </div>
+            <p class="empty-placeholder">
+              Publications and manuscripts will be added after they are
+              publicly available.
+            </p>
 
           </div>
+
         </div>
       </section>
 
@@ -589,75 +1232,56 @@
     <!-- =======================================================
          FOOTER
          ======================================================= -->
+
     <footer class="site-footer">
       <p>
         &copy; 2026 Evan Wu. All rights reserved.
-        <br>
-
-        <span class="template-credit">
-          <a
-            href="https://github.com/wzsyyh/luka-homepage-template"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Luka Homepage Template
-          </a>
-
-          by
-
-          <a
-            href="https://wzsyyh.github.io/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Yuheng Yang
-          </a>
-        </span>
       </p>
     </footer>
 
   </div>
 
 
-  <!-- Existing responsive scaling script -->
+  <!-- Existing responsive scale script -->
   <script src="assets/js/scale.fix.js"></script>
 
 
   <!-- =========================================================
-       PAGE INTERACTION SCRIPT
+       PAGE INTERACTION
        ========================================================= -->
+
   <script>
     (function () {
 
-      // Obtain the theme toggle button.
-      const themeToggle = document.getElementById('themeToggle');
+      const themeToggle =
+        document.getElementById('themeToggle');
 
-      // Obtain the icon inside the theme toggle button.
-      const icon = themeToggle.querySelector('i');
+      const icon =
+        themeToggle.querySelector('i');
 
 
       /**
-       * Apply the requested page theme.
+       * Apply the selected visual theme.
        *
        * @param {boolean} isDark
-       * True enables dark mode.
-       * False enables light mode.
        */
       function setTheme(isDark) {
 
-        // Store the current theme on the root HTML element.
         document.documentElement.setAttribute(
           'data-theme',
           isDark ? 'dark' : 'light'
         );
 
-        // Show the sun icon while dark mode is active.
-        icon.classList.toggle('fa-sun', isDark);
+        icon.classList.toggle(
+          'fa-sun',
+          isDark
+        );
 
-        // Show the moon icon while light mode is active.
-        icon.classList.toggle('fa-moon', !isDark);
+        icon.classList.toggle(
+          'fa-moon',
+          !isDark
+        );
 
-        // Save the selected theme in the browser.
         localStorage.setItem(
           'theme',
           isDark ? 'dark' : 'light'
@@ -665,16 +1289,14 @@
       }
 
 
-      // Read the visitor's previously selected theme.
-      const savedTheme = localStorage.getItem('theme');
+      const savedTheme =
+        localStorage.getItem('theme');
 
-      // Detect whether the visitor's operating system uses dark mode.
-      const prefersDark = window.matchMedia(
-        '(prefers-color-scheme: dark)'
-      ).matches;
+      const prefersDark =
+        window.matchMedia(
+          '(prefers-color-scheme: dark)'
+        ).matches;
 
-      // Use the saved preference when available.
-      // Otherwise, follow the operating system preference.
       setTheme(
         savedTheme
           ? savedTheme === 'dark'
@@ -682,91 +1304,131 @@
       );
 
 
-      // Switch between light and dark mode when the button is clicked.
-      themeToggle.addEventListener('click', function () {
+      themeToggle.addEventListener(
+        'click',
+        function () {
 
-        // Check whether dark mode is currently active.
-        const isDark =
-          document.documentElement.getAttribute('data-theme') === 'dark';
+          const isDark =
+            document.documentElement.getAttribute(
+              'data-theme'
+            ) === 'dark';
 
-        // Apply the opposite theme.
-        setTheme(!isDark);
-      });
+          setTheme(!isDark);
+        }
+      );
 
 
       /**
-       * Add smooth scrolling for internal navigation links.
+       * Prevent unfinished links from navigating.
        */
-      document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+      document
+        .querySelectorAll('a[data-empty-link="true"]')
+        .forEach(function (link) {
 
-        link.addEventListener('click', function (event) {
+          link.addEventListener(
+            'click',
+            function (event) {
+              event.preventDefault();
+            }
+          );
 
-          // Read the target section ID.
-          const targetId = link.getAttribute('href');
-
-          // Ignore empty fragment links.
-          if (!targetId || targetId === '#') {
-            return;
-          }
-
-          // Find the corresponding section.
-          const targetElement = document.querySelector(targetId);
-
-          // Stop if the target does not exist.
-          if (!targetElement) {
-            return;
-          }
-
-          // Prevent the browser's default immediate jump.
-          event.preventDefault();
-
-          // Smoothly scroll to the target section.
-          targetElement.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
         });
-      });
 
 
       /**
-       * Reveal sections when they enter the viewport.
+       * Smooth-scroll internal links.
+       */
+      document
+        .querySelectorAll('a[href^="#"]')
+        .forEach(function (link) {
+
+          link.addEventListener(
+            'click',
+            function (event) {
+
+              const targetId =
+                link.getAttribute('href');
+
+              if (
+                !targetId ||
+                targetId === '#'
+              ) {
+                return;
+              }
+
+              const targetElement =
+                document.querySelector(targetId);
+
+              if (!targetElement) {
+                return;
+              }
+
+              event.preventDefault();
+
+              targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+              });
+            }
+          );
+
+        });
+
+
+      /**
+       * Reveal sections as they enter the viewport.
        */
       if ('IntersectionObserver' in window) {
 
-        // Create an observer for page sections.
-        const observer = new IntersectionObserver(
-          function (entries) {
+        const observer =
+          new IntersectionObserver(
 
-            entries.forEach(function (entry) {
+            function (entries) {
 
-              // Reveal a section once it becomes visible.
-              if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
+              entries.forEach(
+                function (entry) {
 
-                // Stop observing after the animation has occurred.
-                observer.unobserve(entry.target);
-              }
-            });
+                  if (entry.isIntersecting) {
 
-          },
-          {
-            // Trigger when at least 10% of the section is visible.
-            threshold: 0.1
-          }
-        );
+                    entry.target.classList.add(
+                      'visible'
+                    );
 
-        // Observe every main content section.
-        document.querySelectorAll('.section').forEach(function (element) {
-          observer.observe(element);
-        });
+                    observer.unobserve(
+                      entry.target
+                    );
+                  }
+
+                }
+              );
+
+            },
+
+            {
+              threshold: 0.1
+            }
+
+          );
+
+
+        document
+          .querySelectorAll('.section')
+          .forEach(function (element) {
+
+            observer.observe(element);
+
+          });
 
       } else {
 
-        // Fallback for browsers without IntersectionObserver support.
-        document.querySelectorAll('.section').forEach(function (element) {
-          element.classList.add('visible');
-        });
+        document
+          .querySelectorAll('.section')
+          .forEach(function (element) {
+
+            element.classList.add('visible');
+
+          });
+
       }
 
     })();

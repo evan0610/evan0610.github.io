@@ -1,0 +1,748 @@
+```css
+/* ============================================
+   Evan Homepage
+   Warm minimal academic homepage
+   ============================================ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+/*
+  让 Evan 主题下的所有元素统一使用 border-box。
+  这样 padding 和 border 不会额外撑大元素尺寸。
+*/
+body.theme-evan,
+body.theme-evan *,
+body.theme-evan *::before,
+body.theme-evan *::after {
+  box-sizing: border-box;
+}
+
+
+/* ============================================
+   全局主题变量
+   ============================================ */
+
+:root {
+  --evan-bg: #faf9f7;
+  --evan-text: #3d3929;
+  --evan-accent: #c2714f;
+  --evan-secondary: #8c8577;
+  --evan-border: rgba(194, 113, 79, 0.2);
+  --evan-shadow: rgba(194, 113, 79, 0.15);
+  --evan-social-bg: #ffffff;
+  --evan-social-text: #8b7355;
+  --evan-footer-border: rgba(194, 113, 79, 0.15);
+}
+
+
+/* ============================================
+   跟随系统深色模式
+   ============================================ */
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --evan-bg: #1a1917;
+    --evan-text: #d1cec7;
+    --evan-accent: #e28a67;
+    --evan-secondary: #9b9488;
+    --evan-border: rgba(226, 138, 103, 0.2);
+    --evan-shadow: rgba(0, 0, 0, 0.3);
+    --evan-social-bg: #22211e;
+    --evan-social-text: #d1cec7;
+    --evan-footer-border: rgba(226, 138, 103, 0.15);
+  }
+}
+
+
+/* ============================================
+   手动深色模式
+   ============================================ */
+
+[data-theme="dark"] {
+  --evan-bg: #1a1917;
+  --evan-text: #d1cec7;
+  --evan-accent: #e28a67;
+  --evan-secondary: #9b9488;
+  --evan-border: rgba(226, 138, 103, 0.2);
+  --evan-shadow: rgba(0, 0, 0, 0.3);
+  --evan-social-bg: #22211e;
+  --evan-social-text: #d1cec7;
+  --evan-footer-border: rgba(226, 138, 103, 0.15);
+}
+
+
+/* ============================================
+   手动浅色模式
+   ============================================ */
+
+[data-theme="light"] {
+  --evan-bg: #faf9f7;
+  --evan-text: #3d3929;
+  --evan-accent: #c2714f;
+  --evan-secondary: #8c8577;
+  --evan-border: rgba(194, 113, 79, 0.2);
+  --evan-shadow: rgba(194, 113, 79, 0.15);
+  --evan-social-bg: #ffffff;
+  --evan-social-text: #8b7355;
+  --evan-footer-border: rgba(194, 113, 79, 0.15);
+}
+
+
+/* ============================================
+   页面主体
+   ============================================ */
+
+body.theme-evan {
+  background: var(--evan-bg);
+  color: var(--evan-text);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+/* ============================================
+   全局链接
+   ============================================ */
+
+body.theme-evan a {
+  color: var(--evan-accent);
+  text-decoration: none;
+}
+
+body.theme-evan a:hover {
+  filter: brightness(1.15);
+}
+
+
+/* ============================================
+   顶部导航栏
+   ============================================ */
+
+body.theme-evan .top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 60px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: var(--evan-bg);
+  border-bottom: 1px solid var(--evan-footer-border);
+
+  z-index: 1000;
+}
+
+body.theme-evan .nav-container {
+  width: 100%;
+  max-width: 1120px;
+
+  padding: 0 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+body.theme-evan .nav-left a {
+  color: var(--evan-text);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+
+/* ============================================
+   深浅色模式按钮
+   ============================================ */
+
+body.theme-evan .theme-toggle {
+  width: 40px;
+  height: 40px;
+
+  border: none;
+  border-radius: 999px;
+
+  background: transparent;
+  color: var(--evan-text);
+
+  cursor: pointer;
+  font-size: 18px;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+body.theme-evan .theme-toggle:hover {
+  background: var(--evan-border);
+  color: var(--evan-accent);
+}
+
+
+/* ============================================
+   页面整体容器
+   ============================================ */
+
+body.theme-evan .wrapper {
+  width: 100%;
+  max-width: 1120px;
+  min-height: 100vh;
+
+  margin: 0 auto;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+
+/* ============================================
+   左侧固定个人信息栏
+   ============================================ */
+
+body.theme-evan .sidebar {
+  position: fixed;
+  top: 60px;
+  left: calc(50% - 560px);
+
+  width: 320px;
+  height: calc(100vh - 60px);
+
+  flex-shrink: 0;
+
+  overflow-y: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  padding-top: 60px;
+
+  text-align: center;
+
+  box-sizing: border-box;
+  z-index: 100;
+}
+
+body.theme-evan .profile-card {
+  width: 100%;
+  padding: 0 20px;
+  text-align: center;
+}
+
+
+/* ============================================
+   头像
+   ============================================ */
+
+body.theme-evan .image.avatar {
+  display: block;
+  margin: 0 auto 28px;
+}
+
+body.theme-evan .image.avatar img {
+  width: 220px;
+  height: 220px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+
+  box-shadow: 0 6px 24px var(--evan-shadow);
+}
+
+
+/* ============================================
+   姓名与邮箱
+   ============================================ */
+
+body.theme-evan .site-name {
+  margin: 0 0 8px;
+
+  color: var(--evan-text);
+
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+body.theme-evan .site-email {
+  margin: 0 0 24px;
+
+  color: var(--evan-secondary);
+
+  font-size: 13px;
+  font-family: "Ubuntu Mono", "SFMono-Regular", monospace;
+
+  word-break: break-all;
+}
+
+
+/* ============================================
+   社交平台图标
+   ============================================ */
+
+body.theme-evan .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+body.theme-evan .social-icons a {
+  width: 40px;
+  height: 40px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: var(--evan-social-bg);
+  color: var(--evan-social-text) !important;
+
+  box-shadow: 0 2px 8px rgba(61, 57, 41, 0.08);
+
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+body.theme-evan .social-icons a:hover {
+  background: var(--evan-accent);
+  color: #ffffff !important;
+
+  transform: translateY(-2px);
+}
+
+
+/* ============================================
+   左侧研究方向卡片
+   ============================================ */
+
+body.theme-evan .visitor-card {
+  width: 240px;
+
+  margin: 40px auto 0;
+  padding: 18px 16px;
+
+  border: 1px dashed var(--evan-border);
+  border-radius: 14px;
+
+  color: var(--evan-secondary);
+
+  text-align: left;
+}
+
+body.theme-evan .visitor-card-title {
+  margin-bottom: 8px;
+
+  color: var(--evan-accent);
+
+  font-size: 13px;
+  font-weight: 600;
+
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+body.theme-evan .visitor-card-body {
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+
+/* ============================================
+   右侧主要内容
+   ============================================ */
+
+body.theme-evan .content {
+  flex: 1;
+  min-width: 0;
+
+  margin-left: 320px;
+  padding: 120px 40px 80px 60px;
+}
+
+
+/* ============================================
+   页面栏目与进入动画
+   ============================================ */
+
+body.theme-evan .section {
+  margin-bottom: 44px;
+
+  opacity: 0;
+  transform: translateY(12px);
+
+  transition:
+    opacity 0.45s ease,
+    transform 0.45s ease;
+}
+
+body.theme-evan .section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+body.theme-evan .section-title {
+  display: inline-block;
+
+  margin: 0 0 18px;
+  padding-bottom: 10px;
+
+  border-bottom: 2px solid var(--evan-accent);
+
+  color: var(--evan-accent);
+
+  font-size: 19px;
+  font-weight: 600;
+}
+
+body.theme-evan .section-body p {
+  margin: 0 0 14px;
+}
+
+
+/* ============================================
+   通用卡片
+   ============================================ */
+
+body.theme-evan .card {
+  padding: 0;
+
+  background: transparent;
+  box-shadow: none;
+}
+
+
+/* ============================================
+   时间线
+   ============================================ */
+
+body.theme-evan .timeline-item {
+  position: relative;
+
+  margin-left: 20px;
+  padding-left: 8px;
+  padding-bottom: 20px;
+}
+
+body.theme-evan .timeline-item::before {
+  content: "";
+
+  position: absolute;
+  left: -20px;
+  top: 0;
+  bottom: 0;
+
+  width: 2px;
+
+  background: linear-gradient(
+    to bottom,
+    var(--evan-accent),
+    rgba(194, 113, 79, 0.12)
+  );
+}
+
+body.theme-evan .timeline-item:last-child::before {
+  bottom: 50%;
+}
+
+body.theme-evan .timeline-item::after {
+  content: "";
+
+  position: absolute;
+  left: -25px;
+  top: 22px;
+
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50%;
+
+  background: var(--evan-accent);
+  border: 2px solid var(--evan-bg);
+}
+
+
+/* ============================================
+   教育与工作经历
+   ============================================ */
+
+body.theme-evan .experience-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+body.theme-evan .institution-logo {
+  width: 52px;
+  height: 52px;
+
+  flex-shrink: 0;
+}
+
+body.theme-evan .experience-content {
+  flex: 1;
+}
+
+body.theme-evan .experience-content p {
+  margin: 0 0 2px;
+}
+
+body.theme-evan .exp-title {
+  color: var(--evan-text);
+  font-size: 15px;
+}
+
+body.theme-evan .exp-detail {
+  color: var(--evan-secondary);
+  font-size: 14px;
+}
+
+body.theme-evan .exp-period {
+  color: var(--evan-accent);
+
+  font-size: 13px;
+  font-weight: 500;
+}
+
+
+/* ============================================
+   项目
+   ============================================ */
+
+body.theme-evan .project-card {
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+
+/* ============================================
+   论文列表
+   ============================================ */
+
+body.theme-evan .publications ol.bibliography {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+body.theme-evan .publications ol.bibliography li {
+  margin-bottom: 14px;
+  padding: 15px 0 15px 16px;
+
+  border-left: 3px solid var(--evan-accent);
+}
+
+body.theme-evan .pub-content .title {
+  margin-bottom: 4px;
+
+  color: var(--evan-text);
+
+  font-size: 15px;
+  font-weight: 600;
+}
+
+body.theme-evan .pub-content .author {
+  margin-bottom: 4px;
+
+  color: var(--evan-secondary);
+
+  font-size: 14px;
+}
+
+body.theme-evan .pub-content .periodical {
+  margin-bottom: 6px;
+
+  color: var(--evan-accent);
+
+  font-size: 14px;
+}
+
+body.theme-evan .pub-content .links a {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+
+/* ============================================
+   奖项
+   ============================================ */
+
+body.theme-evan .awards-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+body.theme-evan .award-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 4px 0;
+}
+
+body.theme-evan .award-icon {
+  flex-shrink: 0;
+  font-size: 20px;
+}
+
+body.theme-evan .award-text {
+  color: var(--evan-text);
+  font-size: 14px;
+}
+
+
+/* ============================================
+   页脚
+   ============================================ */
+
+body.theme-evan .site-footer {
+  width: 100%;
+  flex-basis: 100%;
+
+  padding: 32px 24px 40px 380px;
+
+  text-align: center;
+}
+
+body.theme-evan .site-footer p {
+  margin: 0;
+  padding-top: 20px;
+
+  border-top: 1px solid var(--evan-footer-border);
+
+  color: var(--evan-secondary);
+
+  font-size: 13px;
+}
+
+
+/* ============================================
+   标题和粗体文字颜色
+   ============================================ */
+
+body.theme-evan h1,
+body.theme-evan h2,
+body.theme-evan h3,
+body.theme-evan h4,
+body.theme-evan strong {
+  color: var(--evan-text);
+}
+
+
+/* ============================================
+   平板及较窄桌面适配
+   ============================================ */
+
+@media (max-width: 1080px) {
+  body.theme-evan .nav-container {
+    padding: 0 20px;
+  }
+
+  body.theme-evan .wrapper {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  body.theme-evan .sidebar {
+    position: static;
+    left: auto;
+
+    width: 100%;
+    height: auto;
+
+    padding-top: 80px;
+
+    overflow: visible;
+  }
+
+  body.theme-evan .profile-card {
+    padding: 0;
+  }
+
+  body.theme-evan .content {
+    margin-left: 0;
+    padding: 32px 0 48px;
+  }
+
+  body.theme-evan .site-footer {
+    padding: 32px 0;
+  }
+
+  body.theme-evan .site-footer p {
+    padding-top: 0;
+    border-top: none;
+  }
+}
+
+
+/* ============================================
+   手机端适配
+   ============================================ */
+
+@media (max-width: 640px) {
+  body.theme-evan .image.avatar img {
+    width: 148px;
+    height: 148px;
+  }
+
+  body.theme-evan .site-name {
+    font-size: 24px;
+  }
+
+  body.theme-evan .experience-item {
+    gap: 12px;
+  }
+
+  body.theme-evan .institution-logo {
+    width: 44px;
+    height: 44px;
+  }
+
+  body.theme-evan .visitor-card {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+
+/* ============================================
+   小屏幕手机适配
+   ============================================ */
+
+@media (max-width: 480px) {
+  body.theme-evan .section {
+    margin-bottom: 32px;
+  }
+
+  body.theme-evan .section-title {
+    font-size: 18px;
+  }
+
+  body.theme-evan .project-card,
+  body.theme-evan .exp-detail,
+  body.theme-evan .award-text,
+  body.theme-evan .pub-content .author,
+  body.theme-evan .pub-content .periodical {
+    font-size: 13px;
+  }
+}
+```

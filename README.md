@@ -155,7 +155,8 @@ evan0610.github.io/
 │   │   ├── institution.jpg
 │   │   ├── HIT.jpg
 │   │   ├── TCL.jpg
-│   │   └── CCIA.jpg
+│   │   ├── CCIA.jpg
+│   │   └── CUEE.jpg
 │   └── js/
 │       └── scale.fix.js
 ```

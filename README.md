@@ -27,7 +27,6 @@ I am an Electronic Engineering undergraduate in the ELITE Stream at The Chinese 
 - Robotic endoscopy
 - Multimodal robot learning
 - Embodied intelligence
-- Computer vision
 - Embedded robotic systems
 
 The website presents my education, research experience, selected projects, professional experience, technical activities, skills, awards, and future publications.

@@ -1,4 +1,264 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Tianchun Wu · Robotics Research</title><meta name="description" content="Tianchun Wu, Electronic Engineering at CUHK. Embodied intelligence, medical robotics and robot learning."><link rel="stylesheet" href="profile.css"><script src="profile.js" defer></script></head><body><header><a class="name" href="#about">Tianchun Wu</a><button id="menu" aria-expanded="false" aria-controls="nav">Menu ☰</button><nav id="nav"><a href="#about">About</a><a href="#research">Research</a><a href="#education">Education</a><a href="#professional">Experience</a><a href="https://tianchun-research-atlas.husheddaisy64.chatgpt.site">Private research atlas ↗</a></nav></header><main><section class="hero" id="about"><div><p class="label">ROBOTICS · EMBODIED INTELLIGENCE</p><h1>Tianchun (Evan) Wu<br><span>武天淳</span></h1><p>Electronic Engineering undergraduate<br>The Chinese University of Hong Kong</p><p>I work on learning-based robotic systems at the intersection of multimodal perception, task intent and physical control, with a focus on robotic endoscopy.</p><div class="links"><a href="mailto:tianchunwu10@gmail.com">Email ↗</a><a href="https://github.com/evan0610">GitHub ↗</a><a href="https://www.linkedin.com/in/tcwu/">LinkedIn ↗</a></div></div><img src="assets/img/avatar.jpg" alt="Tianchun Wu" id="portrait"></section><section id="research"><p class="label">RESEARCH DIRECTIONS</p><h2>From physical interaction<br>to adaptive robot intelligence.</h2><div class="directions"><article><span>01</span><h3>Medical robotics</h3><p>Robotic endoscopy, task-oriented perception and coordination between learned policies and human operators.</p></article><article><span>02</span><h3>Robot learning</h3><p>Language-conditioned action generation, multimodal temporal context and transfer across task conditions.</p></article><article><span>03</span><h3>Adaptive systems</h3><p>Using recorded interaction evidence to evaluate candidate skills and guide subsequent policy development.</p></article><article><span>04</span><h3>Continuum robotics</h3><p>Flexible embodiments and local tool actions in constrained spaces.</p></article></div><aside><strong>Detailed project materials are access controlled.</strong><p>Unpublished manuscripts, project-level results and detailed review notes are available through the private research atlas. Access requires the owner's account and a separate password.</p><a href="https://tianchun-research-atlas.husheddaisy64.chatgpt.site">Open private research atlas ↗</a></aside></section><section class="section" id="education">
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<!-- =========================================================
+       Basic Page Configuration
+       ========================================================= -->
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Tianchun Wu - Homepage</title>
+<meta content="Tianchun Wu is an Electronic Engineering undergraduate at The Chinese University of Hong Kong. His research focuses on embodied AI, medical robotics, robotic endoscopy, vision-language-action models, and self-evolving robotic systems." name="description"/>
+<!--
+    Keywords only include research directions.
+    Personal names, project names, institutions, and awards are intentionally excluded.
+  -->
+<meta content="Embodied AI, Medical Robotics, Surgical Robotics, Robotic Endoscopy, Vision-Language-Action Models, Robot Learning, Self-Evolving Robotic Systems, Robot Foundation Models, Multimodal Learning, Learning-Based Robotic Control" name="keywords"/>
+<meta content="Tianchun Wu" name="author"/>
+<link href="assets/img/favicon.jpg" rel="icon" type="image/jpeg"/>
+<!-- =========================================================
+       External Fonts and Icon Libraries
+       ========================================================= -->
+
+
+
+
+
+<!-- =========================================================
+       Local CSS Files
+       ========================================================= -->
+<link href="assets/css/font_sans_serif.css" rel="stylesheet"/>
+<link href="assets/css/theme-evan.css" rel="stylesheet"/>
+<!-- =========================================================
+       Page-Specific Supplementary Styles
+       ========================================================= -->
+<style>
+    body.theme-evan .site-chinese-name {
+      margin: 0 0 12px;
+      color: var(--evan-secondary);
+      font-size: 17px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-align: center;
+    }
+
+    body.theme-evan .site-role {
+      margin: 0 0 4px;
+      color: var(--evan-text);
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    body.theme-evan .site-affiliation {
+      margin: 0 0 4px;
+      color: var(--evan-secondary);
+      font-size: 13px;
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    body.theme-evan .site-location {
+      margin: 0 0 14px;
+      color: var(--evan-secondary);
+      font-size: 13px;
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    body.theme-evan .research-focus-list {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    body.theme-evan .research-focus-list span {
+      display: block;
+      line-height: 1.4;
+    }
+
+    body.theme-evan .project-subtitle {
+      margin: 2px 0 10px;
+      color: var(--evan-secondary);
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+
+    body.theme-evan .achievement-list {
+      margin: 10px 0 18px;
+      padding-left: 21px;
+    }
+
+    body.theme-evan .achievement-list li {
+      margin-bottom: 7px;
+      line-height: 1.65;
+    }
+
+    body.theme-evan .section {
+      scroll-margin-top: 86px;
+    }
+
+    /*
+      Unify Font Awesome and Academicons colors.
+      This fixes the Google Scholar icon color mismatch.
+    */
+    body.theme-evan .social-icons a i,
+    body.theme-evan .social-icons a .ai,
+    body.theme-evan .social-icons a .fa-solid,
+    body.theme-evan .social-icons a .fa-brands {
+      color: inherit !important;
+    }
+
+    body.theme-evan .social-icons a .ai::before {
+      color: inherit !important;
+      line-height: 1;
+    }
+
+    body.theme-evan .social-icons a[data-placeholder-link="true"] {
+      opacity: 1;
+      cursor: default;
+    }
+  </style>
+<style>.section{opacity:1!important;transform:none!important}.social-icons svg{display:block}.theme-toggle{font-size:23px!important}a:focus-visible,button:focus-visible{outline:2px solid var(--evan-accent);outline-offset:4px}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}</style><script defer="" src="academic-ui.js"></script></head>
+<body class="theme-evan">
+<!-- =========================================================
+       Top Navigation
+       ========================================================= -->
+<nav class="top-nav">
+<div class="nav-container">
+<div class="nav-left">
+<a href="#about">About</a>
+<a href="#education">Education</a>
+<a href="#research">Research</a>
+<a href="#projects">Projects</a>
+<a href="#professional">Experience</a>
+<a href="#leadership">Leadership</a>
+<a href="#skills">Skills</a>
+<a href="#publications">Publications</a>
+</div>
+<div class="nav-right">
+<button aria-label="Toggle between light and dark themes" class="theme-toggle" data-theme-toggle="" id="themeToggle" title="Toggle theme" type="button">☾</button>
+</div>
+</div>
+</nav>
+<!-- =========================================================
+       Main Wrapper
+       ========================================================= -->
+<div class="wrapper">
+<!-- =======================================================
+         Sidebar
+         ======================================================= -->
+<header class="sidebar">
+<div class="profile-card">
+<a aria-label="Go to the About section" class="image avatar" href="#about">
+<img alt="Portrait of Tianchun Wu" src="assets/img/avatar.jpg"/>
+</a>
+<h1 class="site-name">
+          Tianchun Wu
+        </h1>
+<p class="site-chinese-name">
+          武天淳
+        </p>
+<p class="site-role">
+          Electronic Engineering Undergraduate
+        </p>
+<p class="site-affiliation">
+          The Chinese University of Hong Kong
+        </p>
+<p class="site-location">
+          Hong Kong SAR
+        </p>
+<p class="site-email">
+          tianchunwu10 [at] gmail.com
+          <br/>
+          1155227818 [at] link.cuhk.edu.hk
+        </p>
+<!-- ===================================================
+             Social Links
+             =================================================== -->
+<div class="social-icons">
+<a aria-label="Send an email to Tianchun Wu" href="mailto:tianchunwu10@gmail.com" title="Email">
+<svg aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="20"><rect height="14" rx="2" width="18" x="3" y="5"></rect><path d="m3 6 9 7 9-7"></path></svg>
+</a>
+<a aria-label="Visit Tianchun Wu's GitHub profile" href="https://github.com/evan0610" rel="noopener noreferrer" target="_blank" title="GitHub">
+<svg aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="20"><path d="M9 19c-4 1-4-2-6-2m12 5v-4a3 3 0 0 0-1-2c3 0 6-1 6-5a4 4 0 0 0-1-3 4 4 0 0 0 0-4s-1 0-4 2a12 12 0 0 0-6 0C6 4 5 4 5 4a4 4 0 0 0 0 4 4 4 0 0 0-1 3c0 4 3 5 6 5a3 3 0 0 0-1 2v4"></path></svg>
+</a>
+<a aria-label="Visit Tianchun Wu's LinkedIn profile" href="https://www.linkedin.com/in/tcwu/" rel="noopener noreferrer" target="_blank" title="LinkedIn">
+<svg aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="20"><rect height="18" rx="2" width="18" x="3" y="3"></rect><path d="M7 10v7m0-10h.01M11 17v-7m0 3c0-4 6-4 6 0v4"></path></svg>
+</a>
+<!-- Google Scholar placeholder -->
+
+<a aria-label="Visit Tianchun Wu's homepage" href="https://evan0610.github.io/" title="Homepage">
+<svg aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="20"><circle cx="12" cy="12" r="9"></circle><ellipse cx="12" cy="12" rx="4" ry="9"></ellipse><path d="M3 12h18"></path></svg>
+</a>
+</div>
+<!-- ===================================================
+             Research Focus
+             =================================================== -->
+<div class="visitor-card">
+<div class="visitor-card-title">
+            Research Focus
+          </div>
+<div class="visitor-card-body research-focus-list">
+<span>Embodied AI &amp; Robot Learning</span>
+<span>Medical &amp; Surgical Robotics</span>
+<span>Vision-Language-Action Models</span>
+<span>Self-Evolving Robotic Systems</span>
+</div>
+</div>
+</div>
+</header>
+<!-- =======================================================
+         Main Content
+         ======================================================= -->
+<main class="content">
+<!-- =====================================================
+           About
+           ===================================================== -->
+<section class="section" id="about">
+<h2 class="section-title">
+          About Me
+        </h2>
+<div class="section-body">
+<p>
+            I am <strong>Tianchun (Evan) Wu</strong>, an Electronic Engineering
+            undergraduate at <strong>The Chinese University of Hong Kong</strong>.
+            My research lies at the intersection of embodied AI, medical robotics,
+            and robot learning, with a particular focus on intelligent robotic
+            endoscopy.
+          </p>
+<p>
+            At the Robotics, Perception and Artificial Intelligence Laboratory
+            (RPAI Lab), I work on learning-based robotic systems that integrate
+            multimodal perception, language reasoning, and physical control.
+            I currently lead and contribute to research projects spanning
+            autonomous endoscopic navigation, vision-language-action learning,
+            and intelligent endoscopic intervention.
+          </p>
+<p>
+            My recent research has increasingly focused on
+            <strong>self-evolving embodied intelligence</strong>: enabling robotic
+            systems to acquire, evaluate, and improve task skills through
+            interaction and experience rather than remaining limited to a fixed
+            policy or a single predefined task.
+          </p>
+<p>
+            My long-term research goal is to develop generalizable and adaptive
+            robotic intelligence for real-world medical environments, particularly
+            systems that can continuously improve while operating safely alongside
+            clinicians. I plan to continue toward research-based postgraduate study
+            in robotics and embodied intelligence.
+          </p>
+
+</div>
+</section>
+<!-- =====================================================
+           Education
+           ===================================================== -->
+<section class="section" id="education">
 <h2 class="section-title">
           Education
         </h2>
@@ -27,7 +287,58 @@
 </div>
 </div>
 </div>
-</section><section class="section" id="professional">
+</section>
+<!-- =====================================================
+           Research Experience
+           ===================================================== -->
+<section class="section" id="research">
+<h2 class="section-title">
+          Research Experience
+        </h2>
+<div class="section-body">
+<div class="card timeline-item">
+<div class="experience-item">
+<img alt="The Chinese University of Hong Kong" class="institution-logo" src="assets/img/cuee.jpg"/>
+<div class="experience-content">
+<p class="exp-title">
+<strong>
+                    Robotics, Perception and Artificial Intelligence Laboratory
+                  </strong>
+</p>
+<p class="exp-detail">
+                  Research Student Helper
+                </p>
+<p class="exp-detail">
+<em>Supervisor:</em> Mr. Chi Kit Ng
+                </p>
+<p class="exp-period">
+                  December 2025 – Present
+                </p>
+<p class="exp-detail">
+                  Work on embodied AI and learning-based medical robotics,
+                  with a focus on autonomous and semi-autonomous robotic
+                  endoscopy.
+                </p>
+
+
+
+
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- =====================================================
+           Selected Research Projects
+           ===================================================== -->
+<section class="section" id="projects">
+<h2 class="section-title">Research Projects</h2>
+<div class="section-body"><div class="card project-card"><p><strong>Medical Robotics</strong></p><p>Robotic endoscopy, task-oriented perception and coordination between learned policies and human operators.</p><p><a href="https://tianchun-research-atlas.husheddaisy64.chatgpt.site">Project details in the private research atlas ↗</a></p></div><div class="card project-card"><p><strong>Robot Learning</strong></p><p>Language-conditioned action generation, multimodal temporal context and task transfer.</p><p><a href="https://tianchun-research-atlas.husheddaisy64.chatgpt.site">Project details in the private research atlas ↗</a></p></div><div class="card project-card"><p><strong>Adaptive Robotic Systems</strong></p><p>Evaluation of reusable skills using recorded interaction evidence.</p><p><a href="https://tianchun-research-atlas.husheddaisy64.chatgpt.site">Project details in the private research atlas ↗</a></p></div><div class="card project-card"><p><strong>Continuum Robotics</strong></p><p>Flexible robotic embodiments and local tool actions in constrained spaces.</p><p><a href="https://tianchun-research-atlas.husheddaisy64.chatgpt.site">Project details in the private research atlas ↗</a></p></div></div>
+</section>
+<!-- =====================================================
+           Professional Experience
+           ===================================================== -->
+<section class="section" id="professional">
 <h2 class="section-title">
           Professional Experience
         </h2>
@@ -61,7 +372,11 @@
 </div>
 </div>
 </div>
-</section><section class="section" id="leadership">
+</section>
+<!-- =====================================================
+           Leadership
+           ===================================================== -->
+<section class="section" id="leadership">
 <h2 class="section-title">
           Leadership &amp; Technical Activities
         </h2>
@@ -112,7 +427,52 @@
 </div>
 </div>
 </div>
-</section><section class="section" id="skills">
+</section>
+<!-- =====================================================
+           Awards
+           ===================================================== -->
+<section class="section" id="awards">
+<h2 class="section-title">
+          Awards
+        </h2>
+<div class="section-body">
+<div class="awards-grid">
+<div class="award-item">
+<span class="award-icon">
+<svg aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="20"><path d="M8 3h8v6a4 4 0 0 1-8 0V3Zm0 2H4v3a4 4 0 0 0 4 4m8-7h4v3a4 4 0 0 1-4 4m-4 1v7m-4 0h8"></path></svg>
+</span>
+<div class="award-text">
+<strong>
+                  Eye Award, Chung Chi College, The Chinese University of Hong Kong
+                </strong>
+<p>
+                  Awarded for overseas academic exchange and outstanding
+                  contribution to Chung Chi College.
+                </p>
+</div>
+</div>
+<div class="award-item">
+<span class="award-icon">
+<svg aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="20"><path d="M8 3h8v6a4 4 0 0 1-8 0V3Zm0 2H4v3a4 4 0 0 0 4 4m8-7h4v3a4 4 0 0 1-4 4m-4 1v7m-4 0h8"></path></svg>
+</span>
+<div class="award-text">
+<strong>
+                  Hong Kong University Student Innovation and
+                  Entrepreneurship Competition
+                </strong>
+<p>
+                  Award recipient for the continuum robot agent project
+                  on constrained-environment rescue robotics.
+                </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- =====================================================
+           Technical Skills
+           ===================================================== -->
+<section class="section" id="skills">
 <h2 class="section-title">
           Technical Skills
         </h2>
@@ -152,4 +512,48 @@
             </p>
 </div>
 </div>
-</section><section id="publications"><p class="label">PUBLICATIONS</p><h2>Publication information</h2><p>Only publication metadata approved for public disclosure is listed here. No acceptance status is implied for unpublished work.</p></section></main><footer>© 2026 Tianchun Wu · <a href="mailto:tianchunwu10@gmail.com">Contact</a> · <a href="https://tianchun-research-atlas.husheddaisy64.chatgpt.site">Private materials ↗</a></footer></body></html>
+</section>
+<!-- =====================================================
+           Publications
+           ===================================================== -->
+<section class="section" id="publications">
+<h2 class="section-title">
+          Selected Publications &amp; Manuscripts
+        </h2>
+<div class="section-body">
+<div class="publications">
+<ol class="bibliography">
+<li>
+<div class="pub-row">
+<div class="pub-content">
+<div class="title">
+                      Manuscripts under review will be listed here when their
+                      bibliographic information is ready for public disclosure.
+                    </div>
+<div class="author"></div>
+<div class="periodical"></div>
+<div class="links"></div>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</section>
+</main>
+<!-- =======================================================
+         Footer
+         ======================================================= -->
+<footer class="site-footer">
+<p>
+        © 2026 Tianchun Wu. All rights reserved.
+      </p>
+</footer>
+</div>
+<!-- =========================================================
+       Local JavaScript
+       ========================================================= -->
+
+
+</body>
+</html>

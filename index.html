@@ -1,1281 +1,155 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <!-- =========================================================
-       Basic Page Configuration
-       ========================================================= -->
-
-  <meta charset="UTF-8">
-
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>Tianchun Wu - Homepage</title>
-
-  <meta
-    name="description"
-    content="Tianchun Wu is an Electronic Engineering undergraduate at The Chinese University of Hong Kong. His research focuses on embodied AI, medical robotics, robotic endoscopy, vision-language-action models, and self-evolving robotic systems."
-  >
-
-  <!--
-    Keywords only include research directions.
-    Personal names, project names, institutions, and awards are intentionally excluded.
-  -->
-  <meta
-    name="keywords"
-    content="Embodied AI, Medical Robotics, Surgical Robotics, Robotic Endoscopy, Vision-Language-Action Models, Robot Learning, Self-Evolving Robotic Systems, Robot Foundation Models, Multimodal Learning, Learning-Based Robotic Control"
-  >
-
-  <meta name="author" content="Tianchun Wu">
-
-  <link
-    rel="icon"
-    href="assets/img/favicon.jpg"
-    type="image/jpeg"
-  >
-
-
-  <!-- =========================================================
-       External Fonts and Icon Libraries
-       ========================================================= -->
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet"
-  >
-
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css"
-    integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw="
-    crossorigin="anonymous"
-  >
-
-  <script
-    src="https://kit.fontawesome.com/a860a211d3.js"
-    crossorigin="anonymous"
-  ></script>
-
-
-  <!-- =========================================================
-       Local CSS Files
-       ========================================================= -->
-
-  <link
-    rel="stylesheet"
-    href="assets/css/font_sans_serif.css"
-  >
-
-  <link
-    rel="stylesheet"
-    href="assets/css/theme-evan.css"
-  >
-
-
-  <!-- =========================================================
-       Page-Specific Supplementary Styles
-       ========================================================= -->
-
-  <style>
-    body.theme-evan .site-chinese-name {
-      margin: 0 0 12px;
-      color: var(--evan-secondary);
-      font-size: 17px;
-      font-weight: 500;
-      letter-spacing: 0.14em;
-      text-align: center;
-    }
-
-    body.theme-evan .site-role {
-      margin: 0 0 4px;
-      color: var(--evan-text);
-      font-size: 14px;
-      font-weight: 600;
-      line-height: 1.5;
-      text-align: center;
-    }
-
-    body.theme-evan .site-affiliation {
-      margin: 0 0 4px;
-      color: var(--evan-secondary);
-      font-size: 13px;
-      line-height: 1.5;
-      text-align: center;
-    }
-
-    body.theme-evan .site-location {
-      margin: 0 0 14px;
-      color: var(--evan-secondary);
-      font-size: 13px;
-      line-height: 1.5;
-      text-align: center;
-    }
-
-    body.theme-evan .research-focus-list {
-      display: flex;
-      flex-direction: column;
-      gap: 7px;
-    }
-
-    body.theme-evan .research-focus-list span {
-      display: block;
-      line-height: 1.4;
-    }
-
-    body.theme-evan .project-subtitle {
-      margin: 2px 0 10px;
-      color: var(--evan-secondary);
-      font-size: 14px;
-      font-weight: 500;
-      line-height: 1.5;
-    }
-
-    body.theme-evan .achievement-list {
-      margin: 10px 0 18px;
-      padding-left: 21px;
-    }
-
-    body.theme-evan .achievement-list li {
-      margin-bottom: 7px;
-      line-height: 1.65;
-    }
-
-    body.theme-evan .section {
-      scroll-margin-top: 86px;
-    }
-
-    /*
-      Unify Font Awesome and Academicons colors.
-      This fixes the Google Scholar icon color mismatch.
-    */
-    body.theme-evan .social-icons a i,
-    body.theme-evan .social-icons a .ai,
-    body.theme-evan .social-icons a .fa-solid,
-    body.theme-evan .social-icons a .fa-brands {
-      color: inherit !important;
-    }
-
-    body.theme-evan .social-icons a .ai::before {
-      color: inherit !important;
-      line-height: 1;
-    }
-
-    body.theme-evan .social-icons a[data-placeholder-link="true"] {
-      opacity: 1;
-      cursor: default;
-    }
-  </style>
-</head>
-
-
-<body class="theme-evan">
-
-  <!-- =========================================================
-       Top Navigation
-       ========================================================= -->
-
-  <nav class="top-nav">
-    <div class="nav-container">
-
-      <div class="nav-left">
-        <a href="#about">About</a>
-        <a href="#education">Education</a>
-        <a href="#research">Research</a>
-        <a href="#projects">Projects</a>
-        <a href="#professional">Experience</a>
-        <a href="#leadership">Leadership</a>
-        <a href="#skills">Skills</a>
-        <a href="#publications">Publications</a>
-      </div>
-
-      <div class="nav-right">
-        <button
-          id="themeToggle"
-          class="theme-toggle"
-          title="Toggle theme"
-          aria-label="Toggle between light and dark themes"
-          type="button"
-        >
-          <i class="fa-solid fa-moon"></i>
-        </button>
-      </div>
-
-    </div>
-  </nav>
-
-
-  <!-- =========================================================
-       Main Wrapper
-       ========================================================= -->
-
-  <div class="wrapper">
-
-    <!-- =======================================================
-         Sidebar
-         ======================================================= -->
-
-    <header class="sidebar">
-      <div class="profile-card">
-
-        <a
-          class="image avatar"
-          href="#about"
-          aria-label="Go to the About section"
-        >
-          <img
-            src="assets/img/avatar.jpg"
-            alt="Portrait of Tianchun Wu"
-          >
-        </a>
-
-        <h1 class="site-name">
-          Tianchun Wu
-        </h1>
-
-        <p class="site-chinese-name">
-          武天淳
-        </p>
-
-        <p class="site-role">
-          Electronic Engineering Undergraduate
-        </p>
-
-        <p class="site-affiliation">
-          The Chinese University of Hong Kong
-        </p>
-
-        <p class="site-location">
-          Hong Kong SAR
-        </p>
-
-        <p class="site-email">
-          tianchunwu10 [at] gmail.com
-          <br>
-          1155227818 [at] link.cuhk.edu.hk
-        </p>
-
-
-        <!-- ===================================================
-             Social Links
-             =================================================== -->
-
-        <div class="social-icons">
-
-          <a
-            href="mailto:tianchunwu10@gmail.com"
-            title="Email"
-            aria-label="Send an email to Tianchun Wu"
-          >
-            <i class="fa-solid fa-envelope"></i>
-          </a>
-
-          <a
-            href="https://github.com/evan0610"
-            title="GitHub"
-            aria-label="Visit Tianchun Wu's GitHub profile"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i class="fa-brands fa-github"></i>
-          </a>
-
-          <a
-            href="https://www.linkedin.com/in/tcwu/"
-            title="LinkedIn"
-            aria-label="Visit Tianchun Wu's LinkedIn profile"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i class="fa-brands fa-linkedin"></i>
-          </a>
-
-          <!-- Google Scholar placeholder -->
-          <a
-            href="#"
-            title="Google Scholar"
-            aria-label="Google Scholar profile is not available yet"
-            data-placeholder-link="true"
-          >
-            <i class="ai ai-google-scholar"></i>
-          </a>
-
-          <a
-            href="https://evan0610.github.io/"
-            title="Homepage"
-            aria-label="Visit Tianchun Wu's homepage"
-          >
-            <i class="fa-solid fa-globe"></i>
-          </a>
-
-        </div>
-
-
-        <!-- ===================================================
-             Research Focus
-             =================================================== -->
-
-        <div class="visitor-card">
-
-          <div class="visitor-card-title">
-            Research Focus
-          </div>
-
-          <div class="visitor-card-body research-focus-list">
-            <span>Embodied AI &amp; Robot Learning</span>
-            <span>Medical &amp; Surgical Robotics</span>
-            <span>Vision-Language-Action Models</span>
-            <span>Self-Evolving Robotic Systems</span>
-          </div>
-
-        </div>
-
-      </div>
-    </header>
-
-
-    <!-- =======================================================
-         Main Content
-         ======================================================= -->
-
-    <main class="content">
-
-      <!-- =====================================================
-           About
-           ===================================================== -->
-
-      <section class="section" id="about">
-
-        <h2 class="section-title">
-          About Me
-        </h2>
-
-        <div class="section-body">
-
-          <p>
-            I am <strong>Tianchun (Evan) Wu</strong>, an Electronic Engineering
-            undergraduate at <strong>The Chinese University of Hong Kong</strong>.
-            My research lies at the intersection of embodied AI, medical robotics,
-            and robot learning, with a particular focus on intelligent robotic
-            endoscopy.
-          </p>
-
-          <p>
-            At the Robotics, Perception and Artificial Intelligence Laboratory
-            (RPAI Lab), I work on learning-based robotic systems that integrate
-            multimodal perception, language reasoning, and physical control.
-            I currently lead and contribute to research projects spanning
-            autonomous endoscopic navigation, vision-language-action learning,
-            and intelligent endoscopic intervention.
-          </p>
-
-          <p>
-            My recent research has increasingly focused on
-            <strong>self-evolving embodied intelligence</strong>: enabling robotic
-            systems to acquire, evaluate, and improve task skills through
-            interaction and experience rather than remaining limited to a fixed
-            policy or a single predefined task.
-          </p>
-
-          <p>
-            My long-term research goal is to develop generalizable and adaptive
-            robotic intelligence for real-world medical environments, particularly
-            systems that can continuously improve while operating safely alongside
-            clinicians. I plan to continue toward research-based postgraduate study
-            in robotics and embodied intelligence.
-          </p>
-
-          <p>
-            <strong>
-              <a
-                href="assets/cv/WU_Tianchun_CV.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fa-solid fa-file-pdf"></i>
-                Download My CV
-              </a>
-            </strong>
-          </p>
-
-        </div>
-      </section>
-
-
-      <!-- =====================================================
-           Education
-           ===================================================== -->
-
-      <section class="section" id="education">
-
-        <h2 class="section-title">
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Tianchun Wu · Robotics Research</title><meta name="description" content="Tianchun Wu, Electronic Engineering at CUHK. Embodied intelligence, medical robotics and robot learning."><link rel="stylesheet" href="profile.css"><script src="profile.js" defer></script></head><body><header><a class="name" href="#about">Tianchun Wu</a><button id="menu" aria-expanded="false" aria-controls="nav">Menu ☰</button><nav id="nav"><a href="#about">About</a><a href="#research">Research</a><a href="#education">Education</a><a href="#professional">Experience</a><a href="https://tianchun-research-atlas.husheddaisy64.chatgpt.site">Private research atlas ↗</a></nav></header><main><section class="hero" id="about"><div><p class="label">ROBOTICS · EMBODIED INTELLIGENCE</p><h1>Tianchun (Evan) Wu<br><span>武天淳</span></h1><p>Electronic Engineering undergraduate<br>The Chinese University of Hong Kong</p><p>I work on learning-based robotic systems at the intersection of multimodal perception, task intent and physical control, with a focus on robotic endoscopy.</p><div class="links"><a href="mailto:tianchunwu10@gmail.com">Email ↗</a><a href="https://github.com/evan0610">GitHub ↗</a><a href="https://www.linkedin.com/in/tcwu/">LinkedIn ↗</a></div></div><img src="assets/img/avatar.jpg" alt="Tianchun Wu" id="portrait"></section><section id="research"><p class="label">RESEARCH DIRECTIONS</p><h2>From physical interaction<br>to adaptive robot intelligence.</h2><div class="directions"><article><span>01</span><h3>Medical robotics</h3><p>Robotic endoscopy, task-oriented perception and coordination between learned policies and human operators.</p></article><article><span>02</span><h3>Robot learning</h3><p>Language-conditioned action generation, multimodal temporal context and transfer across task conditions.</p></article><article><span>03</span><h3>Adaptive systems</h3><p>Using recorded interaction evidence to evaluate candidate skills and guide subsequent policy development.</p></article><article><span>04</span><h3>Continuum robotics</h3><p>Flexible embodiments and local tool actions in constrained spaces.</p></article></div><aside><strong>Detailed project materials are access controlled.</strong><p>Unpublished manuscripts, project-level results and detailed review notes are available through the private research atlas. Access requires the owner's account and a separate password.</p><a href="https://tianchun-research-atlas.husheddaisy64.chatgpt.site">Open private research atlas ↗</a></aside></section><section class="section" id="education">
+<h2 class="section-title">
           Education
         </h2>
-
-        <div class="section-body">
-
-          <div class="card timeline-item">
-
-            <div class="experience-item">
-
-              <img
-                src="assets/img/institution.jpg"
-                alt="The Chinese University of Hong Kong"
-                class="institution-logo"
-              >
-
-              <div class="experience-content">
-
-                <p class="exp-title">
-                  <strong>
+<div class="section-body">
+<div class="card timeline-item">
+<div class="experience-item">
+<img alt="The Chinese University of Hong Kong" class="institution-logo" src="assets/img/institution.jpg"/>
+<div class="experience-content">
+<p class="exp-title">
+<strong>
                     The Chinese University of Hong Kong
                   </strong>
-                </p>
-
-                <p class="exp-detail">
+</p>
+<p class="exp-detail">
                   Bachelor of Engineering in Electronic Engineering,
                   ELITE Stream
                 </p>
-
-                <p class="exp-detail">
+<p class="exp-detail">
                   Selected coursework: Data Structures, C Programming,
                   Digital Circuits, and Electronic System Design
                 </p>
-
-                <p class="exp-period">
+<p class="exp-period">
                   August 2024 – June 2027
                 </p>
-
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-      </section>
-
-
-      <!-- =====================================================
-           Research Experience
-           ===================================================== -->
-
-      <section class="section" id="research">
-
-        <h2 class="section-title">
-          Research Experience
-        </h2>
-
-        <div class="section-body">
-
-          <div class="card timeline-item">
-
-            <div class="experience-item">
-
-              <img
-                src="assets/img/cuee.jpg"
-                alt="The Chinese University of Hong Kong"
-                class="institution-logo"
-              >
-
-              <div class="experience-content">
-
-                <p class="exp-title">
-                  <strong>
-                    Robotics, Perception and Artificial Intelligence Laboratory
-                  </strong>
-                </p>
-
-                <p class="exp-detail">
-                  Research Student Helper
-                </p>
-
-                <p class="exp-detail">
-                  <em>Supervisor:</em> Mr. Chi Kit Ng
-                </p>
-
-                <p class="exp-period">
-                  December 2025 – Present
-                </p>
-
-                <p class="exp-detail">
-                  Work on embodied AI and learning-based medical robotics,
-                  with a focus on autonomous and semi-autonomous robotic
-                  endoscopy.
-                </p>
-
-                <p class="exp-detail">
-                  Lead and contribute to research projects including
-                  <strong>EndoNav</strong>, <strong>ColonVLA</strong>, and
-                  <strong>EndoRinse</strong>, covering autonomous endoscopic
-                  navigation, vision-language-action learning, multimodal robot
-                  reasoning, and intelligent endoscopic intervention.
-                </p>
-
-                <p class="exp-detail">
-                  Develop multimodal robotic learning pipelines integrating
-                  endoscopic vision, language instructions, electromagnetic
-                  tracking, robot states, motor commands, and task-level feedback.
-                </p>
-
-                <p class="exp-detail">
-                  Investigate self-evolving robotic systems that can construct
-                  reusable skills from demonstrations and interaction data,
-                  evaluate task execution, and progressively adapt to new
-                  environments and tasks.
-                </p>
-
-                <p class="exp-detail">
-                  Conduct physical robot experiments and human-subject studies,
-                  including phantom-based navigation, intervention,
-                  failure recovery, and human-robot collaboration experiments.
-                </p>
-
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-      </section>
-
-
-      <!-- =====================================================
-           Selected Research Projects
-           ===================================================== -->
-
-      <section class="section" id="projects">
-
-        <h2 class="section-title">
-          Selected Research Projects
-        </h2>
-
-        <div class="section-body">
-
-
-          <!-- =================================================
-               EndoNav
-               ================================================= -->
-
-          <div class="card project-card">
-
-            <p>
-              <strong>EndoNav</strong>
-            </p>
-
-            <p class="project-subtitle">
-              Self-Evolving Autonomous Endoscopic Navigation
-            </p>
-
-            <p>
-              A research platform for autonomous endoscopic navigation that
-              investigates how embodied robotic agents can learn, evaluate,
-              and progressively improve navigation skills through interaction
-              with physical environments.
-            </p>
-
-            <p>
-              The project combines multimodal perception, robot-state
-              information, vision-language reasoning, and action generation
-              for closed-loop endoscope control. Recent work explores
-              self-evolving robotic agents that construct reusable skills
-              from demonstrations and interaction experience, enabling
-              adaptation beyond fixed task-specific policies.
-            </p>
-
-            <p>
-              My work spans system design, learning architecture development,
-              dataset collection, physical robot experimentation, baseline
-              evaluation, and autonomous navigation studies across different
-              anatomical conditions.
-            </p>
-
-          </div>
-
-
-          <!-- =================================================
-               ColonVLA
-               ================================================= -->
-
-          <div class="card project-card">
-
-            <p>
-              <strong>ColonVLA</strong>
-            </p>
-
-            <p class="project-subtitle">
-              Vision-Language-Action Learning for Robotic Endoscopy
-            </p>
-
-            <p>
-              A vision-language-action framework for intelligent robotic
-              endoscopy, connecting endoscopic visual observations,
-              language-level task understanding, robot states, and continuous
-              control actions.
-            </p>
-
-            <p>
-              The project investigates how multimodal foundation models can
-              support generalizable endoscopic robot behavior across navigation
-              and intervention tasks, with particular interest in transferring
-              learned skills across environments and task settings.
-            </p>
-
-            <p>
-              My work focuses on multimodal dataset construction, VLM/VLA
-              training and evaluation, action representation, robot integration,
-              and physical validation.
-            </p>
-
-          </div>
-
-
-          <!-- =================================================
-               EndoRinse
-               ================================================= -->
-
-          <div class="card project-card">
-
-            <p>
-              <strong>EndoRinse</strong>
-            </p>
-
-            <p class="project-subtitle">
-              Adaptive Robotic Endoscopic Rinsing
-            </p>
-
-            <p>
-              An intelligent robotic endoscopy system for autonomous rinsing
-              and scene recovery under visually degraded endoscopic conditions.
-            </p>
-
-            <p>
-              The project studies how an embodied robotic agent can perceive
-              contamination, reason about cleaning requirements, execute
-              coordinated rinsing actions, and evaluate task outcomes in a
-              closed loop. Ongoing work explores self-improving task policies
-              that can accumulate reusable rinsing skills from physical
-              interaction and experience.
-            </p>
-
-            <p>
-              My work covers robotic system integration, VLA policy design,
-              embedded control, task-level autonomy, and phantom-based
-              physical validation.
-            </p>
-
-          </div>
-
-
-          <!-- =================================================
-               EndoVLA-OOV
-               ================================================= -->
-
-          <div class="card project-card">
-
-            <p>
-              <strong>EndoVLA-OOV</strong>
-            </p>
-
-            <p class="project-subtitle">
-              Open-Vocabulary Vision-Language-Action for Robotic Endoscopy
-            </p>
-
-            <p>
-              A robotic endoscopy project exploring open-vocabulary perception,
-              visual-language reasoning, and action-conditioned model behavior
-              under endoscopic scenes.
-            </p>
-
-            <p>
-              My work focuses on VLM/VLA baseline evaluation,
-              domain-specific data preparation, and model tuning for
-              endoscopic robotic tasks.
-            </p>
-
-          </div>
-
-
-          <!-- =================================================
-               Open-H Dataset
-               ================================================= -->
-
-          <div class="card project-card">
-
-            <p>
-              <strong>Open-H Dataset</strong>
-            </p>
-
-            <p class="project-subtitle">
-              Healthcare Robotics Dataset Collaboration with NVIDIA
-            </p>
-
-            <p>
-              Contributed high-quality manually collected endoscopic robotic
-              data for the OpenHDS collaboration with NVIDIA, supporting
-              healthcare robotics and surgical robot learning research.
-            </p>
-
-            <p>
-              The work connects domain-specific endoscopic data collection
-              with large-scale robotics datasets and robot policy training.
-            </p>
-
-          </div>
-
-
-          <!-- =================================================
-               Continuum Robot Agents
-               ================================================= -->
-
-          <div class="card project-card">
-
-            <p>
-              <strong>
-                Exploring Continuum Robot Agents for Fire Rescuing in Buildings
-              </strong>
-            </p>
-
-            <p class="project-subtitle">
-              Continuum Robotics and Agentic Autonomy
-            </p>
-
-            <p>
-              A continuum robotics project for navigation and rescue
-              assistance in structurally constrained building-fire scenarios.
-            </p>
-
-            <p>
-              The project received an award at the Hong Kong University
-              Student Innovation and Entrepreneurship Competition.
-            </p>
-
-          </div>
-
-        </div>
-      </section>
-
-
-      <!-- =====================================================
-           Professional Experience
-           ===================================================== -->
-
-      <section class="section" id="professional">
-
-        <h2 class="section-title">
+</div>
+</div>
+</div>
+</div>
+</section><section class="section" id="professional">
+<h2 class="section-title">
           Professional Experience
         </h2>
-
-        <div class="section-body">
-
-          <div class="card timeline-item">
-
-            <div class="experience-item">
-
-              <img
-                src="assets/img/TCL.jpg"
-                alt="TCL Technology Corporation"
-                class="institution-logo"
-              >
-
-              <div class="experience-content">
-
-                <p class="exp-title">
-                  <strong>
+<div class="section-body">
+<div class="card timeline-item">
+<div class="experience-item">
+<img alt="TCL Technology Corporation" class="institution-logo" src="assets/img/TCL.jpg"/>
+<div class="experience-content">
+<p class="exp-title">
+<strong>
                     TCL Technology Corporation
                   </strong>
-                </p>
-
-                <p class="exp-detail">
+</p>
+<p class="exp-detail">
                   Project Assistant, Smartphone Research and Development
                 </p>
-
-                <p class="exp-period">
+<p class="exp-period">
                   June 2025 – July 2025
                 </p>
-
-                <p class="exp-detail">
+<p class="exp-detail">
                   Supported smartphone R&amp;D through prototype testing,
                   technical documentation, defect analysis,
                   and cross-functional engineering coordination.
                 </p>
-
-                <p class="exp-detail">
+<p class="exp-detail">
                   Worked on functional validation across multiple prototypes
                   and helped improve defect traceability during the
                   flagship-model iteration cycle.
                 </p>
-
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-      </section>
-
-
-      <!-- =====================================================
-           Leadership
-           ===================================================== -->
-
-      <section class="section" id="leadership">
-
-        <h2 class="section-title">
+</div>
+</div>
+</div>
+</div>
+</section><section class="section" id="leadership">
+<h2 class="section-title">
           Leadership &amp; Technical Activities
         </h2>
-
-        <div class="section-body">
-
-          <div class="card timeline-item">
-
-            <div class="experience-item">
-
-              <img
-                src="assets/img/CCIA.jpg"
-                alt="Chung Chi International Association"
-                class="institution-logo"
-              >
-
-              <div class="experience-content">
-
-                <p class="exp-title">
-                  <strong>
+<div class="section-body">
+<div class="card timeline-item">
+<div class="experience-item">
+<img alt="Chung Chi International Association" class="institution-logo" src="assets/img/CCIA.jpg"/>
+<div class="experience-content">
+<p class="exp-title">
+<strong>
                     Chung Chi International Association
                   </strong>
-                </p>
-
-                <p class="exp-detail">
+</p>
+<p class="exp-detail">
                   President
                 </p>
-
-                <p class="exp-period">
+<p class="exp-period">
                   April 2025 – Present
                 </p>
-
-                <p class="exp-detail">
+<p class="exp-detail">
                   Lead a 15-member executive team and coordinate programme
                   planning, student engagement, external communication,
                   and event operations.
                 </p>
-
-              </div>
-            </div>
-
-          </div>
-
-
-          <div class="card timeline-item">
-
-            <div class="experience-item">
-
-              <img
-                src="assets/img/institution.jpg"
-                alt="CUHK RoboMaster Team"
-                class="institution-logo"
-              >
-
-              <div class="experience-content">
-
-                <p class="exp-title">
-                  <strong>
+</div>
+</div>
+</div>
+<div class="card timeline-item">
+<div class="experience-item">
+<img alt="CUHK RoboMaster Team" class="institution-logo" src="assets/img/institution.jpg"/>
+<div class="experience-content">
+<p class="exp-title">
+<strong>
                     RoboMaster Team, The Chinese University of Hong Kong
                   </strong>
-                </p>
-
-                <p class="exp-detail">
+</p>
+<p class="exp-detail">
                   Member, Vision &amp; Algorithms Group
                 </p>
-
-                <p class="exp-period">
+<p class="exp-period">
                   December 2025 – Present
                 </p>
-
-                <p class="exp-detail">
+<p class="exp-detail">
                   Work on real-time robotic perception, object detection,
                   target tracking, and deployment-oriented vision algorithms.
                 </p>
-
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-      </section>
-
-
-      <!-- =====================================================
-           Awards
-           ===================================================== -->
-
-      <section class="section" id="awards">
-
-        <h2 class="section-title">
-          Awards
-        </h2>
-
-        <div class="section-body">
-
-          <div class="awards-grid">
-
-            <div class="award-item">
-
-              <span class="award-icon">
-                <i class="fa-solid fa-trophy"></i>
-              </span>
-
-              <div class="award-text">
-
-                <strong>
-                  Eye Award, Chung Chi College, The Chinese University of Hong Kong
-                </strong>
-
-                <p>
-                  Awarded for overseas academic exchange and outstanding
-                  contribution to Chung Chi College.
-                </p>
-
-              </div>
-            </div>
-
-
-            <div class="award-item">
-
-              <span class="award-icon">
-                <i class="fa-solid fa-trophy"></i>
-              </span>
-
-              <div class="award-text">
-
-                <strong>
-                  Hong Kong University Student Innovation and
-                  Entrepreneurship Competition
-                </strong>
-
-                <p>
-                  Award recipient for the continuum robot agent project
-                  on constrained-environment rescue robotics.
-                </p>
-
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-
-      <!-- =====================================================
-           Technical Skills
-           ===================================================== -->
-
-      <section class="section" id="skills">
-
-        <h2 class="section-title">
+</div>
+</div>
+</div>
+</div>
+</section><section class="section" id="skills">
+<h2 class="section-title">
           Technical Skills
         </h2>
-
-        <div class="section-body">
-
-          <div class="card">
-
-            <p>
-              <strong>Robot Learning:</strong>
+<div class="section-body">
+<div class="card">
+<p>
+<strong>Robot Learning:</strong>
               Vision-Language-Action models, multimodal learning,
               imitation learning, robot policy learning,
               self-evolving agents, robot foundation models
             </p>
-
-            <p>
-              <strong>Medical Robotics:</strong>
+<p>
+<strong>Medical Robotics:</strong>
               Robotic endoscopy, continuum robots,
               autonomous navigation, human-robot collaboration
             </p>
-
-            <p>
-              <strong>Perception:</strong>
+<p>
+<strong>Perception:</strong>
               Vision-language models, endoscopic vision,
               object detection, visual grounding,
               visual tracking, multimodal perception
             </p>
-
-            <p>
-              <strong>Robotics &amp; Systems:</strong>
+<p>
+<strong>Robotics &amp; Systems:</strong>
               ROS, ROS 2, STM32, CAN communication,
               motor control, electromagnetic tracking,
               physical robot integration
             </p>
-
-            <p>
-              <strong>Programming:</strong>
+<p>
+<strong>Programming:</strong>
               Python, PyTorch, C, C++, Linux, Git,
               embedded development
             </p>
-
-            <p>
-              <strong>Languages:</strong>
+<p>
+<strong>Languages:</strong>
               Mandarin, Cantonese, English
             </p>
-
-          </div>
-
-        </div>
-      </section>
-
-
-      <!-- =====================================================
-           Publications
-           ===================================================== -->
-
-      <section class="section" id="publications">
-
-        <h2 class="section-title">
-          Selected Publications &amp; Manuscripts
-        </h2>
-
-        <div class="section-body">
-
-          <div class="publications">
-
-            <ol class="bibliography">
-
-              <li>
-                <div class="pub-row">
-
-                  <div class="pub-content">
-
-                    <div class="title">
-                      Manuscripts under review will be listed here when their
-                      bibliographic information is ready for public disclosure.
-                    </div>
-
-                    <div class="author"></div>
-
-                    <div class="periodical"></div>
-
-                    <div class="links"></div>
-
-                  </div>
-                </div>
-              </li>
-
-            </ol>
-
-          </div>
-        </div>
-      </section>
-
-    </main>
-
-
-    <!-- =======================================================
-         Footer
-         ======================================================= -->
-
-    <footer class="site-footer">
-      <p>
-        &copy; 2026 Tianchun Wu. All rights reserved.
-      </p>
-    </footer>
-
-  </div>
-
-
-  <!-- =========================================================
-       Local JavaScript
-       ========================================================= -->
-
-  <script src="assets/js/scale.fix.js"></script>
-
-
-  <script>
-    (function () {
-
-      const themeToggle =
-        document.getElementById('themeToggle');
-
-      const icon =
-        themeToggle.querySelector('i');
-
-
-      /**
-       * Set page theme.
-       *
-       * @param {boolean} isDark
-       */
-      function setTheme(isDark) {
-
-        document.documentElement.setAttribute(
-          'data-theme',
-          isDark ? 'dark' : 'light'
-        );
-
-        icon.classList.toggle(
-          'fa-sun',
-          isDark
-        );
-
-        icon.classList.toggle(
-          'fa-moon',
-          !isDark
-        );
-
-        localStorage.setItem(
-          'theme',
-          isDark ? 'dark' : 'light'
-        );
-      }
-
-
-      const savedTheme =
-        localStorage.getItem('theme');
-
-      const prefersDark =
-        window.matchMedia(
-          '(prefers-color-scheme: dark)'
-        ).matches;
-
-      setTheme(
-        savedTheme
-          ? savedTheme === 'dark'
-          : prefersDark
-      );
-
-
-      themeToggle.addEventListener(
-        'click',
-        function () {
-
-          const isDark =
-            document.documentElement.getAttribute(
-              'data-theme'
-            ) === 'dark';
-
-          setTheme(!isDark);
-        }
-      );
-
-
-      /*
-        Prevent placeholder links from jumping.
-      */
-      document
-        .querySelectorAll('a[data-placeholder-link="true"]')
-        .forEach(function (link) {
-
-          link.addEventListener(
-            'click',
-            function (event) {
-              event.preventDefault();
-            }
-          );
-
-        });
-
-
-      /*
-        Smooth scrolling for internal links.
-      */
-      document
-        .querySelectorAll('a[href^="#"]')
-        .forEach(function (link) {
-
-          link.addEventListener(
-            'click',
-            function (event) {
-
-              const targetId =
-                link.getAttribute('href');
-
-              if (
-                !targetId ||
-                targetId === '#'
-              ) {
-                return;
-              }
-
-              const targetElement =
-                document.querySelector(targetId);
-
-              if (!targetElement) {
-                return;
-              }
-
-              event.preventDefault();
-
-              targetElement.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-              });
-
-            }
-          );
-
-        });
-
-
-      /*
-        Reveal sections when they enter the viewport.
-      */
-      if ('IntersectionObserver' in window) {
-
-        const observer =
-          new IntersectionObserver(
-
-            function (entries) {
-
-              entries.forEach(
-                function (entry) {
-
-                  if (entry.isIntersecting) {
-
-                    entry.target.classList.add(
-                      'visible'
-                    );
-
-                    observer.unobserve(
-                      entry.target
-                    );
-                  }
-
-                }
-              );
-
-            },
-
-            {
-              threshold: 0.1
-            }
-
-          );
-
-
-        document
-          .querySelectorAll('.section')
-          .forEach(function (element) {
-
-            observer.observe(element);
-
-          });
-
-      } else {
-
-        document
-          .querySelectorAll('.section')
-          .forEach(function (element) {
-
-            element.classList.add('visible');
-
-          });
-
-      }
-
-    })();
-  </script>
-
-</body>
-</html>
+</div>
+</div>
+</section><section id="publications"><p class="label">PUBLICATIONS</p><h2>Publication information</h2><p>Only publication metadata approved for public disclosure is listed here. No acceptance status is implied for unpublished work.</p></section></main><footer>© 2026 Tianchun Wu · <a href="mailto:tianchunwu10@gmail.com">Contact</a> · <a href="https://tianchun-research-atlas.husheddaisy64.chatgpt.site">Private materials ↗</a></footer></body></html>

@@ -876,3 +876,7 @@ body.theme-evan strong {
     font-size: 13px;
   }
 }
+
+body.theme-evan .image.avatar{width:200px;height:200px;overflow:hidden;border-radius:50%;margin:0 auto 20px}body.theme-evan .image.avatar img{display:block!important;width:100%!important;height:100%!important;object-fit:cover!important;border-radius:0!important}body.theme-evan .sidebar{position:sticky;top:60px;height:auto;overflow:visible;padding-top:36px;align-self:start}body.theme-evan .profile-card{padding-bottom:25px}@media(max-width:1080px){body.theme-evan .sidebar{position:static;width:100%;top:auto}}
+
+body.theme-evan .content{margin-left:0}body.theme-evan .sidebar{left:auto;flex:0 0 320px}@media(max-width:1080px){body.theme-evan .sidebar{flex-basis:100%}}

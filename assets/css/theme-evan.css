@@ -580,14 +580,14 @@ body.theme-evan .project-card {
    论文列表
    ============================================ */
 
-body.theme-evan .publications ol.bibliography {
+body.theme-evan .project-publications ol.bibliography {
   margin: 0;
   padding: 0;
 
   list-style: none;
 }
 
-body.theme-evan .publications ol.bibliography li {
+body.theme-evan .project-publications ol.bibliography li {
   margin-bottom: 14px;
   padding: 15px 0 15px 16px;
 
@@ -624,12 +624,12 @@ body.theme-evan .pub-content .links a {
   font-weight: 500;
 }
 
-body.theme-evan .publications ol.bibliography {
+body.theme-evan .project-publications ol.bibliography {
   display: grid;
   gap: 16px;
 }
 
-body.theme-evan .publications ol.bibliography li {
+body.theme-evan .project-publications ol.bibliography li {
   width: 100%;
   margin: 0;
   padding: 21px 23px;
@@ -678,12 +678,20 @@ body.theme-evan .pub-content .links {
   text-align: center;
 }
 
+body.theme-evan .project-publications {
+  margin-top: 0;
+}
+
+body.theme-evan .pub-content .links a + a {
+  margin-left: 18px;
+}
+
 body.theme-evan .pub-content a {
   color: var(--evan-accent);
 }
 
 @media (max-width: 640px) {
-  body.theme-evan .publications ol.bibliography li {
+  body.theme-evan .project-publications ol.bibliography li {
     padding: 18px 15px;
   }
 
